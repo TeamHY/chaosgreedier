@@ -1,0 +1,1546 @@
+(!)대결 룰
+ 
+*공통
+-리셋기회 : 3/2, 5/3 상관없이 시작제외 1회
+-타이머 : 타이머는 움직임과 함께 ON. 노말의 경우 엔딩과 함께 OFF, 카그의 경우 상자에 들어가는 모션과 함께 OFF
+-무승부의 경우 즉시 에결 실행
+＃에결 : 에이스 결정전의 줄임말로, 서로 랜덤을 선택후 선택된 캐릭터의 배수가 높은쪽이 승리한다. 에덴의 축복은 적용되지 않으며, 다음라운드에서도 사용 불가
+ 
+[노말]
+-게임시간 : 40분
+-캐릭터 : 1R 합의한 이후 진행 후, 2R 부턴 패배한 사람이 선택
+-템제한 및 특수룰
+Mom's Knife, Brimstone : 3/2 포함 2회까 사용 가능
+Dr. Fetus, Ipecac : 3/2 포함 1회 사용 가능
+Epic Fetus, Polyphemus : 3/2 포함 1회 사용 가능
+Habit : 3/2 포함 1회 사용 가능
+※5/3 의 경우 사용 가능 횟수가 +1 증가됩니다.
+ 
+[카그]
+-게임시간 : 30분
+-캐릭터 : 1R 에덴 이후 패배한 사람이 선택하며, 랜덤 선택은 가능하나, 양쪽의 캐릭터는 동일하며, 중복 캐릭터 선택 불가
+-템제한 및 특수룰
+*Ultra Greed 방에서 알약, 카드, 룬 1회성 소모 아이템 모두 사용 불가
+*모든 스테이지는 12웨이브 필수 클리어
+*Sheol, The Shop 스테이지에서는 스킵 불가능
+
+[세트 아이템]
+Rust Set : Bloody Lust 추가
+Sensory Satisfaction Set : ①Delirium, Ultra Greed, Ultra Greedier 공격 시 x4.1 추가 데미지가 적용됩니다. ②DMG(고정) x1.5 증가됩니다. ③캐릭터에게 공중효과가 추가됩니다.
+
+Ice Princess Breath Set : ①Delirium, Ultra Greed, Ultra Greedier 공격 시 x4.1 추가 데미지가 적용됩니다. ②공격당한 몬스터가 사망할 때까지 몬스터 주변에 눈물이 발사됩니다. ③캐릭터에게 공중효과가 추가됩니다. ④120초 간격마다 SoulHearts +1 소환됩니다.
+
+Refined Otherverse Magic Stone Set : ①Delirium, Ultra Greed, Ultra Greedier 공격 시 x4.1 추가 데미지가 적용됩니다. ②120초 간격마다 Greed Devil Room x 1 소환됩니다. (완성 시 즉시 소환됩니다.) ③캐릭터에게 공중효과가 추가됩니다.
+
+Heblon's Monarch Set : ①Delirium, Ultra Greed, Ultra Greedier 공격 시 x4.1 추가 데미지가 적용됩니다. ②300 범위 내에 보스 몬스터에게 10% 지속 데미지를 줍니다. ③캐릭터에게 공중효과가 추가됩니다. ③Stop Watch 추가됩니다.
+
+Ancient Civilization : ①Delirium, Ultra Greed, Ultra Greedier 공격 시 x4.1 추가 데미지가 적용됩니다.②일반 몬스터 공격 시 방 전체에 존재하는 다른 일반 몬스터에게 스플래쉬 데미지가 발생됩니다. ③캐릭터에게 공중효과가 추가됩니다.
+--------------------------------------------------------------------
+▶Chaos Greed Greedier 8.4(5)
+ -루아가 정상적으로 작동되지 않던 현상 수정
+
+▶Chaos Greed Greedier 8.4(4)
+ -세트 아이템 단일 파츠 획득 시 해당 세트의 파츠만 배열되도록 변경
+ -최대 데미지 보정 수치가 감소됩니다. (300 -> 100)
+
+▶Chaos Greed Greedier 8.4(3)
+ -신규 제거 배열 아이템 : Stop Watch
+ -Stop Watch : 지속시간 6초 -> 10초 증가
+ -Venus's Breath, Memory Of Water : 획득 시 Luck + 1 ~ 4 증가됩니다. (리뉴얼)
+ -Little Horn : 데미지 수치가 감소됩니다.
+ -Brimstone, Technology : 데미지 수치가 증가됩니다.
+
+▶Chaos Greed Greedier 8.4(2)
+ -Stigmata, Synthoil, Cat-o-nine-tails, Dog Tooth, Iron Bar, 8 Inch Nails, Sulfuric Acid, Steven : 데미지 수치가 100% 증가됩니다.
+ -Boss(Room) : Guppy's 아이템이 등장하도록 변경됩니다.
+
+▶Chaos Greed Greedier 8.4
+ -Absolute Leviathan : 획득 시 레어 수치가 증가하던 현상이 수정됩니다.
+ -몬스터 사망 시 생성되는 잔해량이 전부 제거 됩니다. (최적화)
+ -최대 데미지 제한이 감소됩니다. 300 -> 150
+ -Greed Basement : 난이도가 소폭 감소됩니다.
+ -특정 웨이브에서 Cleaner 아이템이 등장하지 않은 현상이 수정됩니다.
+ -12 웨이브 보상 아이템이 Mystery Gift 변경됩니다.
+ -Ice Princess Breath Set : 등장하는 눈물의 딜레이가 증가됩니다. (2 -> 6)
+
+▶Chaos Greed Greedier 8.3(3)
+ -Refined Destructive Magic Stone Bracelet, Refined Chaos Stone Necklace, Refined Amnesia Stone Ring : DMG 1.0 -> 4.0 증가
+ -Greed Devil : 아이템을 쉽게 구매할 수 있도록 변경됩니다.
+
+▶Chaos Greed Greedier 8.3(2)
+ -Greed Basement : 난이도가 소폭 감소됩니다.
+ -Chaos(Player) : Eye with Full of Pride -> Chaos 변경
+ -Venus's Breath, Scent Of Glitter, Memory Of Water : 획득 시 Coins +15 추가됩니다.
+
+▶Chaos Greed Greedier 8.3
+ -부스터팩5 호환작업이 일부 완료되었습니다. (게임 플레이에는 지장없도록)
+ -Isaac : Hlminth 추가
+ -Cain : Mom's Wig 추가
+ -신규 제거 배열 아이템 : Blood Rights, Harlequin Baby, Brother Bobby, Euthanasia, Millstone, Helmet LV.1, Helmet LV.2, Helmet LV.3, Pageant Boy, The Peeper, Gnawed Leaf, Deck of Cards, Mom's Wig, Piggy Bank, Mom's Contacts, Telepathy For Dummies, BackStabber, The Hourglass, Artifact Achilleshield, Artifact Aegis, Stop Watch 2, A Lump of Coal, Farting Baby, Night Light
+ -일부 제거된 아이템들이 배열되던 현상 수정
+ -간헐적으로 Rank-Up-Magic Skip Force 발동되던 현상 수정
+ -Rank-Up-Magic Cipher Ascension, Rank-Up-Magic Astral Force, Rank-Up-Magic Soul Shave Force : 대기 시간 120초 -> 60초 감소됩니다.
+ -Rank-Up-Magic Raid Force, Rank-Up-Magic Argent Chaos Force : 대기 시간 180초 -> 120초 감소됩니다.
+ -Stigmata, Synthoil, Cat-o-nine-tails, Dog Tooth, Iron Bar, 8 Inch Nails, Sulfuric Acid, Steven : 악마방에서만 등장하도록 변경됩니다.
+ -Red Cube, Black Cube : 아이템 사용에 필요한 Coins 수치가 감소됩니다.
+ -Head of Krampus : 쿨타임 3 -> 2 감소
+ -세트 아이템 단일 파츠들의 효과가 리뉴얼 됩니다.
+ -4번째 레어 아이템 획득 시 모든 패시브 레어 아이템들이 리롤되도록 변경됩니다. (해당 효과는 모든 방에서 적용됩니다.)
+ -데미지 보정 시스템이 추가됩니다.
+ -보스 몬스터들의 HP 증가됩니다.
+ -Ultra Greed HP : 500000 -> 250000 감소
+ -Ultra Greedier HP : 1000000 -> 500000 감소
+
+▶Chaos Greed Greedier 8.2
+ -신규 제거 배열 아이템 : Rank-Up-Magic Skip Force, Purity, Plan C, D6, Absolute Gravity, Trisagion
+ -Plan C : 사용 시 캐릭터가 즉시 사망하던 현상 수정
+ -Sensory Satisfaction, Ice Princess Breath, Refined Otherverse Magic Stone, Heblon's Monarch Set, Ancient Civilization : Coins 10 -> 5.0 감소
+ -Stigmata, Synthoil, Cat-o-nine-tails, Dog Tooth, Iron Bar, 8 Inch Nails, Sulfuric Acid, Steven : 공격력 수치가 증가됩니다.
+ -Artifact Labrys, Artifact Lancea : 사용에 필요한 Coins 요구 개수가 대폭 감소됩니다.
+ -Angelic Prism : ①캐릭터의 공격이 관통될경우, 추가 공격을 발생되는 퍼밀리어 x 15 추가됩니다.
+ -Absolute Tuna : ①보스 몬스터 공격 시 DMG(Boss) x 1.5 추가됩니다.
+ -Ultra Greed Stage : 난이도가 소폭 감소됩니다.
+ -Dead Eye, Eye of Belia, Little Horn : 이펙트가 제거됩니다. (눈물이 화면을 가리는 현상이 더 이상 생기지 않음)
+
+▶Chaos Greed Greedier 8.1(2)
+ -신규 레어 아이템 : Lost Contact
+ -신규 제거 배열 아이템 : Blank Card, Little Steven, Remote Detonator, Mom's Eye, Headless Baby
+ -세트 아이템 보정 시스템이 비정상적인 현상 수정 (추가 작업)
+ -Little Horn : 획득 시 레어도가 올라가지 않던 현상 수정
+ -Heblon's Monarch Set : 일부 효과가 적용되지 않던 현상 수정
+ -게임 재 시작 시 추가 데미지가 리셋되지 않던 현상 수정
+ -추가 데미지 디버그의 색상 변경
+ -Lost Contact(P) : ①DMG(고정) x 1.3 증가됩니다. ②눈물이 몬스터가 발사한 투사체와 접촉 시, 몬스터의 눈물이 제거 됩니다. ③몬스터 관통 기능이 추가됩니다.
+
+▶Chaos Greed Greedier 8.1
+ -Silver Bullets : 눈물 상태가 아니어도 추가 데미지가 적용되도록 변경
+ -Ancient Civilization Set : 몬스터 공격 시 스텟 데미지가 추가적으로 적용되던 현상 수정
+ -세트 아이템 보정 시스템이 비정상적인 현상 수정
+ -레어 아이템 보정 시스템이 비정상적인 현상 수정
+ -추가 데미지 합산 수치를 확인할 수 있도록 변경
+ -추가 데미지 공식이 통일됩니다. (타격 시 몬스터에게 적용된 데미지의 %)
+ -Basement, Cave, Depth, Womb Stage : 신규 구조 대폭 추가
+
+▶Chaos Greed Greedier 8.0(3)
+ -Jacob's Ladder, Technology Zero 레어 수치가 누적되지 않던 현상 수정
+
+▶Chaos Greed Greedier 8.0(2)
+ -신규 제거 배열 : Power Bond
+ -Rank-Up-Magic Skip Force : 대기 시간 150초 -> 120초 감소됩니다.
+
+▶Chaos Greed Greedier 8.0
+ -신규 레어 아이템 : Jacob's Ladder, Technology Zero
+ -Little Horn : ①DMG(고정) 2.0 -> 1.5 감소됩니다. ②액티브 -> 패시브 변경됩니다.
+ -Jacob's Ladder : ①액티브 -> 패시브 변경됩니다.
+ -Technology Zero : ①액티브 -> 패시브 변경됩니다.
+ -Mom's Knife : ①패시브 -> 액티브 변경됩니다.
+ -Sacrificial Dagger : 칼의 배리어 개수 4 -> 6 증가됩니다.
+ -Rank-Up-Magic Skip Force : 대기 시간 180초 -> 150초 감소됩니다.
+ -Plan C : 사용 시 Ultra Greedier 즉시 사망하지 않던 현상이 수정됩니다.
+ -Rank-Up-Magic Cipher Ascension, Rank-Up-Magic Astral Force, Rank-Up-Magic Soul Shave Force : 대기 시간 180초 -> 120초 감소됩니다.
+ -(R)Mirror : ①사용 시 악마방 아이템 x 1 소환됩니다. ②해당 스테이지에 Darkness 저주가 적용됩니다.
+
+▶Chaos Greed Greedier 7.9(2)
+ -Sensory Satisfaction, Ice Princess Breath, Refined Otherverse Magic Stone, Heblon's Monarch Set, Ancient Civilization : Coins 5 -> 10 증가
+ -게임 시작 시 Debug 7 기능이 On -> Off 변경됩니다.
+ -Rubber Cement, God Head, Euthanasia, Spectrum Tear : 액티브 -> 패시브 변경됩니다, 획득 시 더 이상 Luck 감소하지 않습니다.
+ -신규 제거 배열 아이템 : The Virus(13), Spider Bite(89), Jumper Cables(520), Leprosy(525)
+ -레어 아이템 제한 개수 3 -> 4 증가
+ -레어 아이템이 4개 이상 획득한 상태에서 패시브 레어 아이템이 더 이상 등장하지 않도록 변경됩니다.
+
+▶Chaos Greed Greedier 7.9
+ -보스방에 등장하는 Death's Head 개수가 소폭 감소됩니다.
+ -비밀방의 보상이 소폭 증가됩니다.
+ -Ultra Greed HP : 300000 -> 500000 증가
+ -Ultra Greedier HP : 600000 -> 1000000 증가
+
+▶Chaos Greed Greedier 7.8(3)
+ -일부 디버그 이미지들이 누락되던 현상 수정
+ -획득한 레어 아이템을 확인할 수 있도록 변경
+
+▶Chaos Greed Greedier 7.8(2)
+ -레어 아이템 보정 시스템이 추가됩니다.
+└패시브에만 적용되며, 4번째 레어 아이템 획득 시 바로 제거됩니다.
+
+▶Chaos Greed Greedier 7.8
+ -몬스터 처치 시 등장하는 잔해량이 전부 제거 됩니다. (최적화)
+ -전체적은 눈물의 투명도 수치 감소
+ -Empty : 캐쉬 플래그가 즉시 적용되지 않던 현상 수정
+ -Artifact Sanctum : Succubus 소환 간격 60초 -> 180초 증가
+ -황금방 신규 구조 대폭 추가
+
+▶Chaos Greed Greedier 7.7(2)
+ -세트 아이템을 1개 이상 완성 시 이하의 아이템을 제거하도록 변경
+└Sensory Satisfaction, Ice Princess Breath, Refined Otherverse Magic Stone, Heblon's Monarch Set, Ancient Civilization
+ -Power Bond, Limiter Removal : 사용 횟수 1 -> 2 증가
+ -Dark Matter : DMG 3.0 -> 10.0 증가
+ -Maw Of The Void : DMG 5.0 -> 15.0  증가
+
+▶Chaos Greed Greedier 7.7
+ -Refined Otherverse Magic Stone : 특정 아이템이 획득되지 않던 현상 수정됩니다.
+ -Larval Therapy, Eye with Full of Pride : 상점 및 황금방에서 더 이상 등장하지 않습니다.
+ -Judas : 눈물 이외에 다른 공격형 아이템을 사용할 수 없도록 변경됩니다.
+ -Azazel : Absolute Sulfer 추가, Epic Fetus, Dr. Fetus 아이템을 사용할 수 없도록 변경됩니다.
+ -Delirium HP : 180000 -> 300000 증가
+ -Ultra Greed HP : 200000 -> 300000 증가
+ -Ultra Greedier HP : 200000 -> 600000 증가
+ -Pyro : Bombs 30 -> 99 증가
+ -버전 표기 방식이 변경됩니다. (추후적용)
+
+▶Chaos Greed Greedier 7.6
+ -신규 아이템 : Artifacts Unleashed(651), Ice Princess Breath(886), Sensory Satisfaction(887), Refined Otherverse Magic Stone(888), Heblon's Monarch(889), Ancient Civilization(890)
+└Artifacts Unleashed(A) : ①사용 시 모든 공격형 아이템이 제거됩니다. ②Technology(68), Mom's Knife(114), Brimstone(118), Epic Fetus(168), The Ludovico Technique(329), Tech X(395), Trisagion(533), Absolute Sulfer(847) 1개의 아이템이 추가됩니다.
+└Ice Princess Breath(A) : ①사용 시 Coins -5 감소됩니다. ②Apathetic Princess Bracelet(827), Cold Princess Necklace(828), Cold Princess Ring(832) 1개의 아이템이 추가됩니다.
+└Sensory Satisfaction(A) : ①사용 시 Coins -5 감소됩니다. ②Venus's Breath(823), Scent Of Glitter(824),  Memory Of Water(825) 1개의 아이템 추가됩니다.
+└Refined Otherverse Magic Stone(A) : ①사용 시 Coins -5 감소됩니다. ②Refined Destructive Magic Stone Bracelet(842), Refined Chaos Stone Necklace(843), Refined Amnesia Stone Ring(844) 1개의 아이템이 추가됩니다.
+└Heblon's Monarch(A) : ①사용 시 Coins -5 감소됩니다. ②Solium Fons(829), Tenebrae Nus(830), Lumen Basilium(831) 1개의 아이템이 추가됩니다.
+└Ancient Civilization(A) : ①사용 시 Coins -5 감소됩니다. ②Symbol Of Babylonia(815), Fars's Golden Goblet(816), Rosetta Stone(817) 1개의 아이템이 추가됩니다.
+ -Larval Therapy : 100% Luck 18 -> 10 감소
+
+▶Chaos Greed Greedier 7.5(3)
+ -A Slothful Foot, The Hand of Greed, A Mouth-eaten Mouth, Tongue with Envy : 지속 시간 60초 -> 20초 감소
+ -Rank-Up-Magic Soul Shave Force : 아이템 소환 대기 시간 120 -> 180 증가
+
+▶Chaos Greed Greedier 7.5(2)
+ -Empty : DMG(고정) x1.25 -> 1.375 증가
+
+▶Chaos Greed Greedier 7.5
+ -신규 아이템 : Black Cube(879), Red Cube(880), Code Geass(881), Blood Drive(882), Mirror(883), Hlminth(884), Empty(885)
+└Black Cube(A) : ①사용 시 Coins -10 소모됩니다. ②해당 방 안에 모든 아이템을 리롤 후, 해당 방에 맞는 아이템 x1 소환합니다. ③최대 3회까지 사용 가능합니다.
+└Red Cube(A) : ①사용 시 Coins -5 소모됩니다. ②해당 방 안에 모든 아이템을 리롤합니다. ③최대 3회까지 사용 가능합니다.
+└Code Geass(P) : ①캐릭터 주변 300 범위 이내에 몬스터들에게 매혹 오라를 유발시킵니다.
+└Blood Drive(A) : ①사용 시 Cherry x1 소환 or 통일 세트 아이템 파츠 x 3 소환됩니다.
+└Mirror(A) : ①사용 시 세트 아이템 파츠 x 1 소환됩니다. ②해당 스테이지에 Blind 저주가 적용됩니다.
+└Hlminth(A) : ①눈물 공격 시 100% 확률로 자폭 거미가 생성됩니다.
+└Empty(P) : ①눈물 이외에 공격형 아이템 사용 불가로 고정 ②DMG(고정) x1.25 증가
+ -LIL Mimic : 쿨타임 2 -> 1 감소
+ -Ultra Greed HP : 120000 -> 200000 증가
+ -Ultra Greedier HP : 120000 -> 200000 증가
+
+▶Chaos Greed Greedier 7.4
+ -신규 레어 아이템 : Rank-Up-Magic Skip Force
+ -신규 아이템 : Artifact Ignition(649), Artifact Sanctum(650), Ethereum(878)
+└Artifact Ignition(A) : ①사용 시 Coins -15 소모됩니다. ②통일된 세트 아이템 x 3 소환됩니다.
+└Artifact Sanctum(A) : ①사용 시 Coins -15 소모됩니다. ②사용 시 Succubus x 2 추가됩니다.. ③ 60초 간격마다 Succubus x 1 추가됩니다.
+└Ethereum(A) : ①사용 시 Delay ± 1 증가 또는 감소됩니다.
+
+▶Chaos Greed Greedier 7.3(2)
+ -신규 아이템 : Rank-Up-Magic Revolution Force(875), Rank-Up-Magic Raid Force(876), Rank-Up-Magic Argent Chaos Force(877)
+└Rank-Up-Magic Revolution Force : 사용 시 60초 경과 후 Rank-Up-Magic Raptor's Force(846) x 2 소환
+└Rank-Up-Magic Raid Force : 사용 시 180초 경과 후 천사방 아이템 x 2 소환
+└Rank-Up-Magic Argent Chaos Force : 사용 시 180초 경과 후 악마방 아이템 x2 소환
+ -Artifact Moralltach, Artifact Beagalltach : 사용 횟수 1 -> 3 증가
+ -The Small Hippo, Book of Revelations, Dad's Key : Ultra Greed 사용 불가
+ -The Small Hippo : 지속 시간 3초 -> 5초 증가
+
+▶Chaos Greed Greedier 7.3
+ -Venus's Breath, Scent Of Glitter, Memory Of Water : Coins +15 -> Coins 0 변경
+ -Silver Bullets : DMG(Boss) x1.5 -> x1.25 변경
+ -Rust Set : 세트 완성 시 아이템이 제거되지 않도록 변경
+
+▶Chaos Greed Greedier 7.2(3)
+ -일부 세트 아이템의 효과 상향
+
+▶Chaos Greed Greedier 7.2(2)
+ -Eye with Full of Pride : 사용 시 아이템이 제거되지 않던 현상 수정
+
+▶Chaos Greed Greedier 7.2
+ -신규 아이템 : Artifact Labrys(638), Artifact Lancea(639), Artifact Moralltach(640), Artifact Beagalltach(643), Artifact Aegis(644), Artifact Achilleshield(645), Artifact Chakram(646)
+└Artifact Labrys : 사용 시 DMG(고정) 5.0 증가, 일회용 (사용 시 Coins 15 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Lancea : 사용 시 DMG(고정) 10.0 증가, 일회용 (사용 시 Coins 30 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Moralltach : 사용 시 공격형 아이템 x1 소환 (사용 시 Coins 15 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Beagalltach : 사용 시 공격형 아이템 x2 소환 (사용 시 Coins 30 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Aegis : 사용 시 방어막 1회 생성 (사용 시 Coins 7 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Achilleshield : 사용 시 SoulHearts x 1 소환 (사용 시 Coins 5 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+└Artifact Chakram : 사용 시 해당 스테이지 천사방 확률 100% 고정, Joker(Card) x 1 소환 (사용 시 Coins 5 제거되며, Coins 존재하지 않는다면 사용해도 아무런 변화가 일어나지 않습니다.)
+ -Soul Change : DMG 증가가 아닌 감소하던 현상 수정
+ -The Small Toy : 신규 소환 아이템 추가 : Absolute Sulfer, Tech X
+ -Solium Fons, Pentagram : 오라 효과 제거
+ -Curse Foot : 사용 시 제거가 되지않던 현상 수정
+ -Chaos : Rank-Up-Magic Skip Force 아이템을 Sheol 부터 사용가능하도록 변경
+ -Epic Fetus, Monstro's Lung : 조합 시 DMG 감소율 50% -> 40% 변경
+
+▶Chaos Greed Greedier 7.1
+ -신규 아이템 : Curse Foot(874)
+└Curse Foot : 사용 시 Red Chest x 3 소환
+ -Error : 보상 소폭 증가
+ -Greed Treasure : 보상 소폭 증가
+ -Greed Sheol : 10,11,12 웨이브에 등장하는 모든 몬스터 x 2 증가
+ -Alt HP : 45000 -> 67500 증가
+ -Hush HP : 70000 -> 105000 증가
+ -Delirium HP : 120000 -> 180000 증가
+
+▶Chaos Greed Greedier 7.0(5)
+ -Greed Basement : 초반 보상 증가
+ -게임 시작 및 스테이지 시작 시 DMG(고정) 2% 감소하는 현상 수정
+ -신규 아이템 : Soul Eater(871), Soul Charge(872), Soul Change(873)
+ -Soul Eater : DMG(고정) x0.75 감소, Eden's Blessing x 3 소환
+ -Soul Charge : Eden's Blessing 1개 이상 소지 시 사용 가능, 사용 시 Eden's Soul x 1 소환
+ -Soul Change : 현재 보유중인 모든 Eden's Blessing 제거, 제거된 Eden's Blessing x 1 -> DMG(고정) x 1.15 증가
+
+▶Chaos Greed Greedier 7.0(4)
+ -일부 방에서 Abyss 아이템이 등장하던 현상 수정
+
+▶Chaos Greed Greedier 7.0(3)
+ -초고대분명 Set : Sacred Heart 추가되지 않도록 변경
+ -일부 아이템들의 효과가 패치노트와 상이한 현상 수정
+
+▶Chaos Greed Greedier 7.0(2)
+ -신규 아이템 : Absolute Tuna(865)
+└Absolute Tuna : Alt, Hush 공격 시 DMG(Boss) x1.5 추가, 패시브
+ -현재 버전 상태와 버전 이미지가 서로 상이한 현상 수정
+ -초고대문명 세트 : 1 Set : 관통 효과 추가, 2 Set : 유도 효과 추가, 3 Set : 단일 아이템이 제거되지 않도록 변경
+ -Abyss : 사용 횟수 3 -> 2회
+ -Sharp Eyes : Luck 1 = DMG(고정) 10%p 증가 (Renewal)
+ -Bit Coin : 사용 시 DMG(고정) x1.1 증가 또는 감소
+ -Plunger : 공격 시 독 효과 추가
+ -A Slothful Foot, The Hand of Greed, A Mouth-eaten Mouth, Tongue with Envy : 사용 시 60초 동안 Chaos 효과 적용, DMG(고정) x0.75 감소
+ -Mom's Knife : DMG(Boss) x 2.0  -> x 3.0 증가
+
+▶Chaos Greed Greedier 7.0
+ -Greed Shop : 구매 아이템의 개수 증가
+ -Greed Shop(Stage) : 난이도 증가
+ -Tongue with Envy : 캐시가 즉시 갱신되지 않던 현상 수정
+ -Brown Nugget : 쿨타임 2.5초 -> 0.5초 감소
+
+▶Chaos Greed Greedier 6.9(3)
+ -Greed Error : 신규 구조 추가 및 보상 증가
+ -신규 아이템 : Bible Thump(862), Lightning(863), Blood Trail(864), Innocent Scroll(870)
+└Blood Trail : Cube Of Meat x 16 추가
+└Bible Thump : Punching Bag x 4 추가
+└Lightning : 눈물 공격 시 확률적으로 DMG(고정) x4.0 스플래쉬 추가 (10% 고정)
+└Innocent Scroll : 사용 시 Cleaner 효과와 동일
+ -Cleaner : 일부 퍼밀리어 제거되도록 변경
+ -Metronome 2 : Bit Coin 아이템 명칭 변경
+ -Clover : Luck 7 -> 9 증가
+
+▶Chaos Greed Greedier 6.9(2)
+ -Brimstone, Technology : DMG(고정) x1.5 -> DMG(Boss) x1.5 변경
+ -Silver Bullets : DMG(Armor) x1.5 -> DMG(Boss) x1.5 변경
+ -The Ludovico Technique : DMG(Boss) x 2.0 추가
+ -Mom's Knife : DMG(Boss) x 2.0 추가
+ -Tenebrae Nus : 이미지가 비정상적인 현상 수정
+ -Abyss : 사용 횟수 5 -> 3회
+ -Scroll For Chaos, Amazing Chaos Scroll : 사용 시 마이너스가 등장하지않도록 변경
+ -League of Legends : Portal 몬스터 공격 시 30% 확률로 즉사
+ -Refined Chaos Stone Necklace : 획득 시 X-Ray Vision 추가 (Renewal)
+
+▶Chaos Greed Greedier 6.9
+ 신규 아이템 : Metronome 2(866), LIL Mimic(867), Black Whirl Wind(868), Abyss(869)
+└Metronome 2: 사용 시 DMG(고정) x1.05 증가 또는 감소
+└LIL Mimic : 사용 시 Red Chest x1 소환 (최대 6회 까지 사용할 수 있습니다.)
+└Black Whirl Wind : 사용 시 일정 확률로 세트 아이템 또는 Black Whirl Wind 소환 (세트 아이템 소환 확률 Luck1 = 10%)
+└Abyss : 사용 시 Succubus 소환 (최대 5회 까지 사용할 수 있습니다.)
+
+▶Chaos Greed Greedier 6.8(4)
+ -Tenebrae Nus : 이미지가 비정상적인 현상 수정
+
+▶Chaos Greed Greedier 6.8(3)
+ -Limiter Removal : 지속 시간 45초 -> 30초 감소 (적용되지 않던 현상 수정)
+ -Gideon : Scroll For Chaos, Amazing Chaos Scroll 획득 시 삭제되도록 변경
+
+▶Chaos Greed Greedier 6.8(2)
+ -Limiter Removal : 지속 시간 45초 -> 30초 감소
+ -Sharp Eyes : 패시브 아이템으로 변경
+ -Greed Secret : 배열이 비정상적인 현상 수정
+
+▶Chaos Greed Greedier 6.8
+ -신규 아이템 : Speed Shoes(857), Helmet LV.1(858), Helmet LV.2(859), Helmet LV.3(860), Galactic Medal Of Valor(861)
+└Speed Shoes : Speed(고정) +10.0 증가
+└Helmet LV.1 : 사용 시 피격 방어막 x 1 생성
+└Helmet LV.2 : 사용 시 피격 방어막 x 2 생성
+└Helmet LV.3 : 사용 시 피격 방어막 x 3 생성
+└Galactic Medal Of Valor : 보스 몬스터 공격 시 DMG(고정) 30% 증가, Delay -1 감소
+ -신규 레어 해제 아이템 : Tenebrae Nus
+ -Teleport 2.0 : 쿨타임 6 -> 0 감소
+
+▶Chaos Greed Greedier 6.7(4)
+ -애니메이션 이펙트 제거
+ -Spice : 획득한 아이템은 등장하지 않도록 변경
+
+▶Chaos Greed Greedier 6.7(3)
+ -Cain : Telepathy For Dummies 추가
+ -Mom's Knife : 유도 기능 제거
+ -Telepathy For Dummies : 쿨타임 2 -> 0 감소
+
+▶Chaos Greed Greedier 6.7(2)
+ -Mom's Dressing Tabel : 오브젝트의 위치를 Greed Shop 변경
+ -GreedGaper HP : 50000 -> 25000 감소
+ -League of Legends : 액티브 아이템으로 변경, Portal 몬스터 공격 시 즉사 확률 100% -> 50% 감소
+ -Refined Chaos Stone Necklace : Coins, Bombs, Keys +4 추가
+ -Delirium HP : 100000 -> 120000 증가
+ -Glass Cannon : 쿨타임 10초 -> 7.5초 감소
+
+▶Chaos Greed Greedier 6.7
+ -Moms Heart HP : 20000 -> 18000 감소
+ -It Lives HP : 120000 -> 110000 감소
+-----------------------------------
+ -Delirium HP : 80000 -> 100000 증가
+ -Ultra Greed HP : 90000 -> 120000 증가
+ -Ultra Greed Coin (Heart, Bomb, Key, Spinner) HP : 10000 -> 100000 증가
+ -Hush HP : 60000 -> 70000 증가
+ -GreedGaper HP : 500 -> 50000 증가
+ -Alt HP : 45000 -> 67500 증가
+
+▶Chaos Greed Greedier 6.6(3)
+ -모든 스테이지에 Mom's Dressing Tabel 추가
+ -Greed Basement : 10, 11, 12 웨이브의 난이도가 소폭 증가
+
+▶Chaos Greed Greedier 6.6(2)
+ -Gideon : Eden's Soul 추가 Sharp Eyes 제거
+ -신규 모드가 추가되며, 카오스 그리디어 모드와 병합
+ -Rank-Up-Magic Soul Shave Force, Rank-Up-Magic Skip Force, Rank-Up-Magic Cipher Ascension, Rank-Up-Magic Astral Force : 예열 대기시간 150초 -> 180초 증가
+ -Monolelium : 예열 대기시간 60초 추가
+
+▶Chaos Greed Greedier 6.6
+ -캐릭터 공통 : Coins 10 -> 8 감소
+ -Gideon : Sharp Eyes 추가, Holy Light 제거
+ -신규 아이템 : Sharp Eyes(855), Cherry(856)
+└Sharp Eyes : Luck 1 = DMG(고정) 5%p 증가
+└Cherry : DMG +1000 증가
+ -Dark Matter : DMG 1.0 -> 3.0 증가
+
+▶Chaos Greed Greedier 6.5(2)
+ -The Hand of Greed : DMG(고정) 25% 감소 (Renewal)
+
+▶Chaos Greed Greedier 6.5
+ -Greed Treasure : 일부 구조에서 제거 배열이 등장하던 현상 수정
+ -Glass Cannon : 쿨타임 5초 -> 10초 증가
+ -No! : 사용 시 60초 동안 No!(Trinket) 효과 적용 (Renewal)
+ -The Hand of Greed : DMG(고정) 15% 감소
+ -Delirious : 쿨타임 3 -> 4 증가
+
+▶Chaos Greed Greedier 6.4(3)
+ -Spectrum Tear : Luck 보정이 적용되지 않던 현상이 수정됩니다.
+ -Greed Error : 비정상적인 아이템이 배열되던 현상 수정 및 보상이 리뉴얼 됩니다.
+ -Pop! : 티어 플래그 : Continuum 제거됩니다.
+ -Absolute Sulfer : The Ludovico Technique 획득되지 않던 현상 수정
+
+▶Chaos Greed Greedier 6.4(2)
+ -Ring Of Ethereal Form : 패시브 아이템이던 현상 수정
+ -Chaos : 일반 배열에서 습득 불가능하도록 변경
+ -일부 제거 아이템들이 배열되던 현상 수정
+
+▶Chaos Greed Greedier 6.4
+ -Portal : Stage HP 증가됩니다.
+ -일부 스테이지 난이도가 증가됩니다.
+ -Greed Depth, Womb, Sheol : 12 웨이브 입장 시 등장하는 아이템의 종류가 추가됩니다, Cleaner 아이템이 등장하지 않던 현상이 수정됩니다.
+ -Clover, Power Bond, Limiter Removal : DMG 캐쉬가 실시간 갱신이 되지 않던 현상 수정
+ -Rank-Up-Magic Cipher Ascension : 간헐적으로 비정상적인 배열이 등장하던 현상 수정
+ -Heroes of the Storm : 획득 시 Coins +99 추가되지 않던 현상 수정
+
+▶Chaos Greed Greedier 6.3(2)
+ -일부 캐릭터, 구조, 시작아이템, 아이템 패치노트와 상이한 현상 수정 (일부 구조에서 "Spice" 등장하지않고 다른 아이템이 등장하던 현상은 Mystery Gift 대체되었으며, 추후 수정 예정)
+ -Eden : A Quarter 제거
+ -콘솔에 존재하는 일부 기능을 단축키로 사용이 가능하도록 변경 (F7은 게임 시작 및 재시작 시 On 설정되어있습니다.)
+└F3 : 무한 체력
+└F4 : DMG +40 증가
+└F7 : 몬스터 공격 시, 데미지 확인
+└F8 : 액티브 아이템 쿨타임 제거
+└F9 : Luck +50 증가
+└F10 : 몹 다이 (방 안에 존재하는 모든 몬스터 사망)
+
+▶Chaos Greed Greedier 6.3
+ -Tongue with Envy : Delay x2.0 -> x3.5 증가
+ -커스텀 아이템의 아이템 번호가 변경되며, 기존 아이템들과 분할작업 되었습니다.
+ -A Mouth-eaten Mouth : 사용 시 액티브 스위칭이 비정상적인 현상 수정
+
+▶Chaos Greed Greedier 6.2(3)
+ -Greed Basement : 초반 코인의 개수가 10 -> 1 감소됩니다.
+
+▶Chaos Greed Greedier 6.2(2)
+ -A Mouth-eaten Mouth : 사용 시 60초동안 Chaos 효과 적용, DMG(고정) 25% 감소 (Renewal)
+ -Chaos : 최종 DMG 50% 감소 패널티 적용 (이전 버전에서 적용되지 않던 현상 수정)
+ -일부 아이템, 장신구의 이미지가 부스터팩4 변경됩니다.
+
+▶Chaos Greed Greedier 6.2
+ ※부스터팩4 호환 패치로 인하여, 잦은 버그 및 문제가 발생할 수 있습니다.
+    버그 및 문제 발생시 카카오톡으로 빠른 제보해주시면 감사하겠습니다. '^'
+    P.S 이번에 새로 추가된 모든 아이템은 공식 아이템들이며, 밸런스로인하여 6.2 버전에서는     등장하지 않습니다.
+
+ -신규 아이템 : Death's List(530), Haemolacria(531), Lachryphagy(532), Trisagion(533), Schoolbag(534)
+└Death's List(P) : ①방 입장 시 임의의 몬스터 머리 위에 해골 표시가 생성됩니다. ②해골 표시를 가지고 있는 몬스터 처치 시 다른 몬스터에게 이동됩니다. ③해골 표시의 순서대로 방을 클리어했을 경우 추가 보상 or 추가 스텟이 증가합니다. ④순서대로 몬스터를 처치하지 못할 경우 해당 아이템의 효과는 종료됩니다.
+└Haemolacria(P) : ①눈물의 색상이 피의 색상으로 변경됩니다. ②바닥, 장애물, 몬스터에게 눈물 명중 시 주변에 랜덤 방향으로 눈물이 퍼집니다. ③Delay(고정) 10 증가됩니다. (기본 연사 MAX 기준) ④퍼지는 눈물의 DMG 30%~75% 적용됩니다.
+└Lachryphagy(P) : ①눈물이 시간이 지날수록 느려지며, 완전히 멈추거나 몬스터 및 지형 명중시 8개의 스플래쉬 효과가 발생합니다. ②눈물과 눈물이 서로 겹쳐질 수 있으며, 겹쳐진 눈물은 크기, DMG 증가됩니다. ③눈물이 5번이상 겹칠 시 즉시 분열됩니다. ④분열 된 눈물의 DMG는 50% 적용됩니다.
+└Trisagion(P) : ①몬스터를 관통하는 성스러운 섬광으로 공격 형태가 변경됩니다. ②섬광의 DMG 33% 적용됩니다.
+└Schoolbag(P) : ①액티브 아이템을 2개까지 소지할 수 있습니다.
+ -신규 몬스터 : Cross Grimace, Fistuloid, Gush, Soul Sucker, Tar Boy, Tube Worm
+ -일부 아이템, 부적의 이미지가 변경됩니다. (해당 패치노트 최적화 작업은 추후 진행)
+ -약 400개의 신규 방이 추가 되었습니다.
+
+▶Chaos Greed Greedier 6.1(3)
+ ●캐릭터 밸런스
+ -Chaos : Chaos 아이템이 누락된 현상 수정
+
+▶Chaos Greed Greedier 6.1(2)
+ ●신규 아이템 : Tongue with Envy(900), A Mouth-eaten Mouth(901), The Hand of Greed(902), Eye with Full of Pride(903), A Slothful Foot(904)
+└Tongue with Envy : 사용 시 60초동안 Chaos 효과 적용, Delay x2.0 증가
+└A Mouth-eaten Mouth : 사용 시 60초동안 Chaos 효과 적용, 모든 세트 아이템 제거
+└The Hand of Greed : 사용 시 60초동안 Chaos 효과 적용, 모든 픽업 제거
+└Eye with Full of Pride : 사용 시 Chaos 아이템 소환, DMG(고정) 50% 감소
+└A Slothful Foot : 사용 시 60초동안 Chaos 효과 적용, Speed(고정) -1.0 감소
+ ●아이템 밸런스
+ -Lucky Foot : Luck 2 -> Luck 3 ~ 6 변경
+
+▶Chaos Greed Greedier 6.1
+ -신규 제거 배열 아이템 : Sulfuric Acid, Explosivo, Key Bum, X-Ray Vision, Spelunker Hat, Blue Map, Dog Tooth, YO LISTEN!
+ -Rank-Up-Magic Soul Shave Force, Rank-Up-Magic Skip Force, Rank-Up-Magic Cipher Ascension, Rank-Up-Magic Astral Force : 예열 대기시간 120초 -> 150초 증가
+ -Rank-Up-Magic Soul Shave Force : A Dollar 등장 아이템 배열 추가
+ -Spice : 간헐적으로 아이템이 등장하지 않던 현상 수정
+ -Delirious : 쿨타임 2 -> 3 증가
+ -Crooked Penny, Coupon : 쿨타임 24 -> 6 감소
+ -Gambler : Car Battery 획득가능하도록 변경
+ -Chaos : 최종 DMG 50% 감소 패널티 적용
+
+▶Chaos Greed Greedier 6.0
+ -신규 제거 해제 배열 룬 : Ehwaz, Jera
+ -신규 제거 배열 아이템 : Fate, Lord of the Pit
+ -신규 아이템 : No!(812)
+└No! : 사용 시 No!(Trinket) x1 소환
+ -Keeper : 저주방 가시에 피해를 입지않도록 변경
+ -Cleaner : The Parasite, Monstro's Lung 제거 아이템 목록 추가
+ -God Head : 오라 이펙트 100% -> 50% 감소
+ -Rank-Up-Magic Soul Shave Force, Rank-Up-Magic Skip Force, Rank-Up-Magic Cipher Ascension, Rank-Up-Magic Astral Force : 예열 대기시간 120초 변경 (Renewal)
+ -Pentagram : DMG 3.0 -> 6.0 증가
+ -Little Horn : DMG(고정) x 2.0 추가, Portal 공격 시 즉사 효과 추가
+ -Angry Fly : DMG 15 -> 25 증가
+
+▶Chaos Greed Greedier 5.9(2)
+ -신규 아이템 : Trinity(811)
+└Trinity : 사용 시 해당 스테이지 천사방 확률 100% 고정, Joker x 1 소환, 사용 시 스피드(고정) 0.1, DMG(고정) 1.0, 럭 1 감소 (감소 수치는 사용시마다 복리로 증가됩니다.)
+ -일부 아이템이미지가 비정상적인 현상 수정
+ -The Small Hippo : 지속 시간 2초 -> 3초 증가, DMG 1000 -> 5000 증가
+ -Pop! : Continuum 효과 추가
+ -Sacrificial Dagger : 칼의 개수 3 -> 4 증가
+ -Spoon Bender : DMG(고정) x 1.05 추가
+ -Werry: Limit Breaker : 지속시간 120초 -> 180초 증가
+ -Fars's Golden Goblet, Rosetta Stone, Symbol Of Babylonia : 기본 발동 확률 0.5% -> 1.0% 증가
+ -The Nail : 사용 시 소울 하트 +12 추가 (Renewal)
+
+▶Chaos Greed Greedier 5.9
+ -Scroll For Chaos : 사용 시 DMG(고정) ±15 -> ±20 증가
+ -Amazing Chaos Scroll : 사용 시 DMG(고정) ±30 -> ±40 증가
+ -Rank-Up-Magic Raptor's Force : 사용 시 RUM 아이템중 1개 랜덤 적용 -> 컬렉티브 소환으로 변경, 일부 RUM 아이템이 누락된 현상 수정
+ -Rank-Up-Magic Death Double Force : Red Chest x 6 -> 8 증가
+ -Rank-Up-Magic Astral Force : 사용 시 드랍되는 테이블의 위치 개선
+
+▶Chaos Greed Greedier 5.8(3)
+ -Isaac : Daddy Longlegs 추가
+ -Maria : Joker(Card) 추가
+ -??? : 일부 아이템 획득 시 사라지던 현상 수정
+ -Gideon : Eden's Soul, Holy Light 추가
+ -The D6 : 쿨타임 12 -> 6 감소
+ -Delirious : 쿨타임 4 -> 2 감소
+ -The Pinking Shears : 쿨타임 12 -> 6 감소
+
+▶Chaos Greed Greedier 5.8(2)
+ -신규 아이템 : (325)Silver Bullets(P), (810)Scroll For Chaos(A), (805)League of Legends(P), (807)The Small Hippo(A), (808)The Small Raven(A), (809)The Small Toy(A), (996)Rank-Up-Magic Soul Shave Force(A)
+└Silver Bullets : 눈물 공격 시, 공격 당한 몬스터가 변종 또는 보스일경우 DMG(고정) x1.5 증가
+└Amazing Chaos Scroll : 사용 시 DMG(고정) ±30 증가 및 감소
+└League of Legends : 눈물 공격 시, 공격 당한 몬스터가 "Portal"(히오스)일경우 즉시 사망
+└Rank-Up-Magic Soul Shave Force : 사용 시 150 경과 후 Steam Sale, Humbleing Bundle, Counterfeit Penny 1개의 아이템 소환
+└The Small Toy : 사용 시 Tech X, Technology, Brimstone, Epic Fetus, Mom's Knife 1개의 아이템 소환
+└The Small Hippo : 사용 시 2초 동안 DMG(고정) 1000, 칼 획득 (2초후 제거됩니다.)
+└The Small Raven : 사용 시 Greed(Miniboss), Dead Bird(2~3) 소환 (해당 아이템으로 소환되는 퍼밀리어는 방 이동시에도 사라지지 않습니다.)
+ -Lost Contact : 관통 기능 추가, DMG(고정) x1.2 증가
+ -Spoon Bender : 관통 기능 추가
+ -Gemini Familiar : DMG 10 -> 20 증가
+
+▶Chaos Greed Greedier 5.8
+ -타이머 UI 비정상적인 현상 수정
+ -전체적인 보상 증가
+
+▶Chaos Greed Greedier 5.7(3)
+ -Euthanasia : 소지 시 럭 0 패널티 -> 럭 -3 변경
+ -The Book of Belial : Eye of Belial 적용되지 않던 현상 수정
+
+▶Chaos Greed Greedier 5.7(2)
+ -헤블론의 군주 세트 : Succubus x 8 추가 (Renewal)
+ -Greed Devil, Greed Angel : 일부 구조 보상 감소
+
+▶Chaos Greed Greedier 5.7
+ -타임드(시간 제한) 아이템의 UI 기능 추가
+ -신규 제거 배열 해제 아이템 : The Polaroid
+ -신규 아이템 : Monolelium(800), Scroll For Chaos(802)
+└Monolelium : 사용 시 Solium Fons, Tenebrae Nns, Lumen Basilium 1개의 컬렉티브 랜덤 소환
+└Scroll For Chaos : 사용 시 DMG(고정) ±15 증가 및 감소
+ -Dark Princes Crown : DMG(고정) 1.5 -> 1.3 감소
+
+▶Chaos Greed Greedier 5.6(2)
+ -일부 아이템들의 명칭이 상이한 현상 수정
+ -Rank-Up-Magic Astral Force : 등장되는 아이템의 개수 비중을 각각 적용하도록 변경 (2개 80%, 3개 15%, 4개 5%)
+
+▶Chaos Greed Greedier 5.6
+ -Ring Of Ethereal Form : 방어막이 무한 유지되던 현상 수정
+ -Limiter Removal : 지속 시간 30초 -> 45초 증가
+ -Rank-Up-Magic Cipher Ascension : 아이템 소환까지의 지연 시간 300초 -> 150초 감소
+ -Rank-Up-Magic Astral Force : 소환되는 세트 아이템의 개수 2 -> 2 ~ 4 증가 (확률은 각각 동일)
+ -Epic Fetus : Tiny Planet 제거
+ -Venus's Breath, Scent Of Glitter, Memory Of Water : Coins 5 -> 15 증가
+ -The Book of Belial : 소지 상태일 경우 Eye of Belial 적용, 쿨타임 3 -> 2 감소
+ -Greed Angel : 일부 구조 보상 증가
+ -lilhaunt : DMG 12 -> 20 증가
+ -Daddys Foot : DMG 25 -> 50 증가
+ -Dead Bird, Eves Bird Foot : DMG 25 (Renewal)
+ -Sprinkler, Book of Shadows : 쿨타임 12 -> 6 감소
+
+▶Chaos Greed Greedier 5.5(2)
+ -Ring Of Ethereal Form : 방어막이 방 이동시 사라지던 현상 수정, Store Credit -> Credit Card 변경
+
+▶Chaos Greed Greedier 5.5
+ -신규 아이템 : Ring Of Ethereal Form(171), Rank-Up-Magic Raptor's Force(298)
+└Ring Of Ethereal Form(A) : 사용 시 피격 방어막 3회 추가, Store Credit 추가 (피격 방어막은 Holy Mantle 특성과 동일합니다.)
+└Rank-Up-Magic Raptor's Force(A) : 사용 시 RUM 아이템중 1개 랜덤 적용 (이미 사용한 아이템이 적용될경우 어떠한 효과도 나타나지 않습니다.)
+ -Dad's Key : 쿨타임 1 -> 0 감소
+ -White Pony : 쿨타임 6 -> 4 감소
+
+▶Chaos Greed Greedier 5.4(2)
+ -Stop Watch 2 : 5분 경과 후 "Stop Watch" 추가
+ -Greed Womb : 일부 몬스터 위치 개편 (몬스터 등장 시 강제적으로 맞는 현상 수정)
+
+▶Chaos Greed Greedier 5.4
+ -신규 아이템 : Stop Watch 2(288), Rank-Up-Magic Cipher Ascension(294), Rank-Up-Magic Astral Force(295)
+└Stop Watch 2 : 사용 시 5분동안 300범위안 몬스터에게 슬로우 오라 생성
+└Rank-Up-Magic Cipher Ascension : 사용 시 5분 경과 후 레어 아이템 1개 소환
+└Rank-Up-Magic Astral Force : 사용 시 세트 아이템 2개 소환
+
+▶Chaos Greed Greedier 5.3(4)
+ -Mom's Heart : HP Max 비정상적인 현상 수정
+
+▶Chaos Greed Greedier 5.3(3)
+ -일부 아이템 버그 수정
+
+▶Chaos Greed Greedier 5.3(2)
+ -신규 아이템 : Spice
+└Spice : 사용 시 저주방 아이템 배열이 등장하며, 패널티를 받습니다. 패널티는 사용 횟수가 누적될수록 증가합니다.
+ -신규 레어 아이템 : Chaos
+ -Heroes of the Storm : 일부 아이템일 제거되지 않던 현상 수정
+ -Mom's Knife : Brimstone, Technology 배수가 적용되지 않도록 변경
+ -God Heart, Nightmare Heart : 하트 및 픽업 개수 3 -> 2 감소
+ -Greed Devil, Angel : 세트 파츠 아이템이 더 이상 등장하지 않습니다.
+
+▶Chaos Greed Greedier 5.3
+ -Greed Shop : 상점 컬렉티브 테이블에서 더 이상 Boss 배열이 등장하지 않습니다.
+ -신규 레어 해제 아이템 : D6
+ -신규 레어 아이템 : Sacrificial Dagger
+ -Lumen Basilium : 획득 시 Crown Of Light 또는 Dark Princes Crown 추가
+ -Princes Crown : DMG(고정) x 1.5 증가
+ -Cold Princess Necklace : Delay -2 -> Delay -1 감소
+ -Sacrificial Dagger : 배리어의 개수 1 -> 3 증가, DMG 15 -> 30 증가
+ -Chaos : Rank-Up-Magic Quick Chaos 패널티가 적용되지 않던 현상 수정
+ -Undefined : 쿨타임 6 -> 2 감소
+ -Brown Nugget : 쿨타임 5 -> 2.5 감소
+ -Head of Krampus : 쿨타임 4 -> 3 감소
+
+▶Chaos Greed Greedier 5.2(2)
+ -The Lost, Keeper : Judas' Shadow 획득 시 DMG(고정) x 1.5 (캐쉬 갱신이 즉시 갱신되지 않던 현상 수정)
+ -Euthanasia : 소지 시 Luck 수치 0 고정 (적용되지 않던 현상 수정)
+
+▶Chaos Greed Greedier 5.2
+ -The Lost, Keeper : Judas' Shadow 획득 시 DMG(고정) x 1.5
+ -Epic Fetus : 획득 시 Tiny Planet 추가
+ -Epic Fetus, Monstro's Lung 조합 시 DMG(고정) x2.0 감소
+ -Delirium HP : 60000 -> 80000 증가
+ -Mom's Pearls : Luck 1 -> Luck 1 ~ 4 랜덤 적용 (개별 확률은 전부 동일합니다.)
+ -Euthanasia : 소지 시 Luck 수치 0 고정
+
+▶Chaos Greed Greedier 5.1
+ -신규 레어 해제 아이템 : Tech X
+ -Tech X : 패시브 아이템으로 변경
+ -Mega Blast : DMG(고정) 100 -> 200 증가, Speed 2.0 추가
+ -Tenebrae Nus, Solium Fons, Pentagram : 오라 범위 150 변경
+ -Plunger : 오라 범위 110 -> 150 변경
+ -Lord of the Pit : BlackHearts 3 -> 6 증가, 소지 시 악마방 확률 100% 고정
+ -Fate : SoulHearts 3 -> 6 증가, 소지 시 천사방 확률 100% 고정
+ -얼음 공주의 숨결(Ice Princess Breath Set)
+└1 Set : 70  -> 75 범위내에 몬스터에게 석화 오라
+└2 Set : 100  -> 150 범위내에 몬스터에게 석화 오라
+└3 Set : 130  -> 300 범위내에 몬스터에게 석화 오라, 공격 시 100% 확률로 석화, DMG x 1.5(고정)
+
+▶Chaos Greed Greedier 5.0(3)
+ -신규 제거 배열 아이템 : Sissy Longlegs, Finger, Telekinesis, Reinforcing Machine +11, Reinforcing Machine +10
+ -Mega Blast : 일회용 액티브 아이템으로 변경, 사용 시 30초간 DMG(고정) 100 증가 (Renewal)
+
+▶Chaos Greed Greedier 5.0(2)
+ -Rank-Up-Magic Quick Chaos : 지속 시간 30초 -> 60초 증가, 획득 시 Coins 50 소환
+ -Rank-Up-Magic Death Double Force : 사용 시 Red Chest x 6, Joker(Card) 소환, 해당 스테이지 악마방 확률 100% 적용 (Renewal)
+ -Greed Devil, Greed Angel : 세트 아이템 파츠 드랍률 감소 (0.15 -> 0.05)
+ -Lumen Basilium : DMG x1.1 -> x1.4 증가
+
+▶Chaos Greed Greedier 5.0
+ -신규 아이템
+┗Rank-Up-Magic Quick Chaos : 사용 시 30초 동안 카오스 획득 30초후 카오스 제거
+┗Rank-Up-Magic Skip Force : 사용 시 Ultra Greed 스테이지로 이동
+┗Rank-Up-Magic Death Double Force : 사용 시, Ehwaz, Joker, Perthro 추가 해당 스테이지 악마방 100% 적용
+ -Greed Devil, Greed Angel : 세트 아이템 파츠 드랍률 감소 (0.25 -> 0.15)
+
+▶Chaos Greed Greedier 4.9(2)
+ -신규 제거 배열 아이템 : Box, Sharp Plug, Lil Gurdy
+ -The Peeper, GB Bug : DMG 8 -> 20 증가
+
+▶Chaos Greed Greedier 4.9
+ -최적화 패치 진행
+
+▶Chaos Greed Greedier 4.8(4)
+ -키리의 강화기, 클론터의 증폭기 명칭 변경
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : 성공 확률이 비정상적인 현상 수정
+
+▶Chaos Greed Greedier 4.8(3)
+ -Glass Cannon : 쿨타임 3초 -> 5초 증가
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : 럭 비례 확률 증가 추가
+ -??? : Delirious 추가
+
+▶Chaos Greed Greedier 4.8(2)
+ -Guppy's Collar : 1UP 제거
+ -??? : Steam Sale 제거
+ -Scent Of Glitter : Luck 6 -> 4 감소
+
+▶Chaos Greed Greedier 4.8
+ -캐릭터 공통 : Coins 15 -> 10 감소
+ -Eden : 간헐적으로 캐릭터 이미지가 비정상적이던 현상 수정
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : 성공 확률 0.5% 고정
+ -Guppy's Collar : 1UP(Calling), Coins +15 추가
+
+▶Chaos Greed Greedier 4.7(2)
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : 사용시 일정 확률(1%+Luck)로 효과 적용, 액티브 아이템으로 변경
+ -신규 아이템 : 키리의 강화기, 클론터의 증폭기
+└키리의 강화기 : 50%+Luck1=1% 확률로 DMG +5 증가, 일회용 액티브
+└클론터의 증폭기 : 50%+Luck1=1% 확률로 DMG +10 증가, 실패시 DMG -10감소, 일회용 액티브
+ -Jesus Juice, MEAT! : DMG 1.5 -> 3.0 증가
+ -Pyromaniac : Mr. Mega, Bobby-Bomb, Bob's Curse, Sad Bombs, Hot Bombs, Bomber Boy, Sticky Bombs, Fast Bombs(Calling)
+ -Solium Fons : 300 범위안 몬스터에게 참 오라 생성
+ -Tenebrae Nus : 300 범위안 몬스터에게 슬로우 오라 생성, Cancer(Calling)
+ -Lumen Basilium : DMG x1.6 -> DMG x1.1 감소
+ -Ultra Greed HP : 70000 -> 90000 증가
+ -Ultra Greedier HP : 70000 -> 120000 증가
+
+▶Chaos Greed Greedier 4.7
+ -얼음 공주의 숨결 세트 : 일부 효과들이 미적용되던 현상 수정
+ -일부 캐릭터 이미지 및 퍼밀리어 이미지가 비정상적인 현상 수정 (해당 이미지는 최적화시 발생한 문제이며, 게임을 진행하는데 실질적은 문제는 없으며, 추후 하나하나씩 수정할 예정)
+
+▶Chaos Greed Greedier 4.6(3)
+ -Memory Of Water, Scent Of Glitter, Venus's Breath : Coins +5 추가
+ -Apathetic Princess Bracelet, Cold Princess Necklace : SoulHearts +3 추가
+ -얼음 공주의 숨결 세트 : DMG x1.5 추가
+
+▶Chaos Greed Greedier 4.6(2)
+ -최적화 패치 진행 완료 (방 이동시 렉, 몬스터 소환시 렉 최적화)
+ -Ultra Greed HP : 40000 -> 70000 증가
+ -Ultra Greedier HP : 70000 -> 100000 증가
+ -Delirium HP : 70000 -> 60000 감소
+ -Alt HP : 45000 -> 40000 감소
+
+▶Chaos Greed Greedier 4.6
+ -Limiter Removal : 지속 시간 20초 -> 30초 증가
+ -Heroes of the Storm : 일부 아이템에 패널티가 적용되지 않던 현상 수정
+ -Refined Chaos Stone Necklace : Coins, Bombs, Keys 5 -> 4 감소
+ -Skelly, Blood Turret, Satan, Satan Stomp, Error HP : 150000 -> 300000 증가
+
+▶Chaos Greed Greedier 4.5(4)
+ -캐릭터 공통 : Bombs 2 -> 1 감소
+ -Greed Womb : 난이도 소폭 하향
+ -Moms Heart HP : 12000 -> 11000 감소
+ -It Lives HP : 20000 -> 18000 증가
+ -The Lamb HP : 25000 -> 22000 감소
+ -Isaac HP : 15000 -> 13000 감소
+ -??? HP : 20000 -> 18000 감소
+ -Hush HP : 55000 -> 60000 증가
+ -Skelly, Blood Turret, Satan, Satan Stomp, Error HP : 150000 (Renewal)
+
+▶Chaos Greed Greedier 4.5(3)
+ -캐릭터 공통 : Bombs +2 추가
+ -8 Inch Nails : DMG 1.5 -> 3.0 증가
+ -Greed Devil : 레어 아이템 비중 소폭 증가 0.3 -> 0.51 (16.15% 증가)
+ -Greed Shop : 신규 구조 1종 추가
+
+▶Chaos Greed Greedier 4.5(2)
+ -전체적인 기본 보상 대폭 감소
+ -Solium Fons : DMG x1.05 -> x1.1 증가
+ -Werry: Limit Breaker : 지속시간 90초 -> 120초 증가
+ -얼음 공주의 숨결(Ice Princess Breath Set)
+└1 Set : 60  -> 70범위내에 몬스터에게 석화 오라
+└2 Set : 90  -> 100범위내에 몬스터에게 석화 오라
+└3 Set : 120  -> 130 범위내에 몬스터에게 석화 오라, 공격시 100% 확률로 석화
+ -Plunger : 오라 범위 100 -> 110 증가
+ -일부 세트 아이템 배열이 비정상적이던 현상 수정
+ -Leech : DMG 15 -> 10 감소
+ -Gemini Familiar : DMG 16 -> 10 감소
+ -lilhaunt : DMG 20 -> 12 감소
+ -Daddys Foot : DMG 50 -> 25 감소
+ -Moms Heart HP : 6000 -> 12000 증가
+ -It Lives HP : 10000 -> 20000 증가
+ -Ultra Greed HP : 32000 -> 40000 증가
+ -Ultra Greedier HP : 60000 -> 70000 증가
+
+▶Chaos Greed Greedier 4.5
+ -신규 레어 아이템 : Spectrum Tear
+ -신규 아이템 : 플런저(Plunger), 크럭스 오브 빅토리아(Crux Of Victoria), 슬롯 머신(Slot Machine)
+└Plunger : 범위 100 이내에 몬스터들에게 스텟 DMG 100%의 독 상태이상 발생
+└Crux Of Victoria : 거래 유무 상관없이 해당 스테이지 천사방 확률 100% 고정, 30초동안 DMG +20 증가, Joker(Card) 추가, 일회용 액티브
+└Slot Machine : 5% 확률로 Coins +99 or 15% 확률로 사망 or 80% 확률로 Coins +30, 일회용 액티브
+└Apathetic Princess Bracelet(27) : DMG +5
+└Cold Princess Necklace(28) : Delay -2
+└Cold Princess Ring(32) : SoulHearts +6
+ -신규 세트 아이템 : 얼음 공주의 숨결(Ice Princess Breath Set)
+└1 Set : 60 범위내에 몬스터에게 석화 오라
+└2 Set : 90 범위내에 몬스터에게 석화 오라
+└3 Set : 120 범위내에 몬스터에게 석화 오라, 공격시 100% 확률로 석화
+ -Rubber Cement, God Head : 소지시 럭 0 으로 고정
+ -Holy Light : 획득시 Luck -3 감소
+ -Sack of Pennies : 획득 시 Coins +10 추가
+ -The Small Rock : DMG 1 -> 5 증가, 스피드 패널티 제거
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : DMG x1.3 -> x1.2 감소
+ -Lumen Basilium : DMG x1.8 -> x1.6 감소
+ -Mom's Knife : 유도 기능 추가
+ -Brimstone, Technology : DMG x1.5 추가, 레이저와 혈사포의 개수 2 -> 1감소
+ -Solium Fons : DMG x1.05 추가, 오라 제거
+ -Tenebrae Nns : 오라 제거
+ -Pentagram : Fear 오라 추가, 범위 300
+ -Restock Machine : 소환되는 오브젝트 1 -> 2 증가
+ -Dog Tooth : DMG 0.3 -> 1.5 증가
+ -Lusty Blood : DMG x 1.1 추가
+ -Dog Tooth : Bombs 3 -> 5 증가
+ -Werry: Limit Breaker : 지속시간 60초 -> 90초 증가
+ -The Soul : SoulHearts 2 -> 3 증가
+ -Synthoil : DMG 1 -> 2 증가
+ -Brionac : DMG 5 -> 3 감소
+ -Big Fan : 배리어의 개수 1 -> 3 증가
+
+▶Chaos Greed Greedier 4.4
+ -캐릭터 공통 : Coins 20 -> 15 감소
+ -전체적인 Black Rune 개수 대폭 감소
+ -Limiter Removal : 패널티 제거
+ -Leech, Haunt : DMG 100% 증가, 개수 2 -> 1 감소
+ -Greed Devil : 보상 대폭 감소
+ -Error : Beggar(일반거지), Cleaner 추가
+ -Heroes of the Storm : Keys, Bombs 패널티 제거
+ -Ultra Greed(Stage) : Cleaner 제거
+ -Ultra Greed(MiniBoss) : 신규 보스 2종 추가
+ -Satan HP : 45000 -> 50000 증가 (11% 증가)
+ -Satan Stomp HP : 40000 -> 50000 (25%증가)
+
+▶Chaos Greed Greedier 4.3
+ -Greed Error : 전체적인 구조 리뉴얼
+└Random Collectible x2, Forget Me Now, Trap Door, Random Set Part 총 4가지 존재합니다.
+ -Ultra Greed : Cleaner 추가
+ -Greed Depth Boss Wave(Hard) : Cleaner 추가
+ -신규 제거 배열 해제 아이템 : Death's Touch
+ -신규 레어 배열 해제 아이템 : Book of Shadows, Cricket's Body
+ -신규 제거 배열 카드 : The Hanged Man, Ace of Hearts
+ -신규 제거 배열 알약 : I Found Pills, Puberty
+ -신규 제거 배열 룬 : Blank Rune
+ -Book of Shadows : 쿨타임 6 -> 12 증가
+ -Lucky Foot : Luck 5 -> 2 감소
+ -Death's Touch : Rubber Cement Tear Flag 적용, Delay +10 증가, Shot Speed +3 증가
+ -Power Bond : 패널티 제거
+ -Satan HP : 45000 -> 67500 증가 (50% 증가)
+ -Satan Stomp HP : 40000 -> 60000 증가 (50% 증가)
+ -Ultra Greed HP : 16000 -> 32000 증가 (100% 증가)
+ -Ultra Greedier HP : 50000 -> 60000 증가 (20% 증가)
+
+▶Chaos Greed Greedier 4.2(2)
+ -??? : Nightmare Heart, Delirious 제거
+ -Greed Treasure : 보상 소폭 감소
+ -Greed Devil : 보상 소폭 감소, 특정 구조 비중 감소
+ -Greed Shop : 특정 구조 비중 감소
+ -Greed Curse : 특정 구조 비중 감소
+ -Item Dungeon : Ehwaz 제거
+ -신규 제거 배열 룬 : Ehwaz
+ -The Lamb HP : 20000 -> 25000 증가
+
+▶Chaos Greed Greedier 4.2
+ -??? : Steam Sale 추가, Humbleing Bundle , Counterfeit Penny(Trinket) 획득시 제거
+ -Venus's Breath : DMG 3 -> 6 증가
+ -Scent Of Glitter : Luck 3 -> 6 증가
+ -Memory Of Water : Speed 0.6 -> 2.0 증가
+ -Refined Chaos Stone Necklace : Coins, Bombs, Keys 2 -> 5 증가
+ -Solium Fons : Eden's Blessing 1 -> 2개 추가(Calling), 공격시 100% 참티어효과 -> 캐릭터 오라로 변경
+ -Tenebrae Nus : 공격시 100% 피어효과 -> 캐릭터 오라로 변경
+ -Humbleing Bundle : Coins, Bombs, Keys 획득시 0개로 감소하던 패널티 제거
+ -Key Piece 1,2 : Keys 2-> 4 증가, 황금방 및 상점에서 배열되지 않도록 변경
+ -The Lamb HP : 30000 -> 20000 감소
+ -Lamb Body HP : 10000 -> 15000 증가
+ -Hush HP : 45000 -> 55000 증가
+ -Greed Angel : 레어 아이템 비중 2.0 -> 2.5 증가 (25%증가)
+ -Smart Fly : 2.4 패치에서 DMG 증가 패치가 적용되지 않던 현상 수정 (1.5 -> 4)
+
+▶Chaos Greed Greedier 4.1(2)
+ -Error : 특정 구조에서 Trap Door 등장하지 않던 현상 수정
+
+▶Chaos Greed Greedier 4.1
+ -Error : Trap Door 추가
+ -Greed Arcade : 일반 거지가 등장하는 모든 구조 제거
+ -신규 레어 해제 아이템 : Mega Blast, Empty Vessel, Sinus Infection
+ -Pop! : 액티브 아이템으로 변경
+ -Pyro : Bombs 20 -> 30 증가
+ -Skeleton Key : Keys 10 -> 30 증가
+ -Lumen Basilium : DMG x1.5 -> x1.8 증가
+ -Refined Destructive Magic Stone Bracelet : 20/20(Calling)
+ -Werry: Limit Breaker : 지속시간 13초 -> 60초 증가
+ -Power Bond : 지속시간 13초 -> 30초 증가
+ -Limiter Removal : 지속시간 13초 -> 20초 증가
+
+▶Chaos Greed Greedier 4.0(2)
+ -신규 제거 배열 아이템 : Multidimensional Baby
+ -Greed Shop, Greed Treasure : 최적화 및 난이도 조정
+ -Greed Devil, Angel : 최적화 및 보상 증가
+ -Lusty Blood : 배열이 비정상적이던 현상 수정
+ -신규 세트 아이템 : "타락의 칠죄종" 추가
+
+▶Chaos Greed Greedier 4.0
+ -신규 아이템 : Runtime Error!(421) : 사용시 에러방으로 이동, 액티브, 1회용
+ -Greed Shop : 특정 구조가 비정상적으로 등장하던 현상 수정
+
+▶Chaos Greed Greedier 3.9(2)
+ -Pentagram, Lusty Blood : 기본 배열로 등장하던 현상 수정
+ -신규 제거 배열 아이템 : Head of the Keeper
+ -신규 부스터팩3 아이템 추가
+└7 Seals(526) : 사용시 묵시록의 기사중 한마리를 랜덤 소환, 패시브
+└Mr. Me!(527) : 목표에 따라 다양한 작업을 수행 가능한 유령 소환, 액티브
+└Angelic Prism(528) : 캐릭터 주변을 자전하는 각기둥 소환. 캐릭터의 공격과 각기둥이 겹치는 상태에서 추가 공격, 퍼밀리어
+└Pop!(529) : 눈물의 생존시간 증가, 패시브
+ -Mr. ME! : 쿨타임 4 -> 12 증가
+ -Black Candle : BlackHearts 3.5 -> 4 증가
+ -Sharp Straw : 쿨타임 10초 -> 5초 감소
+ -Heroes of the Storm : 일부 세트 아이템을 제거하지 못하던 현상 수정
+ -Red Candle : 쿨타임 2초 -> 1.33초 감소
+ -Greed Angel : 보상 감소, 확률 및 레어 아이템 배열 확률 증가 (20%)
+
+▶Chaos Greed Greedier 3.9
+ -Power Bond : 일부 아이템들 제거하지 못하는 현상 수정
+ -신규 부스터팩3 아이템 4종, 장신구 1종 추가 (신규 아이템은 현재 버전에서는 등장하지 않습니다.)
+ -Eden : 신규 헤어스타일 추가
+ -Forget Me : 차지바 제거
+
+▶Chaos Greed Greedier 3.8(2)
+ -Greed Treasure : 신규 구조 추가
+ -Greed Shop : 신규 구조 추가
+ -일부 방 입장시 비정상적이던 현상 수정
+
+▶Chaos Greed Greedier 3.8
+ -Chaos : Pageant Boy 제거
+ -Greed Curse : Pentagram, Lusty Blood 배열 추가
+ -신규 세트 아이템 : Rust Set : Bloody Lust 추가
+└Pentagram : DMG 1 -> 3 증가, SoulHearts +1 -> -0 감소
+└Lusty Blood : DMG 2.3
+ -신규 제거 배열 해제 카드 : XX - Judgement
+ -A Dollar : Keys, Bombs 0개가 되던 패널티 제거
+ -Black Candle : Blackhearts 1 -> 3.5 증가
+ -It Lives HP : 8000 -> 10000 증가
+ -Moms Heart HP : 4000 -> 6000 증가
+
+▶Chaos Greed Greedier 3.7(3)
+ -Larval Therapy : DMG 4.0 -> 2.0 감소, 필요 Luck 수치 14 -> 18 증가
+ -Lusty Blood : 아이템 획득시 Bloody Lust 지급되던 현상 수정
+
+▶Chaos Greed Greedier 3.7(2)
+ -Lumen Basilium : 스텟 캐시가 실시간 적용되지 않던 현상 수정
+
+▶Chaos Greed Greedier 3.7
+ -Technology Zero : 이미지가 비정상적이던 현상 수정
+ -Lusty Blood, Samson's Lock(Trinket) 소지시 Bloody Lust(Calling)
+ -신규 제거 배열 해제 부적 : Counterfeit Penny
+ -Lumen Basilium : DMG 2.0 -> 1.5 감소
+ -Mom's Knife : 패시브 아이템으로 변경
+
+▶Chaos Greed Greedier 3.6(2)
+ -XX - Judgement : Greed Mode 등장하지 않도록 변경
+ -Chaos Card : 이미지를 쉽게 구분 가능하도록 변경
+
+▶Chaos Greed Greedier 3.6
+ -Bomb Bum -> Beggar 변경
+ -Beggar : Greed Angel 배열이 동일하도록 변경
+ -Spectrum Tear : 활성화 상태시 럭 수치 0 고정
+ -일부 구조 구조 완화 및 편의성 개편
+
+▶Chaos Greed Greedier 3.5
+ -Explosivo : 아이템이 비정상적이던 현상 수정
+ -Larval therapy : 눈물 공격시에만 나오도록 변경
+ -신규 레어 아이템 : Blank Card
+
+▶Chaos Greed Greedier 3.4(3)
+ -Samael : 폭주 모드 기본 쿨타임 9.3초 -> 13초 증가
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : DMG x1.2 -> x1.3 증가
+
+▶Chaos Greed Greedier 3.4(2)
+ -Greed Angel : 보상 소폭 증가
+ -Keeper : The Hourglass -> Coupon 변경
+ -퍼밀리어들의 DMG 수치와 패치노트의 수치가 상이한 현상 수정
+ -신규 아이템 : Restock Machine(19),  Chaos Card(20)
+└Restock Machine(19) : 사용시 Restock Machine 오브젝트 소환, 액티브, 일회용
+└Chaos Card(20) : 사용시 Chaos Card 1개 소환, 액티브, 일회용
+ -신규 제거 배열 해제 아이템 : Blank Card(286), Technology Zero(524)
+ -Technology Zero : 액티브 아이템으로 변경
+ -Blank Card : 쿨타임 4 -> 100 증가
+ -Samael : Succubus 사용 불가
+
+▶Chaos Greed Greedier 3.4
+ -Larval Therapy : 조합에 상관없이 거미가 등장하도록 변경 (진짜 저는 멍농이입니다. 또 실수해서 잘못 올렸네요. 이번엔 확실하게 거미 나옵니다. ㅠㅠ)
+  -Absolute Gravity : Werry: Limit Breaker 무한 지급되던 현상 수정
+
+▶Chaos Greed Greedier 3.3(2)
+ -Larval Therapy : 조합에 상관없이 거미가 등장하도록 변경 (3.3에서 적용되지 않던 현상 수정)
+ -Werry: Limit Breaker, Power Bond, Limiter Removal : 특정 상황시 아이템이 강제적으로 발동되던 현상 수정
+ -Lil Haunt : DMG 7 -> 10 증가
+ -Little Chubby, Big Chubby : DMG 20 -> 30 증가
+ -Daddys Foot : DMG 30 -> 50 증가
+ -Gemini Familiar : DMG 12 -> 16 증가
+
+▶Chaos Greed Greedier 3.3
+ -Greed Shop(Stage) : 허쉬 웨이브에서 진행이 불가능한 현상 수정
+ -Coupon : 이미지가 비정상적이던 현상 수정
+ -Sulfuric Acid : DMG 0.3 -> 0.9 증가
+ -Larval Therapy : 조합에 상관없이 거미가 등장하도록 변경
+ -신규 아이템 : 웨리 : 리미트 브레이커(Werry: Limit Breaker), 파워 본드(Power Bond), 리미터 해제(Limiter Removal)
+└Werry: Limit Breaker : 사용 시 13초 동안 DMG +30 (Independence) 증가, 액티브, 일회용
+└Power Bond : 사용 시 13초 동안 DMG x 2.0 증가, 13.01초후 획득한 모든 아이템 제거, 액티브, 일회용
+└Limiter Removal : 사용 시 13초 동안 DMG x 2.0 증가, 13.01초후 Cleaner(Calling), 액티브, 일회용
+ 
+▶Chaos Greed Greedier 3.2(3)
+ -Greed Womb : 일부 웨이브 난이도 감소
+ -아이템던전 입장시 블랙마켓 확률 대폭 증가
+ -Ultra Greed(Stage) : 구조 간편화 진행
+
+▶Chaos Greed Greedier 3.2(2)
+ -Greed Shop : 보상 대폭 감소
+
+▶Chaos Greed Greedier 3.2
+ -Keeper : The Hourglass 추가, Piggy Bank, Swallowed Penny 획득시 제거
+ -??? : Nightmare Heart 추가, Brown Nugget -> Delirious 변경
+ -신규 제거 배열 아이템: Technology Zero
+ -신규 제거 배열 해제 아이템 : Guppy's Tail, Blood Rights, Coupon
+ -신규 레어 아이템 : Rubber Cement
+ -신규 레어 해제 아이템 : Epic Fetus, Gnawed Leaf
+ -Cleaner : Tiny Planet 제거 아이템 추가
+ -Crooked Penny : 쿨타임 6 -> 24 증가
+ -Coupon : 쿨타임 12 -> 24 증가
+ -Guppy's Tail : Coins +25, Keys -99
+ -Maw Of The Void : DMG 1 -> 5 증가
+ -Pay To Play : Coins +5 -> +15 증가
+ -신규 세트 아이템 : 초고대문명 세트 : Sacred Heart 추가
+ -Symbol Of Babylonia, Fars's Golden Goblet, Rosetta Stone : DMG 1.4 -> 1.2 변경, 단일 효과 전부 제거, 패시브 아이템으로 변경
+ -Ultra Greedier : 45000 -> 50000 증가 (11%증가)
+ -Hush : 30000 -> 45000 증가 (50% 증가)
+ -Alt : 60000 -> 45000 감소 (25% 감소)
+ -Satan : 30000 -> 45000 증가 (50% 증가)
+ -Satan Stomp : 24000 -> 40000 증가 (66% 증가)
+
+▶Chaos Greed Greedier 3.1(2)
+ -Ultra Greed(Stage) : 스타트룸 구조 완화 (보상 획득이 더 쉬워집니다.)
+ -The Shop(Stage) : 11웨이브 보스 몬스터가 비정상적이던 현상 수정
+ -The Shop : Lil Battery -> Red Chest 변경
+ -The Pact : DMG 0.5 -> 5.0 증가, SoulHearts -2 감소
+ -The Mark : DMG 1 -> 10증가, SoulHearts -1 감소
+ -신규 레어 아이템 : Absolute Leviathan
+ -Eden's Soul : 쿨타임 6 -> 0 감소, 악마 기본 배열로 변경 (더 이상 황금방 및 상점에서 드랍되지 않습니다.)
+ -Delirious : 쿨타임 6 -> 4 감소
+
+▶Chaos Greed Greedier 3.1
+ -The Depths : 일부 웨이브 난이도 하향
+ -일부 아이템 이미지가 비정상적이던 현상 수정
+ -The Shop(Stage) : 11웨이브 보스 몬스터가 등장하지 않던 현상 수정
+ -The Hourglass : 지속시간 20초 -> 6초 감소 (Stop Water 동일합니다.)
+ -신규 레어 해제 아이템 : Jacob's Ladder, Rubber Cement
+
+▶Chaos Greed Greedier 3.0(4)
+ -Larval Therapy : DMG x0.066 -> x4 변경, 확률 30% -> Luck14 = 100%
+ -Steven : DMG 1 -> 2 증가
+ -Blood of the Martyr : 획득시 Eye of Belial(Calling)
+ -Bum Friend : Coins +99, Bombs, Keys -99
+ -Key Bum : Keys +5
+ -The Hourglass : 지속시간 7.6 -> 20 증가, Speed +2.0
+ -신규 제거 배열 해제 아이템 : The Hourglass, Bum Friend, Key Bum
+ -신규 보스 : Conscivit 추가
+ -획득전 아이템의 배열 및 효과 확인 가능 (아이템 주변에 가면 텍스트가 뜨는 기능은 현재 기본 아이템으로 설정되어 있으며, 추후 카그리디어 모드 기준으로 변경할 예정 입니다.)
+
+▶Chaos Greed Greedier 3.0(3)
+ -Greed Devil, Angel : Black Rune 추가
+ -Greed Depths : 난이도 대폭 감소
+ -Car Battery : 겜블러 이외에 캐릭터가 획득시에도 제거되던 현상 수정
+ -Lord of the Pit : Speed 0.3 추가
+ -Keeper, Samael, The Heretic : Clicker, Ankh, Judas' Shadow, Lazarus' Rags, Missing Poster(Trinket), Broken Ankh(Trinket) 획득시 제거
+ -Cone Head : Soulhearts 1 -> 3 증가
+ -Clover : Luck 14 -> 7 감소
+ -Fire Place : 피격 DMG 1 -> 0.5 변경
+ -God Heart, Nightmare Heart : 하트 및 픽업 개수 2 -> 3 증가
+
+▶Chaos Greed Greedier 3.0(2)
+ -Binky : 액티브 아이템이던 현상 수정
+
+▶Chaos Greed Greedier 3.0
+ -Samael : Black Hole 추가
+ -Greed Shop(Stage) : Perthro 추가
+ -신규 레어 배열 해제 아이템 : Absolute Inzektor
+ -Mom's Razor, Lil' Brimstone : 획득시 x3 추가
+ -신규 아이템 : Clover
+└Clover : Luck +14 증가, 액티브
+ -신규 캐릭터 : Gambler
+└Gambler : Crooked Penny 기본 아이템이며, 도박 컨셉을 가진 캐릭터 입니다. 또한 기본 운영 아이템과 시너지가 대폭 발생하는 Car Battery 획득시 제거 됩니다.
+ -Hush, Satan, Ultra Greed, Ultra Greedier : HP Max 대폭 증가
+
+▶Chaos Greed Greedier 2.9(2)
+ -일부 웨이브 난이도 하향
+ -일부 세트 파츠 아이템이 황금방 및 상점에서 등장하던 현상 수정
+ -일부 아이템들 이미지 스킨 올바르게 수정
+ -CAT-O-NINE-TAILS : DMG 1 -> 2 증가
+ -신규 제거 배열 아이템 : Fruit Cake
+
+▶Chaos Greed Greedier 2.9
+ -스테이지 공통 : 웨이브 추가 확장
+ -Greed Angel : 레어 아이템 등장 확률 증가 (약66%)
+ -캐릭터 공통 : HP Max +1 증가
+ -신규 아이템 : RAINBOW SPUN
+└RAINBOW SPUN : 공격시 100% 확률로 다수의 상태이상 적용
+ -신규 세트 아이템 : 타천사 : Chaos 추가
+└Lord Of Fit : BlackHearts +3
+└Fate : Eternal, SoulHearts +2.5
+ -Samael : Spear Of Destiny, Lusty Blood 폭주 단축키 Alt -> V 변경 (폭주 모드의 단축키는 추후 유저들이 직접 원하는키로 변경할 수 있도록 지원할 예정입니다.)
+└Isaac 처치시 등장하는 애니메이션 제거
+ -신규 레어 아이템 : Tenebrae Nns
+ -신규 레어 해제 아이템 : Absolute Inzektor, Lost Contact
+ -Larval Therapy : 공격시 유충 소환 확률 100% -> 30% 감소
+ -Adrenaline Shock : SoulHearts -3 -> -6 감소, DMG 5 -> 10 증가
+ -Solium Fons : 획득시 Eden's Blessing 추가
+ -Tenebrae Nus : 획득시 Incubus 추가
+ -3신기 아이템 개편 : DMG x1.5 -> x1.4 감소
+└Symbol Of Babylonia : Luck +3 추가
+└Fars's Golden Goblet : Speed 0.6, Range +6 추가
+└Rosetta Stone : DMG (Independence) +3 추가
+ -Satan, Satan Stomp, Hush : HP Max 증가
+
+▶Chaos Greed Greedier 2.8(3)
+ -메인화면 버전이 비정상적이던 현상 수정
+
+▶Chaos Greed Greedier 2.8(2)
+ -Samael : 스타트 카드가 존재하지 않던 현상 수정
+ -Greed Treasure : 보상 소폭 감소
+
+▶Chaos Greed Greedier 2.8
+ -Samael : Backpack 추가, 폭주  단축키 "Left Alt" 변경
+ -보스 몬스터, 몬스터 이미지 롤백
+
+▶Chaos Greed Greedier 2.7(3)
+ -2.7(3) 이후 추가된것들이 많아 버그 및 오류가 많습니다. 카카오톡으로 제보 부탁드립니다.
+ -신규 캐릭터 사마엘(Samael) 추가
+└낫을 이용하는 근접 캐릭터
+ -신규 아이템 라이트샷(LightShot) 추가
+└갓헤드와 비슷한 오라형 눈물
+ -몬스터들의 HP 상태가 비정상적이던 현상 수정
+ -일부 오브젝트 파괴시 오류가 발생하여 게임이 팅기던 현상 수정
+ -일부 몬스터 처치시 오류가 발생하여 게임이 팅기던 현상 수정
+
+▶Chaos Greed Greedier 2.7(2)
+ -신규 제거 배열 아이템 : The Battery
+ -신규 레어 아이템 : Absolute Inzektor
+ -신규 레어 해제 아이템 : Maw Of The Void
+ -퍼밀리어 DMG 비정상적이던 현상 수정
+ -몬스터 처치시 발생하는 잔해량 전부 제거
+ -보스 몬스터와 델라니움 몬스터 색상 구분할 수 있도록 변경
+
+▶Chaos Greed Greedier 2.7
+ -The Heretic : Glass Cannon 추가, Book Of Shadows 제거
+ -Greed Shop : 상점 판매 아이템 소폭 감소 (신규 부스터팩 아이템과의 충돌로 인한 수정)
+ -미니맵 이미지가 비정상적이던 현상 수정
+ -Greed Error : : Forget Me 추가, 트랩도어 제거
+ -하드 모드 전투방 입장 및 진행이 불가능하던 현상 수정
+ -신규 부스터팩2 5종 추가
+└신규 아이템은 전부 황금방&상점 기본 배열로 설정
+ -신규 제거 배열 아이템 : Coupon (현재 특정방 입장시 튕기는 오류가 존재합니다.)
+ -Book of Shadows : 쿨타임 8 -> 6 감소
+ -Sprinkles : 쿨타임 10 -> 12 증가
+ -Glass Cannon : 쿨타임 3.6초 -> 3초 감소
+ -Red Chest, Greed Curse : 일부 세트 파츠 아이템 제거
+ -신규 오브젝트 폭탄 거지 추가
+└Bomb Bum : 천사방과 배열이 동일
+
+▶Chaos Greed Greedier 2.6(4)
+ -일부 액티브 아이템 스위칭 후 바로 적용가능하도록 변경
+ -신규 제거 배열 해제 아이템: Eden's Blessing
+ -Absolute Gravity : Eden's Blessing x 3-> Torn Photo, The Sad Onion, Wire Coat Hanger 획득
+ -Absolute Inzektor : Larval Therapy 추가
+ -Spelunker Hat : Bombs +3 추가
+ -Eden's Blessing 효과가 적용되지 않던 현상 수정
+ -일부 몬스터 이미지를 변종 확인이 가능하도록 변경
+ -크람푸스방 보상 소폭 증가
+
+▶Chaos Greed Greedier 2.6(3)
+ -천사방 아이템 획득시 나머지 아이템 전부 제거 :: More Option 효과와 동일 (공식 패치이며 그에따라 천사방의 보상이 증가됩니다.)
+ -구토제(Ipecac), 리드 연필(Lead Pencil) 조합시 강제적으로 피격되던 현상 수정
+ -Angry Fly : Beelzebub 세트의 새로운 파츠
+ -Azazel : Tech X 획득시 공격 우선순위가 아자젤의 기본 혈사가 아닌 테크X 적용되도록 변경
+ -Greed Angel : 보상 소폭 증가
+ -Fast Bombs : 이미지 확인이 불가능하던 현상 수정
+ -일회용 액티브 아이템을 무한적으로 사용할 수 있던 현상 수정
+
+▶Chaos Greed Greedier 2.6(2)
+ -캐릭터 공통 : The Hermit(Card), The Stars(Card) 추가
+ (!)부스터팩 패치는 모드 패치가 아닌 공식 패치 입니다. (부스터팩 2 아이템은 2.6(3) 업데이트 됩니다.)
+ -신규 부스터팩 아이템 : Jumper Cables(520), Coupon(521), Telekinesis(522), Moving Box(523), Technology Zero(524), Leprosy(525) 추가
+└Jumper Cables : 몬스터 15마리 처치시마다 액티브 아이템 차지 +1 증가
+└Coupon : 사용시 100% 확률로 무작위한 거래 아이템에 코인값 및 지불 하트 제거
+└Telekinesis : 사용시 2초동안 모든 발사눈물 반사효과
+└Moving Box : 사용시 컬렉티브, 픽업을 전부 흡수 후, 두번째 발동시 흡수한 아이템 소환
+└Tech Zero : 공격시 눈물과 눈물 사이에 레이저 추가
+└Leprosy : 피격시 미트와 동일한 배리어 생성, 3회까지 눈물 배리어 효과
+ -신규 부스터팩 장신구 : Filigree Feather(123)
+└Filigree Feather : 천사방의 석상 파괴후 나오는 몬스터 처치후 키피스가 아닌 천사방 배열의 아이템 등장
+ -천사방의 구조 추가 및 보상 증가 (모드에서는 적용되지 않는 사항입니다.)
+ -전투방 웨이브마다 액티브 아이템의 차지 충전
+ -폭탄의 외형이미지가 좀 더 구분하기 쉽도록 변경
+ -코스튬 외형이미지 최적화
+ -럭 아이템들의 최대 수치 확인 가능
+ -백팩 아이템 오류 수정
+ -모든 몬스터 스킨 이미지 변경
+
+▶Chaos Greed Greedier 2.6
+ -하드 모드 플레이가 가능해집니다.
+└하드 모드는 기본적으로 그리드 모드와 배열이 동일합니다. (밸런싱은 추후 정기적으로 진행됩니다.)
+ -캐릭터 공통 : Backpack(스위칭박스), The Stars(Card) 추가
+ -신규 아이템 : Backpack(스위칭박스)
+└Backpack(스위칭박스) : 액티브 아이템 2개 소지 가능, L Shift 사용시 변경, 현재 가지고 있는 아이템의 효과만 적용, 쿨타임 공유 X
+ -퍼밀리어 아이템 획득시 부설명에서 DMG 정보 확인 가능
+ -Milk! : 아이템이 등장되지 않던 현상 수정
+ -Delirious : 쿨타임 8 -> 6 감소
+
+▶Chaos Greed Greedier 2.5(4)
+ -캐릭터 공통 : Zip Capsule(Card) 추가
+ -신규 카드 : Zip Capsule
+└Zip Capsule : 사용시 액티브 아이템 스위칭 가능
+
+▶Chaos Greed Greedier 2.5(3)
+ -신규 아이템 : Larval Therapy
+└Larval Therapy : 공격시 파리 소환 (눈물 0.06, 테크0.2, 칼0.1)
+ -Chiggers : Chemical Peel 2 명칭 변경
+ -Samson : Tractor Beam, The Wiz 제거
+
+▶Chaos Greed Greedier 2.5(2)
+ -캐릭터 공통 : Coins 30 -> 20 감소
+ -Heroes of the Storm : Bombs -99, Keys -99
+
+▶Chaos Greed Greedier 2.5
+ -Refined Destructive Magic Stone Bracelet : 20/20(Calling) 제거
+ -Eden's Soul : 쿨타임 0 -> 6 증가
+ -Guppy's Tail : Coins -15
+ -Brionac : DMG +5 (Independence) 추가
+ -Greed Error : 보상 감소
+ -Greed Angel : 레어 아이템 등장 확률이 비정상적이던 현상 수정
+ -Greed Curse : 일부 방 등장 확률 감소
+ -신규 아이템 : Heroes of the Storm(히어로즈 오브 더 스톰 :: 히오스) : Coins +99, 획득시 황홀, 루크, 정마 모든 세트 파츠 제거 (악마방 1배열로 설정되어 있습니다.)
+ -신규 제거 배열 아이템 : Guppy's Hairball, Guppy's Tail
+ -신규 제거 배열 해제 아이템 : Dead Cat, Guppy's Paw
+ -모든 보스 몬스터 HP Max 100% 증가
+
+▶Chaos Greed Greedier 2.4(4)
+ -일부 배열이 정상적이지 않던 현상 수정
+
+▶Chaos Greed Greedier 2.4(3)
+ -일부 아이템이 정상적이지 않던 현상 수정
+
+▶Chaos Greed Greedier 2.4(2)
+ -Greed Cures : 악마방 노레어 아이템 + 세트 아이템 파츠 배열- >세트 아이템 파츠 배열
+
+▶Chaos Greed Greedier 2.4
+ -Eve 캐릭터가 개편됩니다.
+└Eve -> Nemesis(암제) 캐릭터 명칭 변경
+└시작 아이템 : Black Hole(512) 추가
+ -신규 아이템 : Chiggers(148) : 공격시100% 확률로 자폭 거미 or 자폭 파리 1마리 소환, 액티브
+ -Greed Cures : 악마방 노레어 아이템 + 세트 아이템 파츠 배열- >세트 아이템 파츠 배열
+ -Cleaner : 일부 아이템을 제거하지 못하던 현상 수정
+ -Gemini, Lil' Haunt, Leech, Daddy Longlegs : 퍼밀리어 개체수 1 -> 2증가
+ -Smart Fly : DMG 2 -> 4 증가
+ -Little Chubby, Big Chubby : DMG 10 -> 20 증가
+ -Lord of the Pit : BlackHearts 2 -> 3 증가
+ -Fate : SoulHearts +3 추가
+ -Millstone : Coins +15 추가
+ -헤블론의 군주 세트(Lord Of The Hebron Set) : Rubber Cement Tear 제거
+ -Skeleton Key : Keys 99 -> 10 감소, 패널티 제거
+ -Pyro : Bombs 99 -> 20 감소, 패널티 제거
+ -Euthanasia, Parasitoid : 제거 배열이 되어있던 현상 수정
+
+▶Chaos Greed Greedier 2.3(3)
+ -Keeper : Judas' Tongue(Trinket), XI - Strength(Card) 추가
+ -Greed Curse : 모든 구조에 최소 Coins +1 등장하도록 구조 변경
+ -Incubus : 제거 배열이 되어있던 현상 수정 (...이걸 왜 지금알았지...어쩐지 안뜨더라..)
+ -Ultra Greedier : HP Max 14500 -> 15000
+
+▶Chaos Greed Greedier 2.3(2)
+ -Greed Error : 보상 소폭 증가
+ -Greed Devil : Succubus 추가 Forget Me Now, Rotten Baby, Sprinkler 제거
+ -Greed Angel : 악마방보다 더 높은 확률로 레어 아이템이 등장되도록 변경 (약1.5배 더 높은 확률로 등장하게됩니다.)
+ -D6 : 쿨타임 6 -> 12 증가
+ -Crack the Sky : 지속시간 4초 -> 3초 감소
+ -The Peeper, GB Bug : 퍼밀리어 개수 1 -> 3 증가
+ -Lord of the Pit : Blackhearts +2 추가
+ -Mom's Knife : 스킨 이미지 변경
+ -신규 세트 아이템 : Key Master : Eucharist 추가
+└Key Piece 1 : Keys +2
+└Key Piece 2 : Keys +2
+
+▶Chaos Greed Greedier 2.3
+ -Brimstone EX : 혈사포의 개수 -1 감소
+ -신규 아이템 : Cleaner(456) : 획득시 모든 눈물 변환 공격형 아이템 제거 (스캐너는 따로 배열 설정이 되어있지 않으며, Womb, Sheol 스테이지 12 웨이브 진입시 등장합니다.)
+ -Mom's Hand, Mom's Dead Hand : 변종 몬스터가 되지 않도록 변경
+ -BlackHole : 쿨타임 4 -> 2 감소
+ -Ultra Greedier : HP Max 13500 -> 14500
+
+▶Chaos Greed Greedier 2.2(3)
+ -일부 아이템 스킨 이미지 적용
+
+▶Chaos Greed Greedier 2.2(2)
+ -캐릭터 공통 : More Options 추가
+ -Greed Devil : 레어 아이템의 등장 확률 소폭 감소 (70 -> 60%), 거래 지불값 2 HP Max 고정
+
+▶Chaos Greed Greedier 2.2
+ -신규 세트 아이템 : 헤블론의 군주(Lord Of The Hebron) :100% 확률로 Rubber Cement, God Head 추가
+└솔리움 폰스(Solium Fons) : 100% 확률로 매혹, 관통 상태이상 공격
+└테네브레 누스(Tenebrae Nns) : 100% 확률로 공포, 관통 상태이상 공격
+└루멘 바실리움(Lumen Basilium) : 획득시 Crown Of Light(415), 관통 추가
+ -신규 아이템 : 앱솔루트 미트(Absolute SMB), 앱솔루트 밴디지(Absolute Bandages)
+└Absolute SMB : 획득시 Cube Of Meat x 3
+└Absolute Bandages : 획득시 Ball Of Bandages x3
+ -Refined Chaos Stone Necklace : Coins, Bombs, Keys +2 추가
+ -Refined Destructive Magic Stone Bracelet : 획득시 20/20 추가
+ -Chaos : Pageant Boy -1 감소
+ -Greed Devil : 레어 아이템의 등장 확률 소폭 감소 (100% -> 70%)
+ -신규 제거 부적 : Bloody Penny(49) 및 그리디어 모드에서 필요없는 부적 제거
+ -일부 부적들의 이미지 스킨 제거
+ -Eden's Soul : 쿨타임 6 -> 0 변경
+ -Lucky Foot : 럭 수치 1 -> 5 증가
+ -D20 : 쿨타임 6 -> 12 증가
+ -신규 제거 배열 해제 아이템 : Head of the Keeper
+ -신규 액티브 아이템 : Head of the Keeper
+ -모든 몬스터의 최소 피격 DMG 1 리뉴얼
+ -Red Chest : 구피, 오감의 황홀경, 정제된 마석, 헤블론의 군주 세트 파츠들이 등장하도록 수정
+ -특정 보스터 몬스터들의 피격 DMG 4 -> 6 증가
+ -Death's Head : 피격 DMG 4 -> 6 증가, 개체수 감소 및 The Shop 이전에는 더 이상 등장하지 않도록 변경
+
+▶Chaos Greed Greedier 2.1(5)
+ -Adrenaline Shock : DMG +5 증가, SoulHearts -3 감소
+ -Succubus EX : 획득시 서큐버스의 개체수 +1 증가
+ -Mysterious Liquid : 획득시 Cupid's Arrow 추가, 눈물 이미지가 정상적이지 않던 현상 수정
+ -Iron Bar : DMG 0.3 -> 1.5 증가
+ -외장차지바 제거
+
+▶Chaos Greed Greedier 2.1(4)
+ -캐릭터 공통 : Mom's Purse, Deep Pockets
+ -Dad's Key : 쿨타임 0 -> 1 증가
+ -Chaos : Magneto, Pageant Boy x2 추가
+ -The Mind, Sulfuric Acid : Bombs +3
+ -Chaos 획득시 특정 아이템 비정상적으로 등장하던 현상 수정
+ -아이템 획득전 유형 확인 가능
+ -Book of Secrets : 쿨타임 6 -> 1 감소
+ -Book of Shadows : 쿨타임 12 -> 8 감소
+ -Clicker : 쿨타임 4 -> 0 감소
+
+▶Chaos Greed Greedier 2.1(3)
+ -Greed Depth, Womb : 난이도 소폭 증가
+ -아이템 획득전 DMG 수치 확인 가능
+ -일부 제거 배열 아이템이 등장되던 현상 수정
+ -Technology EX : 레이저의 개수 +1 추가
+ -Brimstone EX : 혈사포의 개수 +2 추가
+ -The Shop(Stage) : 전체적인 Death's Head 개수 감소
+ -Portal : HP Max 감소
+
+▶Chaos Greed Greedier 2.1(2)
+ -신규 아이템 : Absolute Gravity(앱솔루트 그래비티)
+└Absolute Gravity : 획득시 Brimstone, Anti-Gravity, Eden's Blessing x3 추가
+ -악마방과 천사방의 모든 배열 통합
+ -Ultra Greed 처치후 상자가 등장되지 않던 현상 수정
+ -The Heretic : Book of Shadows 추가
+ -Crack the Sky : 지속시간 4초 -> 3초 감소
+ -신규 패시브 아이템 : Tough Love
+ -Error : Key Block 오브젝트 제거
+ -Mr. Mega : Bombs 5 -> 10 증가
+ -신규 제거 배열 룬 : Jera, Hagalaz
+ -Jesus Juice : DMG 0.5 -> 1.5 증가Coins 8 -> 0 감소
+ -MEAT!, Stigmata : DMG 0.3 -> 1.5 증가, HP Max 1 -> 0 감소
+ -아이템 획득전 상세 정보 확인 가능
+
+▶Chaos Greed Greedier 2.1
+ -Chaos : 획득시 Coins -99
+ -Greed Devil, Greed Angel, Greed Curse, Golden Chest 배열 통합 (천사방의 경우에는 좀 더 높은 확률오 레어 등급의 아이템이 등장합니다.)
+ -Amount 0으로 통합 (Amount 수치는 몬스터 처치시 떨어지는 혈, 잔해입니다.)
+ -신규 패시브 아이템 : Mom's Knife, Dove's Book
+ -Greed Treasure : Key Block 오브젝트 제거
+ -Greed Treasure, Greed Devil : 스킵 구조 등장 확률 대폭 감소
+ -신규 제거 부적 : Counterfeit Penny
+ -Black Market : 스킵 오브젝트 제거
+
+▶Chaos Greed Greedier 2.0(5)
+ -Spectrum Tear : 액티브 아이템으로 설정되어 있지 않던 현상 수정
+ -전체적인 몬스터 수 소폭 감소
+
+▶Chaos Greed Greedier 2.0(4)
+ -Dad's Key : 쿨타임 2 -> 0 감소
+ -전체적인 몬스터 수 소폭 감소
+ -Greed Devil : The Fact, The Mark 제거
+ -신규 아이템 : 앱솔루트 레비아탄(Absolute Leviathan)
+└Absolute Leviathan(346) : 획득시 The Pact, The Mark, Spirit of the Night 추가
+ -Book of Revelations, Satanic Bible, The Nail : 쿨타임 12 -> 10 감소
+ -신규 액티브 아이템 : Tech X, Mom's Knife
+ -Ultra Greed : 일부 패턴 확인이 어렵던점 수정
+ -Dead Eye, Holy Light, Eye of Belial : 이펙트 75% 감소
+
+▶Chaos Greed Greedier 2.0(3)
+ -신규 아이템 : Spectrum Tear
+└Spectrum Tear : 공격시 100% Holy Light 효과 발동, 액티브
+ -Explosivo : 공격시 100% 확률로 변경, 액티브 아이템으로 변경
+ -일반 몬스터, 보스 몬스터 스테이지 HP 50% 증가
+ -앱솔루트 시리즈 아이템 상점 및 황금방 배열 제거
+ -Sprinkler : 쿨타임 8 -> 10 증가
+
+▶Chaos Greed Greedier 2.0(2)
+ -Greed Shop(Stage) : 11웨이브 등장하던 카오스 아이템 스테이지 입장시 등장하도록 변경
+
+▶Chaos Greed Greedier 2.0
+ -Chaos : A Quarter 제거
+ -신규 제거 배열 해제 아이템 : Virgo, Empty Vessel
+ -Ultra Greed(Stage) : Satan 보스 추가
+ -Greed Error : 기존 방이 리뉴얼되고, 앱솔루트 시리즈 아이템이 등장되도록 변경
+ -Greed Shop(Stage) : 스테이지 입장시 등장하던 카오스 아이템을 11웨이브 진입시 등장도록 변경
+ -Greed Devil : 천사방에서 나올 수 있는 모든 아이템들이 소폭 확률로 배열 (각각 0.5%), 모든 아이템들의 거래값 2칸으로 고정
+ -Bomb Bum : 천사방 배열과 동일하도록 변경
+ -Beggar : 보스방(Greed Boss) 동일하도록 변경
+ -Ladder Door 입장시 100% 확률로 Black Market 입장가능하도록 변경
+ -10,11,12 진입시 스테이지에 비례해서 추가 보상 (Greed Basement 등장하지않음)
+ -Blue Map : Bombs +3 추가
+ -Head of Krampus,The Necronomicon : 쿨타임 6 -> 4 감소
+ -Jacob's Ladder, God Head, Rubber Cement, Euthanasia, Little Horn : 액티브 아이템으로 변경
+ -신규 아이템 : Absolute Explosion, Absolute Inzektor, Absolute Seraphim, Dove's Book
+└Absolute Explosion(앱솔루트 익스플로젼) : 획득시 Dr. Fetus, Sad Bombs 추가
+└Absolute Inzektor(앱솔루트 인잭터) : 획득시 Distant Admiration, Forever alone, Smart Fly, Best Bud, Big Fan, Friend Zone, Lost Fly, Obsessed Fan, YO LISTEN! 추가
+└Absolute Seraphim : Rosary, The Halo, Habit, Seraphim 추가
+└Dove's Book : DMG +9.99 (Independence, Active)
+ -Refined Destructive Magic Stone Bracelet : DMG +4 (Independence)
+ -Refined Chaos Stone Necklace : DMG +4 (Independence)
+ -Refined Amnesia Stone Ring : DMG +4 (Independence), Black Candle 추가
+ -Refined Set : DMG +12 (Independence)
+ -Angry Fly : 1 -> 3 증가
+ -신규 제거 카드 : The Fool
+ -Ultra Greed : Base HP Max 3500 -> 7000 증가
+
+▶Chaos Greed Greedier 1.9(3)
+ -정제된 마석셋 명칭이 올바르지 않던 현상 수정
+
+▶Chaos Greed Greedier 1.9(2)
+ -Cain : Mom's Bottle of Pills 제거
+ -Guppy's Tail : Coins +15
+ -Crack the Sky : 지속시간 3초 -> 4초 증가
+ -Red Candle : 쿨타임 3.6 -> 2 감소
+ -YO LISTEN!, Dog Tooth : Bombs +3
+ -Delirious 쿨타임 : 10 -> 8 감소
+ -Potato Peeler : Max Hearts +1
+ -Angry Fly : DMG 2 -> 10 증가
+ -Lil' Haunt, Dead Bird, Eves Bird Foot : DMG 5 -> 7 증가
+ -Little Chubby : DMG 7 -> 10 증가
+ -BigChubby : DMG 5.5 -> 10 증가
+ -Daddy Longlegs : DMG 20 -> 30 증가
+ -Guppys Hair Ball : DMG 3 -> 30 증가
+ -Cube of Meat L3 : DMG 3.5 -> 14 증가
+ -Cube of Meat L4 : DMG 5.5 -> 28 증가
+ -Smart Fly : DMG 1.5 -> 2 증가
+ -Leech : DMG 3 -> 10 증가
+ -Sprinkler : 쿨타임 4 -> 8 증가
+ -Brown Nugget : 쿨타임 6.6초 -> 5초 감소
+ -신규 제거 카드 : The High Priestess, Emergency Contact, Get Out Of Jail Free Card
+ -신규 제거 알약 : Pheromones, I'm Excited!!!, Horf!, R U A Wizard?, Amnesia, Paralysis
+ -신규 아이템 : Refined Destructive Magic Stone Bracelet(정제된 마석의 팔찌), Refined Chaos Stone Necklace(정제된 마석의 목걸이), Refined Amnesia Stone Ring(정제된 마석의 반지) = 기존 오감의 황홀경 세트와 전부 동일합니다.
+
+▶Chaos Greed Greedier 1.9
+ (!)부스터팩 패치는 모드 패치가 아닌 공식 패치 입니다.
+ -신규 부스터팩 아이템 : Angry Fly(511), Black Hole(512), Bozo(513), Broken Modem(514), Mystery Gift(515), Sprinkler(516), Fast Bombs(517), Buddy in a box(518), Lil Delirium(519) 추가
+ -신규 부스터팩 장신구 : Hairpin, Wooden Cross, Butter! 추가
+ -신규 부스터팩 카드 : Huge Growth, Ancient Recall, Era Walk 추가
+ -신규 아이템 : Absolute Conjoined(앱솔루트 종양), Absolute Spun(앱솔루트 마약), Absolute Sulfer(앱솔루트 유황)
+└Absolute Conjoined(253) : 획득시 Mongo Baby(322), Rotten Baby(268), Harlequin Baby(167)
+└Absolute Spun(75) : 획득시 The Virus(13), Growth Hormones(70), Speed Ball(143)
+└Absolute Sulfer(329) : 획득시 Brimstone(118), The Ludovico Technique(329)
+ -Stop Watch : 지속시간 3초 -> 6초 증가
+ -신규 제거 카드 : The Tower, The World, Rules Card, Wheel of Fortune
+ -신규 제거 알약 : Bad Gas, Retro Vision, Infested!, Infested?
+
+▶Chaos Greed Greedier 1.8(3)
+ -Console : Giveitem 커맨드 작동시 런타임 오류가 발생하던 현상 수정
+
+▶Chaos Greed Greedier 1.8(2)
+ -God Heart : 소울 하트 증가가 적용되지 않던 현상 수정
+ -God Heart, Nightmare Heart : 하트 및 픽업 개수 3 -> 2 감소
+ -신규 제거 부적 : Flat Penny, Burnt Penny 배열 제거
+
+▶Chaos Greed Greedier 1.8
+ -Greed Devil : Euthanasia 제거
+ -Greed Angel : Circle of Protection, Lazarus' Rags 제거
+ -신규 제거 부적 : Flat Penny, Burnt Penny 배열 제거 (추후적용)
+ -신규 제거 배열 해제 : Host Hat
+ -Host Hat : Bombs +5, 액티브 아이템으로 변경
+ -Eden's Soul : 쿨타임 12 -> 6 변경
+ -Lost Contact : 액티브 아이템 변경
+ -Screw, Jesus Juice : Coins +8 추가
+ -신규 아이템 God Heart, Nightmare Heart
+└God Heart : Soul Heart +3, Coins +3, Bombs +3, Keys +3
+└Nightmare Heart : Black Heart +3, Coins +3, Bombs +3, Keys +3
+ -오감의 황홀경 : DMG *2.5 -> *2.0 감소
+ -캐릭터 선택 이미지와 플레이 이미지가 동일하도록 변경
+
+▶Chaos Greed Greedier 1.7(3)
+ -신규 제거 배열 아이템 : Virgo(303), The Polaroid(327), Empty Vessel(409)
+ -Humbleing Bundle : 획득시 모든 픽업 제거
+ -Death's Head : 피격 DMG 2 -> 3 증가
+ -오감의 황홀경 : DMG *3 -> *2.5 감소
+ -눈물 DMG 이펙트 100% -> 50% 감소
+
+▶Chaos Greed Greedier 1.7(2)
+ -Greed Shop : Random Heart +1 추가
+ -Greed Devil : D4 배열 추가
+ -Greed Angel : 낮은 확률로 천사 석상이 존재하는 구조 등장
+ -Greed Shop(Stage) : Joker 추가 및 몬스터 위치 개편
+ -Greed Treasure : Key Block -1 감소
+ -Tough Love : 액티브 아이템으로 변경
+ -Pentagram : 블랙 하트 +1 추가
+ -Ceremonial Robes : 블랙 하트 1 -> 3 증가
+Blank Card 286
+▶Chaos Greed Greedier 1.7
+ -Greed Caves : 난이도 감소
+ -Chaos : A Quarter추가, A Dollar 제거
+ -The Heretic : Infamy, Guppy's Collar, AAA Battery(Trinket)
+--------------------------------------------------------------------
+Greed Devil, Devil, Greed Golden Chest, Golden Chest, Curse
+Greed Angel, Angel, Library, Beggar
+Red Chest, Greed Curse
+GreedSecret, Greed Shop, Greed Treasure, Greed Library, Shop
+
+//Unknown
+ -신규 아이템 : Refined Destructive Magic Stone Bracelet(정제된 마석의 팔찌), Refined Chaos Stone Necklace(정제된 마석의 목걸이), Refined Amnesia Stone Ring(정제된 마석의 반지)
+
+//3신기
+21, 26, 54
+
+//구피
+134, 187, 212
+
+//황홀
+22, 23, 24
+
+//정마
+241, 249, 255
+
+//인잭터 9
+9, 52, 75, 119, 253, 329
+
+//세라핌 173
+72, 101, 156
+
+//익스플로젼 52
+
+//마약 75
+
+//앱솔루트 구피 119
+
+//앱솔루트 혈사 253
+
+//앱솔루트 레비아탄 346
+
+//앱솔루트 그래비티 129
+
+
+spawn 5.100.코드

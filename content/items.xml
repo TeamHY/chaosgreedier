@@ -1,0 +1,133 @@
+<items gfxroot="gfx/items/" version="1">
+
+
+<passive cache="damage" gfx="collectibles_chiggers.png" devilprice="2" name="Larval Therapy" special="false" />
+<passive gfx="backpack.png" name="Backpack" />
+<passive cache="tearflag flying" gfx="symbol.png" name="Symbol_Of_Babylonia" />
+<passive cache="tearflag flying" gfx="fars.png" name="Farss_Golden_Goblet" />
+<passive cache="tearflag flying" gfx="rosetta.png" name="Rosetta_Stone" />
+<active gfx="collectibles_quickchaos.png" devilprice="2" name="Rank-Up-Magic Quick Chaos" />
+<active gfx="collectibles_skipforce.png" special="true" name="Rank-Up-Magic Skip Force" />
+<active gfx="collectibles_deathdoubleforce.png" devilprice="2" name="Rank-Up-Magic Death Double Force" />
+<active gfx="813.png" devilprice="2" name="Rank-Up-Magic Cipher Ascension" />
+<active gfx="814.png" devilprice="2" name="Rank-Up-Magic Astral Force" />
+<active gfx="815.png" name="Symbol Of Babylonia" />
+<active gfx="816.png" name="Fars's Golden Goblet" />
+<active gfx="817.png" name="Rosetta Stone" />
+<active cache="damage" gfx="818.png" name="Werry: Limit Breaker" />
+<active cache="damage" gfx="819.png" special="true" name="Power Bond" />
+<active cache="damage" gfx="820.png" devilprice="2" name="Limiter Removal" />
+
+<active gfx="821.png" name="Restock Machine" />
+<active gfx="822.png" name="Chaos Card" />
+<passive cache="damage luck flying" gfx="823.png" name="Venus's Breath" />
+<passive cache="damage luck flying" gfx="824.png" name="Scent Of Glitter" />
+<passive cache="damage luck flying" gfx="825.png" name="Memory Of Water" />
+<passive cache="damage speed" coins="15" gfx="826.png" name="Millstone" />
+<passive cache="tearflag flying" gfx="827.png" name="Apathetic Princess Bracelet" />
+<passive cache="firedelay tearflag damage flying" gfx="828.png" name="Cold Princess Necklace" />
+<passive cache="tearflag damage flying" description="N/A" gfx="829.png" name="Solium Fons" />
+<passive cache="tearflag damage flying" description="N/A" gfx="830.png" special="false" name="Tenebrae Nus" />
+<passive cache="tearflag damage flying" description="N/A" gfx="831.png" special="true" name="Lumen Basilium" />
+<passive cache="tearflag damage flying" soulhearts="12" gfx="832.png" name="Cold Princess Ring" />
+
+
+<active cache="damage" gfx="833.png" name="Crux Of Victoria" />
+<passive gfx="834.png" cache="tearflag" name="Plunger" />
+<passive gfx="835.png" coins="99" devilprice="2" name="Heroes of the Storm" />
+<passive gfx="836.png" special="true" name="Absolute Guppy" />
+<passive gfx="837.png" devilprice="2" name="Absolute Gravity" />
+<active cache="tearflag" gfx="838.png" devilprice="2" name="Chemical Peel 2" />
+<active gfx="839.png" name="Ring Of Ethereal Form" />
+<passive gfx="840.png" name="Absolute Seraphim" />
+<passive cache="damage" gfx="841.png" devilprice="2" name="Dove's Book" />
+<passive cache="damage flying" gfx="842.png" name="Refined Destructive Magic Stone Bracelet" />
+<passive cache="damage flying" gfx="843.png" name="Refined Chaos Stone Necklace" />
+<passive cache="damage flying" gfx="844.png" name="Refined Amnesia Stone Ring" />
+<active gfx="845.png" name="Stop Watch 2" />
+<active gfx="846.png" devilprice="2" name="Rank-Up-Magic Raptor's Force" />
+<passive gfx="847.png" devilprice="2" name="Absolute Sulfer" />
+<passive cache="tearflag" gfx="848.png" special="true" name="Spectrum Tear" />
+<passive gfx="849.png" special="true" name="Absolute Leviathan" />
+<active gfx="850.png" devilprice="2" name="Runtime Error!" />
+<active cache="luck" gfx="851.png" name="Clover" />
+<passive gfx="852.png" name="Cleaner" />
+<passive gfx="853.png" devilprice="2" name="Absolute Conjoined" />
+<active gfx="854.png" name="Pachinko" />
+
+<active gfx="monolelium.png" devilprice="2" name="Monolelium"/>
+<active gfx="900.png" cache="firedelay damage" name="Tongue with Envy"/>
+<active gfx="901.png" cache="firedelay damage" name="A Mouth-eaten Mouth"/>
+<active gfx="902.png" cache="firedelay damage" name="The Hand of Greed"/>
+<active gfx="903.png" cache="firedelay damage" devilprice="2" name="Eye with Full of Pride"/>
+<active gfx="904.png" cache="firedelay damage" name="A Slothful Foot"/>
+<active gfx="801.png" devilprice="1" name="Spice"/>
+<active gfx="802.png" devilprice="2" name="Scroll For Chaos" />
+<active gfx="803.png" name="(DNF)Skeleton Key" />
+<active gfx="804.png" name="(DNF)Unseal Lost Treasures" />
+<passive gfx="805.png" devilprice="2" name="League of Legends" />
+<active gfx="806.png" name="Tropicana Sparkling Apple" />
+<active cache="damage" gfx="807.png" devilprice="2" name="The Small Hippo" />
+<active gfx="808.png" devilprice="2" name="The Small Raven" />
+<active gfx="809.png" devilprice="2" name="The Small Toy" />
+<active cache="damage" gfx="810.png" devilprice="2" name="Amazing Chaos Scroll" />
+<active cache="damage" gfx="811.png" name="Trinity" maxcharges="1" />
+<active gfx="812.png" devilprice="2" name="No!" />
+<active gfx="996.png" devilprice="2" name="Rank-Up-Magic Soul Shave Force" />
+
+<passive cache="luck damage" gfx="855.png" devilprice="2" name="Sharp Eyes" />
+<passive gfx="856.png" maxhearts="-99" soulhearts="-99" name="Cherry" />
+
+<passive cache="speed" gfx="857.png" name="Speed Shoes" />
+<active gfx="858.png" name="Helmet LV.1" />
+<active gfx="859.png" name="Helmet LV.2" />
+<active gfx="860.png" name="Helmet LV.3" />
+<passive cache="damage firedelay" gfx="861.png" devilprice="2" name="Galactic Medal Of Valor" />
+<passive gfx="862.png" name="Bible Thump" />
+<passive gfx="863.png" cache="tearflag" name="Lightning" />
+<passive gfx="864.png" name="Blood Trail" />
+<active gfx="866.png" cache="damage" name="Bit Coin" />
+<active gfx="867.png" maxcharges="1" name="LIL Mimic" />
+<active gfx="868.png" maxcharges="0" name="Black Whirl Wind" />
+<active gfx="869.png" maxcharges="100" devilprice="2" name="Abyss" />
+<active gfx="870.png" name="Innocent Scroll" />
+<passive gfx="865.png" devilprice="2" name="Absolute Tuna" />
+<active gfx="871.png" cache="damage" name="Soul Eater" />
+<active gfx="872.png" cache="damage" name="Soul Charge" />
+<active gfx="873.png" cache="damage" name="Soul Change" />
+<active gfx="874.png" name="Curse Foot" />
+<active gfx="875.png" devilprice="2" name="Rank-Up-Magic Revolution Force" />
+<active gfx="876.png" devilprice="2" name="Rank-Up-Magic Raid Force" />
+<active gfx="877.png" devilprice="2" name="Rank-Up-Magic Argent Chaos Force" />
+<active cache="firedelay" gfx="878.png" devilprice="2" name="Ethereum" />
+<active gfx="879.png" special="true" name="Black Cube" />
+<active gfx="880.png" name="Red Cube" />
+<passive gfx="881.png" name="Code Geass" />
+<active gfx="882.png" devilprice="2" name="Blood Drive" />
+<active gfx="883.png" name="Mirror" />
+<active gfx="884.png" devilprice="2" name="Hlminth" />
+<passive cache="damage" gfx="885.png" devilprice="2" name="Empty" />
+<active gfx="886.png" devilprice="2" name="Ice Princess Breath" />
+<active gfx="887.png" devilprice="2" name="Sensory Satisfaction" />
+<active gfx="888.png" devilprice="2" name="Refined Otherverse Magic Stone" />
+<active gfx="889.png" devilprice="2" name="Heblon's Monarch" />
+<active gfx="890.png" devilprice="2" name="Ancient Civilization" />
+
+
+<active gfx="613.png" maxcharges="4" name="Fortune Cookie" />
+<passive gfx="615.png" name="Booster Pack" />
+<passive gfx="612.png" name="2Spooky" />
+<passive gfx="635.png" name="Psy Fly" />
+<active gfx="638.png" cache="damage" name="Artifact Labrys" />
+<active gfx="639.png" cache="damage" name="Artifact Lancea" />
+<active gfx="640.png" name="Artifact Moralltach" />
+<active gfx="643.png" name="Artifact Beagalltach" />
+<active gfx="644.png" name="Artifact Aegis" />
+<active gfx="645.png" name="Artifact Achilleshield" />
+<active gfx="646.png" name="Artifact Chakram" />
+
+<active gfx="649.png" special="true" name="Artifact Ignition" />
+<active gfx="650.png" special="true" name="Artifact Sanctum" />
+<active gfx="651.png" name="Artifacts Unleashed" />
+
+</items>

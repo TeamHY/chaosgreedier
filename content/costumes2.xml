@@ -1,0 +1,10 @@
+<costumes anm2root="gfx/characters/costumes/">
+	<costume anm2path="arac_head.anm2" priority="100" type="none" skinColor="-1"/>
+	<costume anm2path="xaphan_head.anm2" priority="100" type="none" skinColor="1"/>
+
+	<costume anm2path="tramp_of_babylon.anm2" priority="30" type="none"/>
+	<costume anm2path="morphine.anm2" priority="30" type="none"/>
+	<costume anm2path="chiggers.anm2" priority="30" type="none"/>
+
+	<costume anm2path="backpack_costume.anm2" priority="98" type="none" />
+</costumes>

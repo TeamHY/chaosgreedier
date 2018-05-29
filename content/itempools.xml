@@ -1,0 +1,423 @@
+<ItemPools>
+	<Pool Name="treasure"/>
+	<Pool Name="shop"/>
+	<Pool Name="boss">
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Trinity" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tongue with Envy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Mouth-eaten Mouth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Hand of Greed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Slothful Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Werry: Limit Breaker" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Restock Machine" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chaos Card" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Crux Of Victoria" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Plunger" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ring Of Ethereal Form" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Clover" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Pachinko" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Speed Shoes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Bit Coin" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="LIL Mimic" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Black Whirl Wind" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Bible Thump" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lightning" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Trail" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Innocent Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Eater" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Charge" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Change" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Curse Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Psy Fly" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Code Geass" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Mirror" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+<Item Name="Artifact Moralltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Beagalltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Artifact Chakram" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+
+<Item Name="Rosetta_Stone" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Farss_Golden_Goblet" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Symbol_Of_Babylonia" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Venus's Breath" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scent Of Glitter" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Memory Of Water" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Apathetic Princess Bracelet" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Cold Princess Necklace" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Cold Princess Ring" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Solium Fons" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tenebrae Nus" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lumen Basilium" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Destructive Magic Stone Bracelet" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Chaos Stone Necklace" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Amnesia Stone Ring" Weight="100" RemoveOn="0" DecreaseBy="1"/>
+
+<Item DecreaseBy="1" Id="81" RemoveOn="0" Weight="1" />
+<Item DecreaseBy="1" Id="133" RemoveOn="0" Weight="1" />
+<Item DecreaseBy="1" Id="134" RemoveOn="0" Weight="1" />
+<Item DecreaseBy="1" Id="145" RemoveOn="0" Weight="1" />
+<Item DecreaseBy="1" Id="187" RemoveOn="0" Weight="1" />
+<Item DecreaseBy="1" Id="212" RemoveOn="0" Weight="1" />
+
+
+
+
+	</Pool>
+	<Pool Name="devil"/>
+	<Pool Name="angel"/>
+	<Pool Name="secret"/>
+	<Pool Name="library"/>
+	<Pool Name="challenge"/>
+	<Pool Name="goldenChest"/>
+
+	<Pool Name="redChest">
+		<Item DecreaseBy="1" Id="81" RemoveOn="0" Weight="1" />
+		<Item DecreaseBy="1" Id="133" RemoveOn="0" Weight="1" />
+		<Item DecreaseBy="1" Id="134" RemoveOn="0" Weight="1" />
+		<Item DecreaseBy="1" Id="145" RemoveOn="0" Weight="1" />
+		<Item DecreaseBy="1" Id="187" RemoveOn="0" Weight="1" />
+		<Item DecreaseBy="1" Id="212" RemoveOn="0" Weight="1" />
+
+
+	</Pool>
+	<Pool Name="beggar">
+<Item Name="Rank-Up-Magic Quick Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Death Double Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Monolelium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Spice" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scroll For Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Amazing Chaos Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Raven" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Toy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Soul Shave Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Trinity" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="No!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Cipher Ascension" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Astral Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Limiter Removal" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sharp Eyes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+	</Pool>
+	<Pool Name="demonBeggar">
+
+<Item Name="Symbol Of Babylonia" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Fars's Golden Goblet" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rosetta Stone" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Venus's Breath" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scent Of Glitter" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Memory Of Water" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Apathetic Princess Bracelet" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Cold Princess Necklace" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Cold Princess Ring" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Solium Fons" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tenebrae Nus" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lumen Basilium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Destructive Magic Stone Bracelet" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Chaos Stone Necklace" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Amnesia Stone Ring" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+
+	</Pool>
+	<Pool Name="curse"/>
+	<Pool Name="keyMaster"/>
+	<Pool Name="bossrush"/>
+	<Pool Name="dungeon"/>
+
+	<Pool Name="greedTreasure">
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Trinity" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tongue with Envy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Mouth-eaten Mouth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Hand of Greed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Slothful Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Werry: Limit Breaker" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Restock Machine" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chaos Card" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Crux Of Victoria" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Plunger" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ring Of Ethereal Form" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Clover" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Pachinko" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Speed Shoes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Bit Coin" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="LIL Mimic" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Black Whirl Wind" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Bible Thump" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lightning" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Trail" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Innocent Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Eater" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Charge" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Change" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Curse Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Psy Fly" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Code Geass" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Mirror" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+<Item Name="Artifact Moralltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Beagalltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Artifact Chakram" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+	</Pool>
+	<Pool Name="greedBoss">
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Trinity" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tongue with Envy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Mouth-eaten Mouth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Hand of Greed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Slothful Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Werry: Limit Breaker" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Restock Machine" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chaos Card" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Crux Of Victoria" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Plunger" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ring Of Ethereal Form" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Clover" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Pachinko" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Speed Shoes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Bit Coin" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="LIL Mimic" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Black Whirl Wind" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Bible Thump" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lightning" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Trail" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Innocent Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Eater" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Charge" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Change" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Curse Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Psy Fly" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Code Geass" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Mirror" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+<Item Name="Artifact Moralltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Beagalltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Artifact Chakram" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+
+	</Pool>
+
+	<Pool Name="greedShop">
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Trinity" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Tongue with Envy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Mouth-eaten Mouth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Hand of Greed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="A Slothful Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Werry: Limit Breaker" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Restock Machine" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chaos Card" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Crux Of Victoria" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Plunger" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ring Of Ethereal Form" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Clover" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Pachinko" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Speed Shoes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Bit Coin" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="LIL Mimic" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Black Whirl Wind" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Bible Thump" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Lightning" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Trail" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Innocent Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Eater" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Charge" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Soul Change" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Curse Foot" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Psy Fly" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Code Geass" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Mirror" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+<Item Name="Artifact Moralltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Beagalltach" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+<Item Name="Artifact Chakram" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+
+	</Pool>
+
+	<Pool Name="greedCurse">
+<Item Name="Rank-Up-Magic Quick Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Death Double Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Larval Therapy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Monolelium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Spice" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scroll For Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Amazing Chaos Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Raven" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Toy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Soul Shave Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="No!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Cipher Ascension" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Astral Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Limiter Removal" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heroes of the Storm" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chemical Peel 2" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Dove's Book" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raptor's Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Sulfer" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Runtime Error!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Conjoined" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sharp Eyes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Galactic Medal Of Valor" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Eye with Full of Pride" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Abyss" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Tuna" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Argent Chaos Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raid Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Revolution Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ethereum" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Drive" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Hlminth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Empty" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifacts Unleashed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ice Princess Breath" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sensory Satisfaction" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Otherverse Magic Stone" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heblon's Monarch" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ancient Civilization" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Red Cube" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Labrys" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Lancea" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Leviathan" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+	</Pool>
+
+	<Pool Name="greedDevil">
+<Item Name="Rank-Up-Magic Quick Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Death Double Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Larval Therapy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Monolelium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Spice" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scroll For Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Amazing Chaos Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Raven" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Toy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Soul Shave Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="No!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Cipher Ascension" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Astral Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Limiter Removal" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heroes of the Storm" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chemical Peel 2" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Dove's Book" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raptor's Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Sulfer" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Runtime Error!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Conjoined" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sharp Eyes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Galactic Medal Of Valor" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Eye with Full of Pride" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Abyss" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Tuna" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Argent Chaos Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raid Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Revolution Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ethereum" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Drive" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Hlminth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Empty" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifacts Unleashed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ice Princess Breath" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sensory Satisfaction" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Otherverse Magic Stone" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heblon's Monarch" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ancient Civilization" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Red Cube" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Labrys" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Lancea" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Leviathan" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+	</Pool>
+	<Pool Name="greedAngel">
+
+<Item Name="Lumen Basilium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Guppy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Spectrum Tear" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Ignition" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Sanctum" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Black Cube" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+	</Pool>
+	<Pool Name="greedLibrary"/>
+	<Pool Name="greedSecret"/>
+	<Pool Name="greedGoldenChest">
+<Item Name="Rank-Up-Magic Quick Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Death Double Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Larval Therapy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Monolelium" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Spice" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Scroll For Chaos" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="League of Legends" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Amazing Chaos Scroll" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Raven" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="The Small Toy" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Soul Shave Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="No!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Cipher Ascension" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Astral Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Limiter Removal" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heroes of the Storm" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Chemical Peel 2" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Dove's Book" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raptor's Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Sulfer" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Runtime Error!" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Conjoined" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sharp Eyes" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Galactic Medal Of Valor" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Eye with Full of Pride" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Abyss" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Tuna" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Argent Chaos Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Raid Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Rank-Up-Magic Revolution Force" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ethereum" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Blood Drive" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Hlminth" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Empty" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifacts Unleashed" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ice Princess Breath" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Sensory Satisfaction" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Refined Otherverse Magic Stone" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Heblon's Monarch" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Ancient Civilization" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Red Cube" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Labrys" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Artifact Lancea" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+<Item Name="Absolute Leviathan" Weight="1" RemoveOn="0" DecreaseBy="1"/>
+
+
+	</Pool>
+	<Pool Name="bombBum"/>
+</ItemPools>

@@ -1,0 +1,44 @@
+﻿<!--Converted to ANM2 by Gibbed.Rebirth.ConvertAnimations-->
+<AnimatedActor>
+  <Content>
+    <Spritesheets>
+      <Spritesheet Path="bosses\godmode\truefinal_conscivit.png" Id="0" />
+      <Spritesheet Path="bosses\godmode\truefinal_conscivit.png" Id="1" />
+    </Spritesheets>
+    <Layers>
+      <Layer Name="body" Id="0" SpritesheetId="1" />
+      <Layer Name="eyes" Id="1" SpritesheetId="1" />
+      <Layer Name="portal1" Id="2" SpritesheetId="1" />
+      <Layer Name="portal2" Id="3" SpritesheetId="1" />
+    </Layers>
+    <Nulls />
+    <Events />
+  </Content>
+  <Animations DefaultAnimation="Idle">
+    <Animation Name="Idle" FrameNum="64" Loop="True">
+      <RootAnimation>
+        <Frame XPosition="0" YPosition="0" Delay="24" Visible="True" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+      </RootAnimation>
+      <LayerAnimations>
+        <LayerAnimation LayerId="2" Visible="True">
+          <Frame XPosition="0" YPosition="-15" XPivot="44" YPivot="44" Width="88" Height="88" XScale="100" YScale="100" Delay="64" Visible="True" XCrop="168" YCrop="96" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+          <Frame XPosition="0" YPosition="-15" XPivot="44" YPivot="44" Width="88" Height="88" XScale="100" YScale="100" Delay="1" Visible="True" XCrop="168" YCrop="96" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="360" Interpolated="False" />
+        </LayerAnimation>
+        <LayerAnimation LayerId="3" Visible="True">
+          <Frame XPosition="0" YPosition="-15" XPivot="44" YPivot="44" Width="88" Height="88" XScale="-100" YScale="100" Delay="64" Visible="True" XCrop="168" YCrop="96" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="360" Interpolated="False" />
+          <Frame XPosition="0" YPosition="-15" XPivot="44" YPivot="44" Width="88" Height="88" XScale="100" YScale="100" Delay="1" Visible="True" XCrop="168" YCrop="96" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+        </LayerAnimation>
+		<LayerAnimation LayerId="0" Visible="True">
+          <Frame XPosition="0" YPosition="0" XPivot="48" YPivot="88" Width="96" Height="96" XScale="100" YScale="100" Delay="1" Visible="True" XCrop="0" YCrop="160" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+        </LayerAnimation>
+        <LayerAnimation LayerId="1" Visible="True">
+          <Frame XPosition="0" YPosition="-20" XPivot="32" YPivot="32" Width="96" Height="64" XScale="100" YScale="100" Delay="32" Visible="True" XCrop="192" YCrop="192" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="100" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+          <Frame XPosition="0" YPosition="-21" XPivot="32" YPivot="32" Width="96" Height="64" XScale="105" YScale="105" Delay="32" Visible="True" XCrop="192" YCrop="192" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="100" RedOffset="0" GreenOffset="0" BlueOffset="50" Rotation="0" Interpolated="False" />
+          <Frame XPosition="0" YPosition="-20" XPivot="32" YPivot="32" Width="96" Height="64" XScale="100" YScale="100" Delay="1" Visible="True" XCrop="192" YCrop="192" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="100" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="False" />
+        </LayerAnimation>
+      </LayerAnimations>
+      <NullAnimations />
+      <Triggers />
+    </Animation>
+  </Animations>
+</AnimatedActor>
