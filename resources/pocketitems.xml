@@ -46,7 +46,7 @@
 	<card achievement="99" description="???" hud="30_RulesCard" id="44" greedmode="false" name="Rules Card" />
 	<card achievement="100" description="Something stinks..." hud="31_CardAgainstHumanity" id="45" name="A Card Against Humanity" />
 	<card achievement="120" description="A true ending?" hud="27_SuicideKing" id="46" name="Suicide King" />
-	<card achievement="225" description="Open Sesame" hud="32_GetOutOfJail" id="47" name="Get Out Of Jail Free Card" greedmode="false" />
+	<card achievement="225" description="Open Sesame" hud="32_GetOutOfJail" id="47" name="Get Out Of Jail Free Card" greedmode="true" />
 	<card description="Double Active" hud="33_MysteryCard" id="48" name="? Card" />
 	<card description="D6 + D20" hud="34_DiceShard" id="49" name="Dice Shard" />
 	<card description="Help from above" hud="35_EmergencyContact" id="50" greedmode="false" name="Emergency Contact" greedmode="false" />

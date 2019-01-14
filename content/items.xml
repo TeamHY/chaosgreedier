@@ -11,42 +11,42 @@
 <active gfx="collectibles_deathdoubleforce.png" devilprice="2" name="Rank-Up-Magic Death Double Force" />
 <active gfx="813.png" devilprice="2" name="Rank-Up-Magic Cipher Ascension" />
 <active gfx="814.png" devilprice="2" name="Rank-Up-Magic Astral Force" />
-<active gfx="815.png" name="Symbol Of Babylonia" />
-<active gfx="816.png" name="Fars's Golden Goblet" />
-<active gfx="817.png" name="Rosetta Stone" />
+<active cache="tearflag flying" gfx="815.png" name="Symbol Of Babylonia" />
+<active cache="tearflag flying" gfx="816.png" name="Fars's Golden Goblet" />
+<active cache="tearflag flying" gfx="817.png" name="Rosetta Stone" />
 <active cache="damage" gfx="818.png" name="Werry: Limit Breaker" />
 <active cache="damage" gfx="819.png" special="true" name="Power Bond" />
 <active cache="damage" gfx="820.png" devilprice="2" name="Limiter Removal" />
 
 <active gfx="821.png" name="Restock Machine" />
 <active gfx="822.png" name="Chaos Card" />
-<passive cache="damage luck flying" gfx="823.png" name="Venus's Breath" />
-<passive cache="damage luck flying" gfx="824.png" name="Scent Of Glitter" />
-<passive cache="damage luck flying" gfx="825.png" name="Memory Of Water" />
+<passive cache="flying damage luck flying" gfx="823.png" name="Venus's Breath" />
+<passive cache="flying damage luck flying" gfx="824.png" name="Scent Of Glitter" />
+<passive cache="flying damage luck flying" gfx="825.png" name="Memory Of Water" />
 <passive cache="damage speed" coins="15" gfx="826.png" name="Millstone" />
-<passive cache="tearflag flying" gfx="827.png" name="Apathetic Princess Bracelet" />
+<passive cache="firedelay tearflag damage flying" gfx="827.png" name="Apathetic Princess Bracelet" />
 <passive cache="firedelay tearflag damage flying" gfx="828.png" name="Cold Princess Necklace" />
-<passive cache="tearflag damage flying" description="N/A" gfx="829.png" name="Solium Fons" />
-<passive cache="tearflag damage flying" description="N/A" gfx="830.png" special="false" name="Tenebrae Nus" />
-<passive cache="tearflag damage flying" description="N/A" gfx="831.png" special="true" name="Lumen Basilium" />
+<passive cache="tearflag damage flying" gfx="829.png" name="Solium Fons" />
+<passive cache="tearflag damage flying" gfx="830.png" special="false" name="Tenebrae Nus" />
+<passive cache="tearflag damage flying" gfx="831.png" special="false" name="Lumen Basilium" />
 <passive cache="tearflag damage flying" soulhearts="12" gfx="832.png" name="Cold Princess Ring" />
 
 
 <active cache="damage" gfx="833.png" name="Crux Of Victoria" />
 <passive gfx="834.png" cache="tearflag" name="Plunger" />
-<passive gfx="835.png" coins="99" devilprice="2" name="Heroes of the Storm" />
+<passive gfx="835.png" devilprice="2" name="Heroes of the Storm" />
 <passive gfx="836.png" special="true" name="Absolute Guppy" />
 <passive gfx="837.png" devilprice="2" name="Absolute Gravity" />
 <active cache="tearflag" gfx="838.png" devilprice="2" name="Chemical Peel 2" />
 <active gfx="839.png" name="Ring Of Ethereal Form" />
 <passive gfx="840.png" name="Absolute Seraphim" />
 <passive cache="damage" gfx="841.png" devilprice="2" name="Dove's Book" />
-<passive cache="damage flying" gfx="842.png" name="Refined Destructive Magic Stone Bracelet" />
-<passive cache="damage flying" gfx="843.png" name="Refined Chaos Stone Necklace" />
-<passive cache="damage flying" gfx="844.png" name="Refined Amnesia Stone Ring" />
+<passive cache="tearflag damage flying" gfx="842.png" name="Refined Destructive Magic Stone Bracelet" />
+<passive cache="tearflag damage flying" gfx="843.png" name="Refined Chaos Stone Necklace" />
+<passive cache="tearflag damage flying" gfx="844.png" name="Refined Amnesia Stone Ring" />
 <active gfx="845.png" name="Stop Watch 2" />
-<active gfx="846.png" devilprice="2" name="Rank-Up-Magic Raptor's Force" />
-<passive gfx="847.png" devilprice="2" name="Absolute Sulfer" />
+<active gfx="846.png" devilprice="1" name="Rank-Up-Magic Raptor's Force" />
+<passive gfx="847.png" devilprice="1" name="Absolute Sulfer" />
 <passive cache="tearflag" gfx="848.png" special="true" name="Spectrum Tear" />
 <passive gfx="849.png" special="true" name="Absolute Leviathan" />
 <active gfx="850.png" devilprice="2" name="Runtime Error!" />
@@ -55,12 +55,12 @@
 <passive gfx="853.png" devilprice="2" name="Absolute Conjoined" />
 <active gfx="854.png" name="Pachinko" />
 
-<active gfx="monolelium.png" devilprice="2" name="Monolelium"/>
+<active gfx="798.png" special="true" devilprice="2" name="Monolelium"/>
 <active gfx="900.png" cache="firedelay damage" name="Tongue with Envy"/>
-<active gfx="901.png" cache="firedelay damage" name="A Mouth-eaten Mouth"/>
-<active gfx="902.png" cache="firedelay damage" name="The Hand of Greed"/>
+<passive gfx="901.png" cache="tearflag damage flying" name="A Mouth-eaten Mouth"/>
+<passive gfx="902.png" cache="tearflag damage flying" name="The Hand of Greed"/>
 <active gfx="903.png" cache="firedelay damage" devilprice="2" name="Eye with Full of Pride"/>
-<active gfx="904.png" cache="firedelay damage" name="A Slothful Foot"/>
+<passive gfx="904.png" cache="tearflag damage flying" name="A Slothful Foot"/>
 <active gfx="801.png" devilprice="1" name="Spice"/>
 <active gfx="802.png" devilprice="2" name="Scroll For Chaos" />
 <active gfx="803.png" name="(DNF)Skeleton Key" />
@@ -89,7 +89,7 @@
 <active gfx="866.png" cache="damage" name="Bit Coin" />
 <active gfx="867.png" maxcharges="1" name="LIL Mimic" />
 <active gfx="868.png" maxcharges="0" name="Black Whirl Wind" />
-<active gfx="869.png" maxcharges="100" devilprice="2" name="Abyss" />
+<active gfx="869.png" maxcharges="100" devilprice="1" name="Abyss" />
 <active gfx="870.png" name="Innocent Scroll" />
 <passive gfx="865.png" devilprice="2" name="Absolute Tuna" />
 <active gfx="871.png" cache="damage" name="Soul Eater" />
@@ -99,7 +99,7 @@
 <active gfx="875.png" devilprice="2" name="Rank-Up-Magic Revolution Force" />
 <active gfx="876.png" devilprice="2" name="Rank-Up-Magic Raid Force" />
 <active gfx="877.png" devilprice="2" name="Rank-Up-Magic Argent Chaos Force" />
-<active cache="firedelay" gfx="878.png" devilprice="2" name="Ethereum" />
+<active cache="firedelay" gfx="878.png" devilprice="1" name="Ethereum" />
 <active gfx="879.png" special="true" name="Black Cube" />
 <active gfx="880.png" name="Red Cube" />
 <passive gfx="881.png" name="Code Geass" />
@@ -129,5 +129,70 @@
 <active gfx="649.png" special="true" name="Artifact Ignition" />
 <active gfx="650.png" special="true" name="Artifact Sanctum" />
 <active gfx="651.png" name="Artifacts Unleashed" />
+
+<passive cache="tearflag damage flying" gfx="588.png" name="Ripple" />
+<passive cache="tearflag damage flying" gfx="589.png" name="Stellar Lumen" />
+<passive cache="tearflag damage flying" gfx="590.png" name="Litecoin" />
+<passive cache="tearflag damage flying" gfx="591.png" name="Limiter Removal P" />
+<passive cache="tearflag damage flying" gfx="592.png" name="Power Bond P" />
+<passive cache="tearflag damage flying" gfx="593.png" name="Werry: Limit Breaker P" />
+<passive cache="tearflag damage flying" gfx="594.png" name="Blood Grail" />
+<passive cache="tearflag damage flying" gfx="595.png" name="Blood Grail 2" />
+<passive cache="tearflag damage flying" gfx="596.png" name="Curse Grail" />
+<passive cache="tearflag damage flying" gfx="597.png" name="Initial Stone" />
+<passive cache="tearflag damage flying" gfx="598.png" name="Void Genome" />
+<passive cache="tearflag damage flying" gfx="599.png" name="Flowers of Prayer" />
+<passive cache="tearflag damage flying" gfx="600.png" name="Execution of Justice : Fair" />
+<passive cache="tearflag damage flying" gfx="601.png" name="Enforcement of Justice: Judgment" />
+<passive cache="tearflag damage flying" gfx="602.png" name="Enforcement of Justice: Equality" />
+<passive cache="tearflag damage flying" gfx="603.png" name="Delusion" />
+<passive cache="tearflag damage flying" gfx="604.png" name="Confusion" />
+<passive cache="tearflag damage flying" gfx="605.png" name="Hallucination" />
+<passive cache="tearflag damage flying" gfx="606.png" name="Spirit Circuits" />
+<passive cache="tearflag damage flying" gfx="607.png" name="Flugel" />
+<passive cache="tearflag damage flying" gfx="608.png" name="Suniastar" />
+<passive cache="tearflag damage flying" gfx="609.png" name="Rainbow Guppy's Tail" />
+<passive cache="tearflag damage flying" gfx="610.png" name="Rainbow Guppy's Paw" />
+<passive cache="tearflag damage flying" gfx="611.png" name="Rainbow Guppy's Dead Cat" />
+<passive cache="tearflag damage flying" gfx="617.png" name="Aquamarine" />
+<passive cache="tearflag damage flying" gfx="618.png" name="Peridot" />
+<passive cache="tearflag damage flying" gfx="619.png" name="Lapis Lazuli" />
+
+<passive cache="tearflag damage flying" gfx="621.png" name="1" />
+<passive cache="tearflag damage flying" gfx="621.png" name="2" />
+
+<active gfx="000.png" name="Master Key" />
+
+<active gfx="800.png" name="Azazel's Eye" />
+<active gfx="799.png" name="Rank-Up-Magic The Seventh One" />
+<active gfx="797.png" name="Neutrality" />
+<passive gfx="796.png" special="true" name="Holy Symbol" />
+<passive gfx="795.png" special="true" name="Intel I7-8700K" />
+
+<active gfx="794.png" name="Rank-Up-Magic Limited Barian's Force" />
+<active gfx="793.png" name="Rank-Up-Magic Admiration of the Thousands" />
+<active gfx="642.png" name="Artifact Vajra" />
+<active gfx="648.png" name="Artifact Failnaught" />
+<active gfx="792.png" name="38" />
+<passive gfx="791.png" name="Absolute Tech" />
+
+<passive gfx="587.png" name="587" />
+<passive gfx="586.png" name="586" />
+<passive gfx="585.png" name="585" />
+<passive gfx="584.png" name="584" />
+<passive gfx="583.png" name="583" />
+<passive gfx="582.png" name="582" />
+<passive gfx="581.png" name="581" />
+<passive gfx="580.png" name="580" />
+<passive gfx="579.png" name="579" />
+<passive gfx="578.png" name="578" />
+<passive gfx="577.png" name="577" />
+<passive gfx="576.png" name="576" />
+<passive gfx="575.png" name="575" />
+<passive gfx="574.png" name="574" />
+<passive gfx="573.png" name="573" />
+<passive gfx="572.png" name="572" />
+<passive gfx="571.png" name="571" />
+<passive gfx="570.png" name="570" />
 
 </items>

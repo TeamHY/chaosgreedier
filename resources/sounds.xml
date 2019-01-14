@@ -1061,4 +1061,44 @@
 	<sound id="457">
 		<sample weight="1" path="Voiceover/Black Rune 2.wav" />
 	</sound>
+	<sound id="458">
+		<sample weight="1" path="pingpong.wav"/>
+	</sound>
+	<sound id="459">
+		<sample weight="1" path="Spewer death scream 1.wav"/>
+		<sample weight="1" path="Spewer death scream 4.wav"/>
+	</sound>
+	<sound id="460">
+		<sample weight="1" path="Mom Footsteps.wav"/>
+	</sound>
+	<sound id="461">
+		<sample weight="1" path="Bone Heart.wav"/>
+	</sound>
+	<sound id="462">
+		<sample weight="1" path="Bone Snap.wav"/>
+	</sound>
+	<sound id="463">
+		<sample weight="1" path="Shovel Drop.wav"/>
+	</sound>
+	<sound id="464">
+		<sample weight="1" path="Shovel Dig.wav"/>
+	</sound>
+	<sound id="465">
+		<sample weight="1" path="Gold Heart.wav"/>
+	</sound>
+	<sound id="466">
+		<sample weight="1" path="Gold Heart Drop.wav"/>
+	</sound>
+	<sound id="467">
+		<sample weight="1" path="Bone Drop.wav"/>
+	</sound>
+	<sound id="468">
+		<sample weight="1" path="unholy!.wav"/>
+	</sound>
+	<sound id="469">
+		<sample weight="1" path="Button Press.wav"/>
+	</sound>
+	<sound id="470">
+		<sample weight="1" path="GoldenBomb.wav"/>
+	</sound>
 </sounds>

@@ -1,5 +1,18 @@
+--[[
+1. 오버리밋세트 추가 데미지가 UI 초기화가 되지 않는 현상 수정 [문제 확인 불가]
+2. 오버리밋세트 데미지 감소 옵션 제거 [완료]
+3. 섬망셋 3분마다 델라니움 효과 제거 [완료]
+4. 아스트랄 포스 사용 시 1분마다 은방템으로 리뉴얼 [완료]
+5. 노겜노라, 탄생석 발동 확률 25% 감소 [완료]
+6. 3신기 빠가지 제거 옵션 삭제 [완료]
+7. 보이드 아폴리온이 아닐경우 3회까지만 사용하도록 변경 
+8. 블러드 드라이브 사용 시 사용 시 15원 필요로 변경, 50% 확률로 성공, 50% 확률로 무효과로 리뉴얼 [완료]
+]]
+
 -- Lua 모듈 불러오기
 timer = require "timer"
+
+setnumber = 15;
 
 --Settings
 swapItemKey = Keyboard.KEY_LEFT_SHIFT --Which keyboard key swaps items
@@ -18,9 +31,6 @@ skipforce_item = Isaac.GetItemIdByName("Rank-Up-Magic Skip Force")
 deathdoubleforce_item = Isaac.GetItemIdByName("Rank-Up-Magic Death Double Force")
 mono_item = Isaac.GetItemIdByName("Monolelium")
 pride_item = Isaac.GetItemIdByName("Eye with Full of Pride")
-sloth_item = Isaac.GetItemIdByName("A Slothful Foot")
-greed_item = Isaac.GetItemIdByName("The Hand of Greed")
-gluttony_item = Isaac.GetItemIdByName("A Mouth-eaten Mouth")
 envy_item = Isaac.GetItemIdByName("Tongue with Envy")
 spice_item = Isaac.GetItemIdByName("Spice")
 scroll_item = Isaac.GetItemIdByName("Scroll For Chaos")
@@ -117,7 +127,13 @@ yusa_guppy_item = Isaac.GetItemIdByName("Hlminth") --눈물 공격 시 100% 자�
 yusa_cleaner_item = Isaac.GetItemIdByName("Empty") --사용 시 항시 클리너 효과, 데미지 50% 증가
 
 garbage_item = Isaac.GetItemIdByName("Artifacts Unleashed") -- 웨폰마스터 기본템
-akma_item = Isaac.GetItemIdByName("2") -- 15원 있어야 사용가능, 1분마다 악마방 아이템 소환
+akma_item = Isaac.GetItemIdByName("Rank-Up-Magic The Seventh One") -- 15원 있어야 사용가능, 1분마다 악마방 아이템 소환 (일회용)
+angel_item = Isaac.GetItemIdByName("Rank-Up-Magic Limited Barian's Force") -- 15원 있어야 사용가능, 2분마다 천사방 아이템 소환 (일회용)
+double_item = Isaac.GetItemIdByName("Rank-Up-Magic Admiration of the Thousands") -- 15원 있어야 사용가능, 2분마다 20/20 아이템 소환 (일회용)
+money_genesis_item = Isaac.GetItemIdByName("Artifact Vajra") -- 사용 시 현재 소지한 1코인 = 1% 확률로 제네시스 눈물 효과 적용 (일회용)
+money_add_damage_item = Isaac.GetItemIdByName("Artifact Failnaught") -- 사용 시 현재 소지한 1코인 = 1% 추가 데미지 (일회용)
+omfg_sagi_item = Isaac.GetItemIdByName("38") -- 사용 시 50% / 현재 코인 수치 2배 증가, 실패 시 모든 코인 삭제 (최대 3회)
+alltech_item = Isaac.GetItemIdByName("Absolute Tech") -- 소지 시 테크X, 테크1, 테크2 캐릭터에게 추가되며, 다른 Mom's Knife, Brimstone, Epic Fetus, cleaner_item, enocent_item "배열 제거
 
 hweng_hol_item = Isaac.GetItemIdByName("Sensory Satisfaction") --황홀
 samsingi_item = Isaac.GetItemIdByName("Ancient Civilization") --삼신기
@@ -125,7 +141,56 @@ jongma_item = Isaac.GetItemIdByName("Refined Otherverse Magic Stone") --정마
 gim_luke_item = Isaac.GetItemIdByName("Heblon's Monarch") --루크
 er_gong_item = Isaac.GetItemIdByName("Ice Princess Breath") --얼공
 
-jjap_raptor_item = Isaac.GetItemIdByName("1") --유사 랩터즈포스
+jjap_raptor_item = Isaac.GetItemIdByName("A") --유사 랩터즈포스
+rainbowdead_item = Isaac.GetItemIdByName("Rainbow Guppy's Dead Cat")
+rainbowpaw_item = Isaac.GetItemIdByName("Rainbow Guppy's Paw")
+rainbowtail_item = Isaac.GetItemIdByName("Rainbow Guppy's Tail")
+ne_item = Isaac.GetItemIdByName("Spirit Circuits")
+da_item = Isaac.GetItemIdByName("Flugel")
+ssip_item = Isaac.GetItemIdByName("Suniastar")
+mangsang_item = Isaac.GetItemIdByName("Delusion")
+hondon_item = Isaac.GetItemIdByName("Confusion")
+hwangak_item = Isaac.GetItemIdByName("Hallucination")
+ac_item = Isaac.GetItemIdByName("Initial Stone")
+ti_item = Isaac.GetItemIdByName("Void Genome")
+ve_item = Isaac.GetItemIdByName("Flowers of Prayer")
+de_item = Isaac.GetItemIdByName("Execution of Justice : Fair")
+fen_item = Isaac.GetItemIdByName("Enforcement of Justice: Judgment")
+ce_item = Isaac.GetItemIdByName("Enforcement of Justice: Equality")
+chaosSt_item = Isaac.GetItemIdByName("A Mouth-eaten Mouth")
+chaosNd_item = Isaac.GetItemIdByName("The Hand of Greed")
+chaosRd_item = Isaac.GetItemIdByName("A Slothful Foot")
+injecA_item = Isaac.GetItemIdByName("Blood Grail")
+injecB_item = Isaac.GetItemIdByName("Blood Grail 2")
+injecC_item = Isaac.GetItemIdByName("Curse Grail")
+godheadA_item = Isaac.GetItemIdByName("Aquamarine")
+godheadB_item = Isaac.GetItemIdByName("Peridot")
+godheadC_item = Isaac.GetItemIdByName("Lapis Lazuli")
+maxoverA_item = Isaac.GetItemIdByName("Werry: Limit Breaker P")
+maxoverB_item = Isaac.GetItemIdByName("Power Bond P")
+maxoverC_item = Isaac.GetItemIdByName("Limiter Removal P")
+moneyA_item = Isaac.GetItemIdByName("Ripple")
+moneyB_item = Isaac.GetItemIdByName("Stellar Lumen")
+moneyC_item = Isaac.GetItemIdByName("Litecoin")
+randomset_item = Isaac.GetItemIdByName("Master Key")
+
+--ranTechX_item = Isaac.GetItemIdByName("1")
+exDmgDble_item = Isaac.GetItemIdByName("Holy Symbol")
+--actLuck_item = Isaac.GetItemIdByName("3")
+
+yuryoBrim_item = Isaac.GetItemIdByName("Azazel's Eye")
+--yuryoKarl_item = Isaac.GetItemIdByName("Azazel's Dick")
+--yuryoTech_item = Isaac.GetItemIdByName("Azazel's Ball")
+
+--gungeoncopy_item = Isaac.GetItemIdByName("sinseongmurdoc")
+--realChamp_item = Isaac.GetItemIdByName("5")
+
+maxoverDmg_item = Isaac.GetItemIdByName("Intel I7-8700K")
+--stopCopyHy_item = Isaac.GetItemIdByName("7")
+--soulpower_item = Isaac.GetItemIdByName("8")
+--extradamage_item = Isaac.GetItemIdByName("9")
+i_cant_understand_item = Isaac.GetItemIdByName("Neutrality")
+
 
 -- 카드 등록
 hermit_stars_card = Isaac.GetCardIdByName("HermitStars")
@@ -153,6 +218,28 @@ config = Isaac.GetItemConfig()
 storedItemSprite = Sprite()
 storedItemSprite:Load("backpack_storeditem.anm2")
 storedItemSprite:Play("Idle")
+specialSprite1 = Sprite()
+specialSprite1:Load("rair_storeditem.anm2")
+specialSprite1:Play("Idle")
+specialSprite2 = Sprite()
+specialSprite2:Load("rair_storeditem.anm2")
+specialSprite2:Play("Idle")
+specialSprite3 = Sprite()
+specialSprite3:Load("rair_storeditem.anm2")
+specialSprite3:Play("Idle")
+specialSprite4 = Sprite()
+specialSprite4:Load("rair_storeditem.anm2")
+specialSprite4:Play("Idle")
+specialSprite5 = Sprite()
+specialSprite5:Load("rair_storeditem.anm2")
+specialSprite5:Play("Idle")
+
+setSprite = {};
+for i=1, setnumber do
+	setSprite[i] = Sprite()
+	setSprite[i]:Load("rair_storeditem.anm2")
+	setSprite[i]:Play("Idle")
+end
 
 werryContinue = 0
 powerBondContinue = 0
@@ -171,6 +258,8 @@ isQuickChaosTimeOut = true
 isMegaBlastTimeOut = true
 isWatchTimeOut = true
 isHippoTimeOut = true
+maxDmg = 0
+soulpowerVar = false
 
 errorTeleportStartedFrame = -1
 UGTeleportStartedFrame = -1
@@ -179,7 +268,6 @@ isforcesuccess = 0
 isamplisuccess = 0
 
 shadowremove = false
-haslumen = false
 
 specialremove = false;
 
@@ -190,6 +278,7 @@ eterbanji = 0
 roomiscleared = 0
 roomseedisold = 0
 ranscroll = 0
+aricooldown = 0
 
 curseroom = {
 	symbol_item,
@@ -217,7 +306,6 @@ curseroom = {
 specialitem = {
 	powerbond_item,
 	18,
-	lumen_item,
 	64,
 	69,
 	aguppy_item,
@@ -235,7 +323,6 @@ specialitem = {
 	313,
 	331,
 	spect_item,
-	alevi_item,
 	360,
 	389,
 	393,
@@ -247,12 +334,20 @@ specialitem = {
 	503,
 	bok_E_tuk_burumyeon_an_om_item, 
 	bok_E_gae_ship_shake_it_item,
-	bok_E_sibal_shake_it_item
+	bok_E_sibal_shake_it_item,
+	477,
+	ascroll_item,
+	108,
+	301,
+	449,
+	exDmgDble_item,
+	maxoverDmg_item,
+	88,
+	399
 }
 
 specialitemp = {
 	18,
-	lumen_item,
 	64,
 	69,
 	aguppy_item,
@@ -267,7 +362,6 @@ specialitemp = {
 	310,
 	311,
 	313,
-	alevi_item,
 	360,
 	389,
 	393,
@@ -280,7 +374,14 @@ specialitemp = {
 	221,
 	494,
 	524,
-	503
+	503,
+	108,
+	301,
+	449,
+	exDmgDble_item,
+	maxoverDmg_item,
+	88,
+	399
 }
 
 attacktype = {
@@ -293,26 +394,60 @@ attacktype = {
 }
 
 setitem = {
-	hweng_hol_item,
-	samsingi_item,
-	jongma_item,
-	gim_luke_item,
-	er_gong_item,
 	venus_item,
 	scent_item,
-	memory_item,
+	memory_item, --1
 	rosettap_item,
 	symbolp_item,
-	farsp_item,
+	farsp_item, --2
 	rcsn_item,
 	rasr_item,
-	rdmsb_item,
+	rdmsb_item, --3
 	lumen_item,
 	tenenu_item,
-	solfon_item,
+	solfon_item, --4
 	cpb_item,
 	cpn_item,
-	cpr_item
+	cpr_item, --5
+	rainbowdead_item,
+	rainbowtail_item,
+	rainbowpaw_item, --6
+	ne_item,
+	da_item,
+	ssip_item, --7
+	mangsang_item,
+	hondon_item,
+	hwangak_item, --8
+	ac_item,
+	ti_item,
+	ve_item, --9
+	de_item,
+	fen_item,
+	ce_item, --10
+	chaosSt_item,
+	chaosNd_item,
+	chaosRd_item, --11
+	injecA_item,
+	injecB_item,
+	injecC_item, --12
+	godheadA_item,
+	godheadB_item,
+	godheadC_item, --13
+	maxoverA_item,
+	maxoverB_item,
+	maxoverC_item, --14
+	moneyA_item,
+	moneyB_item,
+	moneyC_item --15
+}
+
+guppyParts={
+	81,
+	133,
+	134,
+	145,
+	187,
+	212
 }
 
 spiceused = 0
@@ -328,17 +463,7 @@ skipuse = false
 chaoschar = false
 EnvyContinue = 0
 isEnvyTimeOut = true
-EnvyUse = false
-GluttonyContinue = 0
-isGluttonyTimeOut = true
-GluttonyUse = false
-GreedContinue = 0
-isGreedTimeOut = true
-GreedUse = false
 PrideUse = false
-SlothContinue = 0
-isSlothTimeOut = true
-SlothUse = false
 footrandom = math.random(2,5)
 MonoContinue = 0
 isMonoTimeOut = true
@@ -348,7 +473,6 @@ succusohwan_item_var = 0
 artifact_moralltach_item_var = 0
 artifact_beagalltach_item_var = 0
 dealnurfvar = 1
-solfonVar = 0
 agravityVar = 0
 artifact_aegis_itemVar = 0
 artifact_achilleshield_itemVar = 0
@@ -364,21 +488,39 @@ bok_a_jeong_sin_cha_ri_ja = false
 bok_a_mal_jom_dureora = 0
 RedCubeVar = 0
 BlackCubeVar = 0
+omfg_sagiVar = 0;
 YusaCleanerVar = false
 akmaVar = false
 akmaTime = 0
+angelVar = false
+angelTime = 0
+doubleVar = false
+doubleTime = 0
 JeongMaVar = false
 bonVar = 0
-limterVar = 0
-specialnum = 0
+juaShadVar = false
+voidVar = 0
+
+money_genesis = 0;
+money_add_damage = 0;
+
 specialitem1 = 0
 specialitem2 = 0
 specialitem3 = 0
 specialitem4 = 0
-ranluck1 = math.random(1,4)
-ranluck2 = math.random(1,4)
-ranluck3 = math.random(1,4)
+specialitem5 = 0
+
+setcheck = {};
+for i=1, setnumber do
+	setcheck[i] = 0;
+end
+
 plusluck = 0
+extraDamage = 0
+hosVar = 0
+wGoldVar = 0
+
+recall = require "recall"
 
 function getFlag(arr, currentFlag) -- 눈물 상태 함수
     number = currentFlag;
@@ -394,15 +536,6 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 	player = Isaac.GetPlayer(0)
 
 	if (cacheFlag == CacheFlag.CACHE_DAMAGE) then -- 아이템 획득 시 cacheFlag가 데미지면
-		if player:HasCollectible(rdmsb_item) then -- 241를 획득했을 시
-			player.Damage = player.Damage + 4 -- 데미지 +4
-		end
-		if player:HasCollectible(rcsn_item) then -- 249 획득했을 시
-			player.Damage = player.Damage + 4 -- 데미지 +4
-		end
-		if player:HasCollectible(rasr_item) then -- 255 획득했을 시
-			player.Damage = player.Damage + 4 -- 데미지 +4
-		end
 		if player:HasCollectible(doveb_item) then -- 176 획득했을 시
 			player.Damage = player.Damage + 9.99 -- 데미지 +9.99
 		end
@@ -415,21 +548,6 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if player:HasCollectible(90) then
 			player.Damage = player.Damage + 5
 		end
-		if player:HasCollectible(cpb_item) then
-			player.Damage = player.Damage + 5
-		end
-		if isWerryTimeOut == false then -- 아직 지속 시간이라면
-			player.Damage = player.Damage + 30
-		end
-		if isCovTimeOut == false then
-			player.Damage = player.Damage + 20
-		end
-		if isMegaBlastTimeOut == false then
-			player.Damage = player.Damage + 200
-		end
-		if isHippoTimeOut == false then
-			player.Damage = player.Damage + 5000
-		end
 		player.Damage = player.Damage + (10 * isamplisuccess) + (5 * isforcesuccess) + ranscroll
 		if spiceuse == true then
 			player.Damage = player.Damage - spiceused
@@ -437,49 +555,11 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if trinityuse == true then
 			player.Damage = player.Damage - trinityused
 		end
-		if player:HasCollectible(symbolp_item) then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*1.2)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 1.2 -- 그냥 1.3배
-			end
-		end
-		if player:HasCollectible(farsp_item) then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*1.2)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 1.2 -- 그냥 1.3배
-			end
-		end
-		if player:HasCollectible(rosettap_item) then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*1.2)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 1.2 -- 그냥 1.3배
-			end
-		end
-		if isPowerBondTimeOut == false then
-			player.Damage = player.Damage * 4
-		end
-		if isLimiterRemovalTimeOut == false then
-			player.Damage = player.Damage * 2
-		end
+		--[[if player:HasCollectible(soulpower_item) then
+			player.Damage = player.Damage + (1.5 * player:GetCollectibleNum(381))
+		end--]]
 		if shadowremove == true then
 			player.Damage = player.Damage * 1.5
-		end
-		if player:HasCollectible(solfon_item) then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*1.1)+40
-			else -- 아니면
-				player.Damage = player.Damage * 1.1
-			end
-		end
-		if player:HasCollectible(tenenu_item) then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*1.1)+40
-			else -- 아니면
-				player.Damage = player.Damage * 1.1
-			end
 		end
 		if player:HasCollectible(411) then
 			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
@@ -495,14 +575,11 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 				player.Damage = player.Damage * 1.3 -- 그냥 1.3배
 			end
 		end
-		if player:HasCollectible(168) and player:HasCollectible(229) then
-			player.Damage = player.Damage / 10 * 6
-		end
 		if player:HasCollectible(213) then
 			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
 				player.Damage = ((player.Damage-40)*1.3)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
 			else -- 아니면
-				player.Damage = player.Damage * 1.3 -- 그냥 1.3배
+				player.Damage = player.Damage * 1.1 -- 그냥 1.3배
 			end
 		end
 		if player:HasCollectible(3) then
@@ -516,7 +593,7 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
 				player.Damage = ((player.Damage-40)*1.5)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
 			else -- 아니면
-				player.Damage = player.Damage * 1.5 -- 그냥 1.3배
+				player.Damage = player.Damage * 1.1 -- 그냥 1.3배
 			end
 		end
 		if PrideUse == true then
@@ -524,34 +601,6 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 				player.Damage = ((player.Damage-40)*0.5)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
 			else -- 아니면
 				player.Damage = player.Damage * 0.5 -- 그냥 1.3배
-			end
-		end
-		if GluttonyUse == true then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*0.85)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 0.75 -- 그냥 1.3배
-			end
-		end
-		if GreedUse == true then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*0.75)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 0.75 -- 그냥 1.3배
-			end
-		end
-		if SlothUse == true then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*0.75)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 0.75 -- 그냥 1.3배
-			end
-		end
-		if EnvyUse == true then
-			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
-				player.Damage = ((player.Damage-40)*0.75)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
-			else -- 아니면
-				player.Damage = player.Damage * 0.75 -- 그냥 1.3배
 			end
 		end
 		if player:HasCollectible(eyes_item) and player.Luck >= 0 then
@@ -571,10 +620,49 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		player.Damage = player.Damage * momlessscroll
 
 		player.Damage = player.Damage * dealnurfvar
+
+		if player:GetPlayerType() == 3 then
+			if player:HasCollectible(149) and player:HasCollectible(68) == false and player:HasCollectible(114) == false and player:HasCollectible(395) == false then
+				player.Damage = ((player.Damage-40)*1.25)+40 -- 40 먼저 빼고 1.3를 곱해서 다시 40 더한다.
+			else -- 아니면
+				player.Damage = player.Damage * 1.25 -- 그냥 1.3배
+			end
+		end
+		if player:GetPlayerType() ~= 3 then
+			if player.Damage > 200+maxDmg then --데미지 제한
+				player.Damage = 200+maxDmg;
+			end
+		else
+			if player.Damage > 300+maxDmg then --데미지 제한
+				player.Damage = 300+maxDmg;
+			end
+		end
+		
+		if isPowerBondTimeOut == false then
+			player.Damage = player.Damage * 4
+		end
+		if isLimiterRemovalTimeOut == false then
+			player.Damage = player.Damage * 2
+		end
+		if isWerryTimeOut == false then -- 아직 지속 시간이라면
+			player.Damage = player.Damage + 30
+		end
+		if isCovTimeOut == false then
+			player.Damage = player.Damage + 20
+		end
+		if isMegaBlastTimeOut == false then
+			player.Damage = player.Damage + 200
+		end
+		if isHippoTimeOut == false then
+			player.Damage = player.Damage + 5000
+		end
 	end
 	if (cacheFlag == CacheFlag.CACHE_RANGE) then -- 아이템 획득 시 cacheFlag가 사거리면
 		if player:HasCollectible(237) then
 			player.TearHeight = player.TearHeight - 13
+		end
+		if player:HasCollectible(221) then
+			player.TearHeight = player.TearHeight + player.TearHeight
 		end
 	end
 	if (cacheFlag == CacheFlag.CACHE_SPEED) then -- 아이템 획득 시 cacheFlag가 스피드면
@@ -599,23 +687,14 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 	end
 	if (cacheFlag == CacheFlag.CACHE_LUCK) then -- 아이템 획득 시 CacheFlag가 운이면
 		player.Luck = player.Luck + plusluck
-		if player:HasCollectible(venus_item) then
-			player.Luck  = player.Luck + ranluck1
-		end
-		if player:HasCollectible(scent_item) then -- 23 획득했을 시
-			player.Luck  = player.Luck + ranluck2 -- 럭 3 증가
-		end
-		if player:HasCollectible(memory_item) then
-			player.Luck  = player.Luck + ranluck3
-		end
 		if player:HasCollectible(46) then -- 46 획득했을 시
 			player.Luck  = player.Luck + footrandom -- 럭 4 증가
 		end
 		if player:HasCollectible(clover_item) then
-			player.Luck  = player.Luck + 9
+			player.Luck  = player.Luck + 7
 		end
-		if player:HasCollectible(374) then
-			player.Luck  = player.Luck - 3
+		if player:HasCollectible(injecA_item) and player:HasCollectible(injecB_item) and player:HasCollectible(injecC_item) then
+			player.Luck  = player.Luck + 10
 		end
 		if player:HasCollectible(355) then
 			player.Luck = player.Luck + pearlrandom
@@ -637,9 +716,6 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if player:HasCollectible(cp2_item) then 
 			player.TearFlags = getFlag({48}, player.TearFlags); 
 		end
-		if haslumen == true then 
-			player.TearFlags = getFlag({2}, player.TearFlags); -- 2번 플래그를 줌
-		end
 		if player:HasCollectible(428) then 
 			player.TearFlags = getFlag({2,3,4,14,15,21}, player.TearFlags); 
 		end
@@ -658,14 +734,18 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if player:HasCollectible(3) then
 			player.TearFlags = getFlag({2}, player.TearFlags);
 		end
+		if player:HasCollectible(331) then
+			player.TearFlags = getFlag({2}, player.TearFlags);
+		end
 		if isMegaBlastTimeOut == false then
 			player.TearFlags = getFlag({3}, player.TearFlags);
 		end
-		if player:HasCollectible(farsp_item) or player:HasCollectible(rosettap_item) or player:HasCollectible(symbolp_item) then
-			player.TearFlags = getFlag({2}, player.TearFlags);
-		end
-		if (player:HasCollectible(farsp_item) and player:HasCollectible(rosettap_item)) or (player:HasCollectible(symbolp_item) and player:HasCollectible(rosettap_item)) or (player:HasCollectible(farsp_item) and player:HasCollectible(symbolp_item)) then
-			player.TearFlags = getFlag({3}, player.TearFlags);
+		for i=1,(#setitem)/3 do
+			if (player:HasCollectible(setitem[3*i-2]) and player:HasCollectible(setitem[3*i-1])) or
+			(player:HasCollectible(setitem[3*i-2]) and player:HasCollectible(setitem[3*i])) or
+			(player:HasCollectible(setitem[3*i-1]) and player:HasCollectible(setitem[3*i])) then
+				player.TearFlags = getFlag({2}, player.TearFlags);
+			end
 		end
 	end
 	if (cacheFlag == CacheFlag.CACHE_SHOTSPEED) then
@@ -677,9 +757,6 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if player:HasCollectible(237) then
 			player.MaxFireDelay = player.MaxFireDelay + 10
 		end
-		if player:HasCollectible(cpn_item) then
-			player.MaxFireDelay = player.MaxFireDelay - 1
-		end
 		if player:HasCollectible(galactic_item) then
 			player.MaxFireDelay = player.MaxFireDelay - 1
 		end
@@ -689,12 +766,10 @@ function ChaosGreed:Item1(player, cacheFlag) -- items.xml의 cacheFlag를 불러
 		if player:HasCollectible(122) then
 			player.CanFly = true
 		end
-		if (player:HasCollectible(venus_item) and player:HasCollectible(memory_item) and player:HasCollectible(scent_item)) or
-		(player:HasCollectible(farsp_item) and player:HasCollectible(symbolp_item) and player:HasCollectible(rosettap_item)) or
-		(player:HasCollectible(rcsn_item) and player:HasCollectible(rasr_item) and player:HasCollectible(rdmsb_item)) or
-		(player:HasCollectible(solfon_item) and player:HasCollectible(tenenu_item) and haslumen == true) or
-		(player:HasCollectible(cpn_item) and player:HasCollectible(cpb_item) and player:HasCollectible(cpr_item)) then
-			player.CanFly = true
+		for i=1,(#setitem)/3 do
+			if player:HasCollectible(setitem[3*i-2]) and player:HasCollectible(setitem[3*i-1]) and player:HasCollectible(setitem[3*i]) then
+				player.CanFly = true
+			end
 		end
 	end
 end
@@ -729,7 +804,6 @@ function ChaosGreed:PlayerInit(player)
 		isforcesuccess = 0
 		isamplisuccess = 0
 		shadowremove = false
-		haslumen = false
 		spiceused = 0
 		spicepenalty = 1
 		spiceuse = false
@@ -752,17 +826,7 @@ function ChaosGreed:PlayerInit(player)
 		trinityuse = false
 		isEnvyTimeOut = true
 		EnvyContinue = 0
-		EnvyUse = false
-		GluttonyContinue = 0
-		isGluttonyTimeOut = true
-		GluttonyUse = false
-		GreedContinue = 0
-		isGreedTimeOut = true
 		PrideUse = false
-		SlothContinue = 0
-		isSlothTimeOut = true
-		SlothUse = false
-		GreedUse = false
 		footrandom = math.random(2,5)
 		MonoContinue = 0
 		isMonoTimeOut = true
@@ -772,7 +836,6 @@ function ChaosGreed:PlayerInit(player)
 		artifact_moralltach_item_var = 0
 		artifact_beagalltach_item_var = 0
 		dealnurfvar = 1
-		solfonVar = 0
 		agravityVar = 0
 		artifact_aegis_itemVar = 0
 		artifact_achilleshield_itemVar = 0
@@ -790,19 +853,41 @@ function ChaosGreed:PlayerInit(player)
 		BoosterPackBoolean = false
 		RedCubeVar = 0
 		BlackCubeVar = 0
+		omfg_sagiVar = 0;
 		YusaCleanerVar = false
 		akmaVar = false
 		akmaTime = 0
+		angelVar = false
+		angelTime = 0
+		doubleVar = false
+		doubleTime = 0
 		JeongMaVar = false
-		specialnum = 0
+		money_genesis = 0;
 		specialitem1 = 0
 		specialitem2 = 0
 		specialitem3 = 0
 		specialitem4 = 0
+		specialitem5 = 0
 		specialremove = false;
+		setcheck = {};
+		for i=1, setnumber do
+			setcheck[i] = 0;
+		end
 		bonusmultiple = 0;
 		skipuse = false;
 		skipContinue = 0;
+		aricooldown = 0
+		extraDamage = 0
+		hosVar = 0
+		maxDmg = 0
+		wGoldVar = 0
+		soulpowerVar = false
+		juaShadVar = false
+		plusluck = 0;
+		voidVar = 0
+		if player:GetPlayerType() == 3 then
+			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
+		end
 	end
 	saveData = Isaac.LoadModData(ChaosGreed)
 	a, b, c = saveData:match("([^,]+),([^,]+),([^,]+)")
@@ -824,500 +909,9 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 	player = Isaac.GetPlayer(0) -- 플레이어 변수 설정
 	entities = Isaac.GetRoomEntities()
 	
-	if player:HasCollectible(280)==true and player:GetCollectibleNum(280)<3 then -- 280을 획득했고 3개 이하면(씨씨)
-		player:AddCollectible(280,0,true) -- 3개를 얻을 때까지 반복해서 280 획득
+	if player:HasCollectible(maxoverDmg_item) then
+		maxDmg = 100;
 	end
-	if player:HasCollectible(511)==true and player:GetCollectibleNum(511)<3 then -- 511을 획득했고 3개 이하면(앵그리플라이)
-		player:AddCollectible(511,0,true) -- 3개를 얻을 때까지 반복해서 511 획득
-	end
-	if player:HasCollectible(197)==true and player:GetCollectibleNum(197)<6 then -- 197을 획득했고 3개 이하면(쥬스)
-		player:AddCollectible(197,0,true) -- 3개를 얻을 때까지 반복해서 197 획득
-	end
-	if player:HasCollectible(193)==true and player:GetCollectibleNum(193)<10 then -- 193을 획득했고 5개 이하면(미트)
-		player:AddCollectible(193,0,true) -- 5개를 얻을 때까지 반복해서 193 획득
-	end
-	if player:HasCollectible(138)==true and player:GetCollectibleNum(138)<20 then -- 138을 획득했고 20개 이하면(스티그마)
-		player:AddCollectible(138,0,true) -- 20개를 얻을 때까지 반복해서 138 획득
-	end
-	if player:HasCollectible(493)==true and player:GetCollectibleNum(208)<10 then -- 493을 획득했고 208이 10개 이하면(아드레날린/챔벨)
-		player:AddCollectible(208,0,true) -- 10개를 얻을 때까지 반복해서 208 획득
-	end
-	if player:HasCollectible(417)==true and player:GetCollectibleNum(417)<2 then -- 417을 획득했고 2개 이하면(서큐)
-		player:AddCollectible(417,0,true) -- 2개를 얻을 때까지 반복해서 417 획득
-	end
-	if player:HasCollectible(317)==true and player:GetCollectibleNum(48)<1 then -- 317을 획득했고 48이 1개 이하면(섬창/큐피드)
-		player:AddCollectible(48,0,true) -- 1개를 얻을 때까지 반복해서 48 획득
-	end
-	if player:HasCollectible(201)==true and player:GetCollectibleNum(201)<20 then -- 201을 획득했고 5개 이하면(철괴)
-		player:AddCollectible(201,0,true) -- 5개를 얻을 때까지 반복해서 201 획득
-	end
-	if player:HasCollectible(207)==true and player:GetCollectibleNum(207)<4 then -- 207을 획득했고 4개 이하면(밴드)
-		player:AddCollectible(207,0,true) -- 4개를 얻을 때까지 반복해서 415 획득
-	end
-	if player:HasCollectible(73)==true and player:GetCollectibleNum(73)<4 then -- 73을 획득했고 4개 이하면(미트)
-		player:AddCollectible(73,0,true) -- 4개를 얻을 때까지 반복해서 73 획득
-	end
-	if player:HasCollectible(155)==true and player:GetCollectibleNum(155)<3 then -- 155을 획득했고 3개 이하면(피퍼)
-		player:AddCollectible(155,0,true) -- 3개를 얻을 때까지 반복해서 155 획득
-	end
-	if player:HasCollectible(405)==true and player:GetCollectibleNum(405)<3 then -- 405을 획득했고 3개 이하면(기가바이트)
-		player:AddCollectible(405,0,true) -- 3개를 얻을 때까지 반복해서 405 획득
-	end
-	if player:HasCollectible(238)==true and player:HasCollectible(239)==true then -- 238과 239를 획득했다면(키피스 1,2)
-		if player:HasCollectible(499)==false then --499가 없다면
-			player:AddCollectible(499,0,true) -- 499 획득
-			player:RemoveCollectible(238)
-			player:RemoveCollectible(239)
-		end
-	end
-	if player:HasCollectible(solfon_item)==true and solfonVar == 0 then 
-		player:AddCollectible(381,0,true)
-		player:AddCollectible(381,0,true)
-		solfonVar = 1
-	end
-	if player:HasCollectible(tenenu_item)==true and player:HasCollectible(387)==false then 
-		player:AddCollectible(387,0,true) 
-	end
-	if player:HasCollectible(170)==true and player:GetCollectibleNum(170)<2 then 
-		player:AddCollectible(170,0,true) 
-	end
-	if player:HasCollectible(318)==true and player:GetCollectibleNum(318)<2 then 
-		player:AddCollectible(318,0,true)
-	end
-	if player:HasCollectible(165)==true and player:GetCollectibleNum(165)<5 then 
-		player:AddCollectible(165,0,true)
-	end
-	if player:HasCollectible(275)==true and player:GetCollectibleNum(275)<3 then 
-		player:AddCollectible(275,0,true)
-	end
-	if player:HasCollectible(508)==true and player:GetCollectibleNum(508)<3 then 
-		player:AddCollectible(508,0,true)
-	end
-	if player:HasCollectible(50)==true and player:GetCollectibleNum(50)<2 then 
-		player:AddCollectible(50,0,true)
-	end
-	if player:HasCollectible(7)==true and player:HasCollectible(462)==false then 
-		player:AddCollectible(462,0,true) 
-	end
-	if player:HasCollectible(79)==true and player:GetCollectibleNum(79)<10 then 
-		player:AddCollectible(79,0,true)
-	end
-	if player:HasCollectible(80)==true and player:GetCollectibleNum(80)<10 then 
-		player:AddCollectible(80,0,true)
-	end
-	if player:HasCollectible(399)==true and player:GetCollectibleNum(399)<15 then 
-		player:AddCollectible(399,0,true)
-	end
-	if player:HasCollectible(463)==true and player:GetCollectibleNum(463)<15 then 
-		player:AddCollectible(463,0,true)
-	end
-	if player:HasCollectible(345)==true and player:GetCollectibleNum(345)<5 then 
-		player:AddCollectible(345,0,true)
-	end
-	if player:HasCollectible(279)==true and player:GetCollectibleNum(279)<3 then 
-		player:AddCollectible(279,0,true)
-	end
-	if player:HasCollectible(359)==true and player:GetCollectibleNum(359)<4 then 
-		player:AddCollectible(359,0,true)
-	end
-	if player:HasCollectible(51)==true and player:GetCollectibleNum(51)<6 then 
-		player:AddCollectible(51,0,true)
-	end
-	if player:HasCollectible(411) and player:HasCollectible(51) and FRageVar == true then
-		player:AddCollectible(157,0,true)
-		FRageVar = false
-	end
-	if player:HasCollectible(528)==true and player:GetCollectibleNum(528)<15 then 
-		player:AddCollectible(528,0,true)
-	end
-	if player:HasCollectible(526)==true and player:GetCollectibleNum(526)<2 then 
-		player:AddCollectible(526,0,true)
-	end
-	if player:HasCollectible(rdmsb_item)==true and player:HasCollectible(245)==false then
-		player:AddCollectible(245,0,true)
-	end
-	if player:HasCollectible(445)==true and player:GetCollectibleNum(445)<20 then 
-		player:AddCollectible(445,0,true)
-	end
-	if player:HasCollectible(lumen_item)==true then
-		haslumen = true
-		player:AddCacheFlags(CacheFlag.CACHE_TEARFLAG)
-		player:EvaluateItems()
-		if math.random(1,2)==1 then
-			player:AddCollectible(415,0,true)
-		else
-			player:AddCollectible(442,0,true)
-		end
-		player:RemoveCollectible(lumen_item)
-	end
-	if player:HasCollectible(172)==true and player:GetCollectibleNum(172)<6 then 
-		player:AddCollectible(172,0,true)
-	end
-	if player:HasCollectible(259)==true and player:GetCollectibleNum(259)<10 then 
-		player:AddCollectible(259,0,true)
-	end
-	if player:HasCollectible(rcsn_item)==true and player:GetCollectibleNum(76)<1 then 
-		player:AddCollectible(76,0,true)
-	end
-	if player:HasCollectible(biblethump_item)==true and player:GetCollectibleNum(281)<4 then 
-		player:AddCollectible(281,0,true)
-	end
-	if player:HasCollectible(bloodtrail_item)==true and player:GetCollectibleNum(73)<16 then 
-		player:AddCollectible(73,0,true)
-	end
-	if player:HasCollectible(solfon_item) and player:HasCollectible(tenenu_item) and haslumen == true and player:GetCollectibleNum(232)<1 then
-		player:AddCollectible(232,0,true)
-	end
-
-	if player:HasCollectible(aguppy_item)==true then -- 119를 획득하면(앱솔루트 구피)
-		if player:HasCollectible(134)==false then -- 134를 획득하지 않았을 때
-			player:AddCollectible(134,0,true) -- 134 획득
-		end
-		if player:HasCollectible(187)==false then -- 이하 반복
-			player:AddCollectible(187,0,true)
-		end
-		if player:HasCollectible(212)==false then
-			player:AddCollectible(212,0,true)
-		end
-	end
-	if player:HasCollectible(75)==true then -- 앱솔루트 마약
-		if player:HasCollectible(70)==false then
-			player:AddCollectible(70,0,true)
-		end
-		if player:HasCollectible(13)==false then
-			player:AddCollectible(13,0,true)
-		end
-		if player:HasCollectible(143)==false then
-			player:AddCollectible(143,0,true)
-		end
-	end
-	if player:HasCollectible(aconjoin_item)==true then -- 앱솔루트 종양
-		if player:HasCollectible(322)==false then
-			player:AddCollectible(322,0,true)
-		end
-		if player:HasCollectible(268)==false then
-			player:AddCollectible(268,0,true)
-		end
-		if player:HasCollectible(167)==false then
-			player:AddCollectible(167,0,true)
-		end
-	end
-	if player:HasCollectible(asulf_item)==true then -- 앱솔루트 유황
-		if player:HasCollectible(118)==false then
-			player:AddCollectible(118,0,true)
-		end
-		if player:HasCollectible(329)==false then
-			player:AddCollectible(329,0,true)
-		end
-	end
-	if player:HasCollectible(52)==true then -- 폭셋
-		if player:HasCollectible(220)==false then
-			player:AddCollectible(220,0,true)
-		end
-	end
-	if player:HasCollectible(rasr_item)==true then -- 정마반
-		if player:HasCollectible(260)==false then
-			player:AddCollectible(260,0,true)
-		end
-	end
-	if player:HasCollectible(9)==true then -- 앱솔루트 파리셋
-		if player:HasCollectible(264)==false then
-			player:AddCollectible(264,0,true)
-		end
-		if player:HasCollectible(492)==false then
-			player:AddCollectible(492,0,true)
-		end
-		if player:HasCollectible(chiggers_item)==false then
-			player:AddCollectible(chiggers_item,0,true)
-		end
-	end
-	if player:HasCollectible(aserap_item)==true then -- 앱솔루트 세라핌
-		if player:HasCollectible(156)==false then
-			player:AddCollectible(156,0,true)
-		end
-		if player:HasCollectible(72)==false then
-			player:AddCollectible(72,0,true)
-		end
-		if player:HasCollectible(101)==false then
-			player:AddCollectible(101,0,true)
-		end
-		if player:HasCollectible(390)==false then
-			player:AddCollectible(390,0,true)
-		end
-	end
-	if player:HasCollectible(alevi_item)==true then -- 앱솔루트 레비아탄
-		if player:HasCollectible(79)==false then
-			player:AddCollectible(79,0,true)
-		end
-		if player:HasCollectible(80)==false then
-			player:AddCollectible(80,0,true)
-		end
-		if player:HasCollectible(159)==false then
-			player:AddCollectible(159,0,true)
-		end
-	end
-	if player:HasCollectible(agravity_item)==true then -- 앱솔루트 그혈
-		if player:HasCollectible(118)==false then
-			player:AddCollectible(118,0,true)
-		end
-		if player:HasCollectible(222)==false then
-			player:AddCollectible(222,0,true)
-		end
-		if agravityVar == 0 then
-			player:AddCollectible(381,0,true)
-			player:AddCollectible(381,0,true)
-			player:AddCollectible(381,0,true)
-			agravityVar = 1
-		end
-	end
-	if player:HasCollectible(223) then
-		if player:HasCollectible(106)==false then
-			player:AddCollectible(106,0,true)
-		end
-		if player:HasCollectible(125)==false then
-			player:AddCollectible(125,0,true)
-		end
-		if player:HasCollectible(140)==false then
-			player:AddCollectible(140,0,true)
-		end
-		if player:HasCollectible(220)==false then
-			player:AddCollectible(220,0,true)
-		end
-		if player:HasCollectible(256)==false then
-			player:AddCollectible(256,0,true)
-		end
-		if player:HasCollectible(353)==false then
-			player:AddCollectible(353,0,true)
-		end
-		if player:HasCollectible(367)==false then
-			player:AddCollectible(367,0,true)
-		end
-		if player:HasCollectible(517)==false then
-			player:AddCollectible(517,0,true)
-		end
-	end
-	if player:HasCollectible(cleaner_item) then -- 만약 클리너 소지 시
-		if player:HasCollectible(52) then -- 닥터 소지 시
-			player:RemoveCollectible(52) -- 닥터 제거
-		end
-		if player:HasCollectible(68) then -- 테크 소지 시
-			player:RemoveCollectible(68) -- 테크 제거
-			player:RemoveCollectible(68)
-		end
-		if player:HasCollectible(104) then -- 테크 소지 시
-			player:RemoveCollectible(104) -- 테크 제거
-		end
-		if player:HasCollectible(114) then -- 칼 소지 시
-			player:RemoveCollectible(114) -- 칼 제거
-		end
-		if player:HasCollectible(118) then -- 혈사 소지 시
-			player:RemoveCollectible(118) -- 혈사 제거
-			player:RemoveCollectible(118)
-		end
-		if player:HasCollectible(agravity_item) then -- 그혈 소지 시
-			player:RemoveCollectible(agravity_item) -- 그혈 제거
-		end
-		if player:HasCollectible(149) then -- 구토 소지 시
-			player:RemoveCollectible(149) -- 구토 제거
-		end
-		if player:HasCollectible(152) then -- 테크2 소지 시
-			player:RemoveCollectible(152) -- 테크2 제거
-		end
-		if player:HasCollectible(168) then -- 에픽 소지 시
-			player:RemoveCollectible(168) -- 에픽 제거
-		end
-		if player:HasCollectible(229) then -- 플래닛 소지 시
-			player:RemoveCollectible(229) -- 플래닛 제거
-		end
-		if player:HasCollectible(233) then -- 플래닛 소지 시
-			player:RemoveCollectible(233) -- 플래닛 제거
-		end
-		if player:HasCollectible(asulf_item) then -- 루도비코 소지 시
-			player:RemoveCollectible(asulf_item) -- 루도비코 제거
-		end
-		if player:HasCollectible(329) then -- 루도비코 소지 시
-			player:RemoveCollectible(329) -- 루도비코 제거
-		end
-		if player:HasCollectible(395) then -- 테크엑스 소지 시
-			player:RemoveCollectible(395) -- 테크엑스 제거
-		end
-		if player:HasCollectible(67) then -- 테크엑스 소지 시
-			player:RemoveCollectible(67) -- 테크엑스 제거
-		end
-		if player:HasCollectible(88) then -- 테크엑스 소지 시
-			player:RemoveCollectible(88) -- 테크엑스 제거
-		end
-		if player:HasCollectible(269) then -- 테크엑스 소지 시
-			player:RemoveCollectible(269) -- 테크엑스 제거
-		end
-		if player:HasCollectible(275) then -- 테크엑스 소지 시
-			player:RemoveCollectible(275) -- 테크엑스 제거
-		end
-		if player:HasCollectible(52) == false and player:HasCollectible(68) == false and player:HasCollectible(104) == false and player:HasCollectible(114) == false and player:HasCollectible(118) == false and player:HasCollectible(agravity_item) == false and player:HasCollectible(149) == false and player:HasCollectible(152) == false and player:HasCollectible(168) == false and player:HasCollectible(229) == false and player:HasCollectible(233) == false and player:HasCollectible(asulf_item) == false and player:HasCollectible(395) == false then -- 공격 변화 아이템이 없는 경우
-			player:RemoveCollectible(cleaner_item) -- 클리너 제거
-		end
-	end
-	if player:HasCollectible(hots_item) then -- 만약 히오스 소지 시
-		if player:HasCollectible(venus_item) then -- 샛별 소지 시
-			player:RemoveCollectible(venus_item) -- 샛별 제거
-		end
-		if player:HasCollectible(scent_item) then -- 향기 소지 시
-			player:RemoveCollectible(scent_item) -- 향기 제거
-		end
-		if player:HasCollectible(memory_item) then -- 물소리 소지 시
-			player:RemoveCollectible(memory_item) -- 물소리 제거
-		end
-		if player:HasCollectible(symbol_item) then -- 삼신기 소지 시
-			player:RemoveCollectible(symbol_item) -- 삼신기 제거
-		end
-		if player:HasCollectible(fars_item) then -- 삼신기 소지 시
-			player:RemoveCollectible(fars_item) -- 삼신기 제거
-		end
-		if player:HasCollectible(rosetta_item) then -- 삼신기 소지 시
-			player:RemoveCollectible(rosetta_item) -- 삼신기 제거
-		end
-		if player:HasCollectible(81) then -- 구피 소지 시
-			player:RemoveCollectible(81) -- 구피 제거
-		end
-		if player:HasCollectible(133) then -- 구피 소지 시
-			player:RemoveCollectible(133) -- 구피 제거
-		end
-		if player:HasCollectible(134) then -- 구피 소지 시
-			player:RemoveCollectible(134) -- 구피 제거
-		end
-		if player:HasCollectible(212) then -- 구피 소지 시
-			player:RemoveCollectible(212) -- 구피 제거
-		end
-		if player:HasCollectible(solfon_item) then -- 솔리움 폰스 소지 시
-			player:RemoveCollectible(solfon_item) --솔리움 폰스 제거
-		end
-		if player:HasCollectible(tenenu_item) then -- 테네브레 루스 소지 시
-			player:RemoveCollectible(tenenu_item) -- 테네브레 루스 제거
-		end
-		if player:HasCollectible(lumen_item) then -- 루멘 바실리움 소지 시
-			player:RemoveCollectible(lumen_item) -- 루멘 바실리움 제거
-		end
-		if player:HasCollectible(rdmsb_item) then -- 정마팔 소지 시
-			player:RemoveCollectible(rdmsb_item) -- 정마팔 제거
-		end
-		if player:HasCollectible(rcsn_item) then -- 정마목 소지 시
-			player:RemoveCollectible(rcsn_item) -- 정마목 제거
-		end
-		if player:HasCollectible(rasr_item) then -- 정마반 소지 시
-			player:RemoveCollectible(rasr_item) -- 정마반 제거
-		end
-		if player:HasCollectible(238) then -- 키피스 소지 시
-			player:RemoveCollectible(238) -- 키피스 제거
-		end
-		if player:HasCollectible(239) then -- 키피스 소지 시
-			player:RemoveCollectible(239) -- 키피스 제거
-		end
-		if player:HasCollectible(51) then -- 펜타 소지 시
-			player:RemoveCollectible(51) -- 펜타 제거
-			player:RemoveCollectible(51) -- 펜타 제거
-			player:RemoveCollectible(51) -- 펜타 제거
-			player:RemoveCollectible(51) -- 펜타 제거
-			player:RemoveCollectible(51) -- 펜타 제거
-			player:RemoveCollectible(51) -- 펜타 제거
-		end
-		if player:HasCollectible(411) then -- 구레이저 소지 시
-			player:RemoveCollectible(411) -- 구레이저 제거
-		end
-		if player:HasCollectible(cpb_item) then -- 얼공 소지 시
-			player:RemoveCollectible(cpb_item) -- 얼공 제거
-		end
-		if player:HasCollectible(cpn_item) then -- 얼공 소지 시
-			player:RemoveCollectible(cpn_item) -- 얼공 제거
-		end
-		if player:HasCollectible(cpr_item) then -- 얼공 소지 시
-			player:RemoveCollectible(cpr_item) -- 얼공 제거
-		end
-		if player:HasCollectible(farsp_item) then 
-			player:RemoveCollectible(farsp_item) 
-		end
-		if player:HasCollectible(rosettap_item) then 
-			player:RemoveCollectible(rosettap_item) 
-		end
-		if player:HasCollectible(symbolp_item) then 
-			player:RemoveCollectible(symbolp_item) 
-		end
-		if player:HasCollectible(venus_item) == false and player:HasCollectible(scent_item) == false and player:HasCollectible(memory_item) == false and player:HasCollectible(symbol_item) == false and player:HasCollectible(fars_item) == false and player:HasCollectible(rosetta_item) == false and player:HasCollectible(81) == false and player:HasCollectible(133) == false and player:HasCollectible(134) == false and player:HasCollectible(212) == false and player:HasCollectible(solfon_item) == false and player:HasCollectible(tenenu_item) == false and player:HasCollectible(lumen_item) == false and player:HasCollectible(rdmsb_item) == false and player:HasCollectible(rcsn_item) == false and player:HasCollectible(rasr_item) == false and player:HasCollectible(238) == false and player:HasCollectible(239) == false and player:HasCollectible(51) == false and player:HasCollectible(411) == false then
-			player:RemoveCollectible(hots_item) -- 히오스 제거
-		end
-	end
-	if player:GetPlayerType() == 5 and player:HasCollectible(126) then --만약 플레이어가 이브(5)이고 만약 126(면도) 소지 시라면
-		player:AddCollectible(485,24,true)
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(349) then 
-		player:AddCollectible(521,30,true)
-	end
-	if player:GetPlayerType() == 6 and player:HasCollectible(scroll_item) then
-		player:RemoveCollectible(scroll_item)
-	end
-	if player:GetPlayerType() == 6 and player:HasCollectible(ascroll_item) then
-		player:RemoveCollectible(ascroll_item)
-	end
-	if player:GetPlayerType() == 10 and player:HasCollectible(482) then
-		player:RemoveCollectible(482)
-	end
-	if player:GetPlayerType() == 10 and player:HasCollectible(332) then
-		player:RemoveCollectible(332)
-	end
-	if player:GetPlayerType() == 10 and player:HasCollectible(311) then
-		player:RemoveCollectible(311)
-		shadowremove = true
-		player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
-		player:EvaluateItems()
-	end
-	if player:GetPlayerType() == 10 and player:HasCollectible(161) then
-		player:RemoveCollectible(161)
-	end
-	if player:GetPlayerType() == 10 and player:GetTrinket(28) then
-		player:TryRemoveTrinket(28)
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(482) then
-		player:RemoveCollectible(482)
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(332) then
-		player:RemoveCollectible(332)
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(311) then
-		player:RemoveCollectible(311)
-		shadowremove = true
-		player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
-		player:EvaluateItems()
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(161) then
-		player:RemoveCollectible(161)
-	end
-	if player:GetPlayerType() == 14 and player:GetTrinket(23) then
-		player:TryRemoveTrinket(23)
-	end
-	if player:GetPlayerType() == 14 and player:GetTrinket(28) then
-		player:TryRemoveTrinket(28)
-	end
-	if player:GetPlayerType() == 14 and player:HasCollectible(227) then
-		player:RemoveCollectible(227)
-	end
-	if player:GetPlayerType() == 14 and player:GetTrinket(1) then
-		player:TryRemoveTrinket(1)
-	end
-	if player:GetTrinket(51) then -- 동일
-		player:TryRemoveTrinket(51)
-	end
-	if player:GetTrinket(50) then
-		player:TryRemoveTrinket(50)
-	end
-	if player:GetTrinket(49) then 
-		player:TryRemoveTrinket(49)
-	end
-	if player:GetTrinket(112) then 
-		player:TryRemoveTrinket(112)
-	end
-	if player:GetTrinket(82) then 
-		player:TryRemoveTrinket(82)
-	end
-
 	if isWerryTimeOut == false and werryContinue <= Game().TimeCounter then -- 지속 시간이 아니고 아직 처리하지 않았다면
 		isWerryTimeOut = true
 		player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
@@ -1373,23 +967,6 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 			Isaac.Spawn(5, 350, 52, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		end
 	end
-	if astraluse == true and astralContinue <= Game().TimeCounter then
-		astraluse = false
-		j = math.random(1,100)
-		if j <= 80 then
-			for i=1,2 do
-				Isaac.Spawn(5, 100,curseroom[math.random(1,#curseroom)], Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
-			end
-		elseif j <= 95 then
-			for i=1,3 do
-				Isaac.Spawn(5, 100,curseroom[math.random(1,#curseroom)], Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
-			end
-		else 
-			for i=1,4 do
-				Isaac.Spawn(5, 100,curseroom[math.random(1,#curseroom)], Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
-			end
-		end
-	end
 	if isHippoTimeOut == false and hippoContinue <= Game().TimeCounter then
 		isHippoTimeOut = true
 		player:RemoveCollectible(114)
@@ -1405,18 +982,6 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 		isEnvyTimeOut = true
 		player:RemoveCollectible(402)
 	end
-	if isGluttonyTimeOut == false and GluttonyContinue <= Game().TimeCounter then
-		isGluttonyTimeOut = true
-		player:RemoveCollectible(402)
-	end
-	if isGreedTimeOut == false and GreedContinue <= Game().TimeCounter then
-		isGreedTimeOut = true
-		player:RemoveCollectible(402)
-	end
-	if isSlothTimeOut == false and SlothContinue <= Game().TimeCounter then
-		isSlothTimeOut = true
-		player:RemoveCollectible(402)
-	end
 	if isMonoTimeOut == false and MonoContinue <= Game().TimeCounter then
 		isMonoTimeOut = true
 		i = math.random(1,3)
@@ -1429,7 +994,7 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 		end
 	end
 	if isRevolutionTimeOut == false and RevolutionContinue <= Game().TimeCounter then
-		i = math.random(1,9)
+		i = math.random(1,12)
 		for j = 1, 2 do
 			if i == 1 then
 				Isaac.Spawn(5, 100, quickchaos_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
@@ -1447,6 +1012,12 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 				Isaac.Spawn(5, 100, Isaac.GetItemIdByName("Rank-Up-Magic Raid Force"), Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 			elseif i == 8 then
 				Isaac.Spawn(5, 100, Isaac.GetItemIdByName("Rank-Up-Magic Argent Chaos Force"), Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+			elseif i == 9 then
+				Isaac.Spawn(5, 100, angel_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+			elseif i == 10 then
+				Isaac.Spawn(5, 100, akma_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+			elseif i == 11 then
+				Isaac.Spawn(5, 100, double_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 			else
 				Isaac.Spawn(5, 100, soulshave_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 			end
@@ -1464,6 +1035,9 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 			Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_DEVIL, true, player:GetCollectibleRNG(Isaac.GetItemIdByName("Rank-Up-Magic Argent Chaos Force")):GetSeed()), Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		end
 		isArgentTimeOut = true
+	end
+	if Game():GetLevel():GetStage() == 1 then
+		Game():GetLevel():RemoveCurses();
 	end
 	if Game():GetLevel():GetStage() == 7 then
 		if player:HasCollectible(175) then
@@ -1491,16 +1065,6 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 		end
 	end
 
-	if player:HasCollectible(tenenu_item) then
-		for i = 1, #entities do
-			if entities[i]:IsVulnerableEnemy() then
-				if ((player.Position.X - entities[i].Position.X)^2 + (player.Position.Y - entities[i].Position.Y)^2)^0.5 <= 150 then
-					entities[i]:AddSlowing(EntityRef(player),1,20,Color(0.5, 0.5, 0.5, 1, 0, 0, 0))
-				end
-			end
-		end
-	end
-
 	if player:HasCollectible(plunger_item) then
 		for i = 1, #entities do
 			if entities[i]:IsVulnerableEnemy() then
@@ -1511,11 +1075,11 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 		end
 	end
 
-	if player:HasCollectible(solfon_item) and player:HasCollectible(tenenu_item) and haslumen == true then
+	if player:HasCollectible(solfon_item) and player:HasCollectible(tenenu_item) and player:HasCollectible(lumen_item) then
 		for i = 1, #entities do
 			if entities[i]:IsVulnerableEnemy() then
-				if ((player.Position.X - entities[i].Position.X)^2 + (player.Position.Y - entities[i].Position.Y)^2)^0.5 <= 300 and entities[i]:ToNPC():IsBoss() then
-					entities[i]:TakeDamage(player.Damage*1/10, 0, EntityRef(player), 1)
+				if ((player.Position.X - entities[i].Position.X)^2 + (player.Position.Y - entities[i].Position.Y)^2)^0.5 <= 300 then
+					entities[i]:TakeDamage(player.Damage*15/100, 0, EntityRef(player), 1)
 				end
 			end
 		end
@@ -1557,15 +1121,11 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 		player:Die()
 	end
 
-	if player.Damage > 100 then --데미지 제한
-		player.Damage = 100;
-	end
-
 	-- 타이머 갱신
 	timer:Renew()
 
 	for i=1, #entities do
-		if entities[i]:IsVulnerableEnemy() and entities[i]:GetData().AquVar == true and Game().TimeCounter % 2 == 0 and entities[i]:ToNPC():IsBoss() then
+		if entities[i]:IsVulnerableEnemy() and entities[i]:GetData().AquVar == true and Game().TimeCounter % 15 == 0 and entities[i]:ToNPC():IsBoss() then
 			splashTear = player:FireTear(entities[i].Position, Vector(player.ShotSpeed*10,0):Rotated(math.random(360)), true,true,false)
 			splashTear:ToTear().FallingSpeed = player.TearHeight*.5*(math.random()*.75+.5)
 			splashTear:ToTear().FallingAcceleration = 1.3
@@ -1578,6 +1138,23 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 	end
 	if akmaVar == true and (Game().TimeCounter - akmaTime) ~= 0 and (Game().TimeCounter - akmaTime) % 1800 == 0 then
 		Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_DEVIL, true, player:GetCollectibleRNG(akma_item):GetSeed()),Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		continueTime = 60 * 30
+		timer:Insert(akma_item, continueTime, 1, 0, 0)
+	end
+	if angelVar == true and (Game().TimeCounter - angelTime) ~= 0 and (Game().TimeCounter - angelTime) % 3600 == 0 then
+		Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_ANGEL, true, player:GetCollectibleRNG(angel_item):GetSeed()),Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		continueTime = 120 * 30
+		timer:Insert(angel_item, continueTime, 1, 0, 0)
+	end
+	if doubleVar == true and (Game().TimeCounter - doubleTime) ~= 0 and (Game().TimeCounter - doubleTime) % 5400 == 0 then
+		Isaac.Spawn(5, 100, 245, Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		continueTime = 180 * 30
+		timer:Insert(double_item, continueTime, 1, 0, 0)
+	end
+	if astraluse == true and (Game().TimeCounter - astralContinue) ~= 0 and (Game().TimeCounter - astralContinue) % 1800 == 0 then
+		Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_TREASURE, true, player:GetCollectibleRNG(akma_item):GetSeed()),Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		continueTime = 60 * 30
+		timer:Insert(astral_item, continueTime, 1, 0, 0)
 	end
 	if player:HasCollectible(yusa_cleaner_item) then
 		if player:HasCollectible(52) then -- 닥터 소지 시
@@ -1618,49 +1195,231 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 			YusaCleanerVar = true
 		end
 	end
+	
+	if player:HasCollectible(alltech_item) then
+		if not player:HasCollectible(395) and player:GetCollectibleNum(395)<1 then -- 테크엑스 미소지 시
+			player:AddCollectible(395,0,true) -- 테크엑스 추가
+		end
+		if not player:HasCollectible(68) and player:GetCollectibleNum(68)<1 then
+			player:AddCollectible(68,0,true)
+		end
+		if not player:HasCollectible(152) and player:GetCollectibleNum(152)<1 then
+			player:AddCollectible(152,0,true)
+		end
+		Game():GetItemPool():RemoveCollectible(114);
+		Game():GetItemPool():RemoveCollectible(68);
+		Game():GetItemPool():RemoveCollectible(168);
+		Game():GetItemPool():RemoveCollectible(cleaner_item);
+		Game():GetItemPool():RemoveCollectible(enocent_item);
+		for j = 1 , #entities do
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == 114 then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == 68 then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == 168 then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == cleaner_item then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == enocent_item then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+		end
+	end
+	
+	if player:HasCollectible(221) or player:HasCollectible(108) or player:HasCollectible(301) then
+		local tmprubber = {};
+		
+		if player:HasCollectible(221) then
+			tmprubber[1] = 108;
+			tmprubber[2] = 301;
+		elseif player:HasCollectible(108) then
+			tmprubber[1] = 221;
+			tmprubber[2] = 301;
+		elseif player:HasCollectible(301) then
+			tmprubber[1] = 108;
+			tmprubber[2] = 221;
+		end
+		
+		Game():GetItemPool():RemoveCollectible(tmprubber[1]);
+		Game():GetItemPool():RemoveCollectible(tmprubber[2]);
+		
+		for j = 1 , #entities do
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == tmprubber[1] then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+			if entities[j].Type == 5 and entities[j].Variant == 100 and entities[j].SubType == tmprubber[2] then
+				entities[j]:ToPickup():Morph(5, 100, 0, true)
+			end
+		end
+	end
+	
+	if player:HasCollectible(hots_item) and hosVar == 0 then
+		for i=1,#setitem do
+			player:RemoveCollectible(setitem[i])
+		end
+		for i=1,2 do
+			j = ranNum(hots_item,#setitem/3)
+			player:AddCollectible(setitem[3*j-2],0,true)
+			player:AddCollectible(setitem[3*j-1],0,true)
+			player:AddCollectible(setitem[3*j],0,true)
+		end
+		hosVar = 1
+	end
+	if player:HasCollectible(hots_item) == false then
+		hosVar = 0
+	end
 
-	if player:HasCollectible(farsp_item) and player:HasCollectible(rosettap_item) and player:HasCollectible(symbolp_item) then
-		for i = 1 , #entities do
-			if entities[i].Type == 306 or entities[i].Type == 212 then
+	--[[if player:HasCollectible(mangsang_item) and player:HasCollectible(hondon_item) and player:HasCollectible(hwangak_item) and (Game().TimeCounter % 900 == 0) then
+		player:UseActiveItem(510, false, true, false, false)
+		player:UseActiveItem(510, false, true, false, false)
+		player:UseActiveItem(510, false, true, false, false)
+	end]]
+
+	if player:HasCollectible(ac_item) and player:HasCollectible(ti_item) and player:HasCollectible(ve_item) and (Game().TimeCounter % 300 == 0) then
+		local i = math.random(1,5)
+		if i == 1 then
+			player:UseActiveItem(39, false, true, false, false)
+		elseif i == 2 then
+			player:UseActiveItem(58, false, true, false, false)
+		elseif i == 3 then
+			player:UseActiveItem(160, false, true, false, false)
+		elseif i == 4 then
+			player:UseActiveItem(291, false, true, false, false)
+		else
+			player:UseActiveItem(293, false, true, false, false)
+		end
+	end
+
+	if player:HasCollectible(moneyA_item) and player:HasCollectible(moneyB_item) and player:HasCollectible(moneyC_item) and (Game().TimeCounter % 1800 == 0) then
+		for i=1,15 do
+			Isaac.Spawn(5, 20, 1, player.Position, Vector(math.random(-1,1), math.random(-1,1)), player)
+		end
+	end
+
+	for i=1,#entities do
+		if entities[i].Type == 17 and entities[i].Variant == 7 then
+			if ((player.Position.X - entities[i].Position.X)^2 + (player.Position.Y - entities[i].Position.Y)^2)^0.5 <= 50 then
+				if player:GetNumCoins() >= 15 then
+					entities[i]:Remove()
+					player:AnimateHappy()
+					player:AddCoins(-15)
+					if (Game():GetLevel():GetAngelRoomChance() < 1) then
+						Game():GetLevel():AddAngelRoomChance(1);
+					end
+				end
+			end
+		end
+	end
+
+	for i=1,#entities do
+		if entities[i].Type == EntityType.ENTITY_PROJECTILE and player:HasCollectible(449) then
+			if ((player.Position.X - entities[i].Position.X)^2 + (player.Position.Y - entities[i].Position.Y)^2)^0.5 <= 30 and entities[i]:GetData().Refl ~= true then
+				entities[i]:GetData().Refl = true
+				reflTear = entities[i]:ToProjectile()
+				local angle = reflTear.Velocity:GetAngleDegrees() - (player.Position):GetAngleDegrees()
+				reflTear.Velocity = reflTear.Velocity:Rotated(180)
+				reflTear.Parent = player
+				reflTear.SpawnerEntity = player
+				reflTear:AddProjectileFlags(ProjectileFlags.CANT_HIT_PLAYER | ProjectileFlags.ANY_HEIGHT_ENTITY_HIT | ProjectileFlags.HIT_ENEMIES)
+			end
+		end
+	end
+
+	--[[if player:HasCollectible(ranTechX_item) and Game():GetFrameCount() % 2 == 0 then
+		player:FireTechXLaser(player.Position, Vector(player.ShotSpeed*10,0):Rotated(math.random(360)),10)
+	end]]
+
+	if player:HasCollectible(mangsang_item) and player:HasCollectible(hondon_item) and player:HasCollectible(hwangak_item) then
+		for i=1,#entities do
+			if entities[i].Type == 405 or entities[i].Type == 409 then
 				entities[i]:Die()
 			end
 		end
 	end
 
-	local notremove = {0,0,0,0,0,0}
+	if player:HasCollectible(114) then
+		if player:HasCollectible(68) then
+			player:RemoveCollectible(68)
+			player:AddCollectible(114,0,true)
+		end
+		if player:HasCollectible(395) then
+			player:RemoveCollectible(395)
+			player:AddCollectible(114,0,true)
+		end
+	end
+
+	if player:HasCollectible(311) and juaShadVar == false then
+		player:AddCard(46)
+		juaShadVar = true
+	end
+
+	--[[if player:HasCollectible(soulpower_item) and soulpowerVar == false then
+		player:AddCollectible(381,0,true)
+		soulpowerVar = true
+	end--]]
+
+
+	--[[for i=1,#entities do
+		if player:HasCollectible(202) and entities[i].Type == 5 and entities[i].Variant == 20 and entities[i].SubType == 1
+		and entities[i]:GetSprite():IsPlaying("Appear") and entities[i]:GetSprite():GetFrame() < 2 and math.random(1,2) <= 1 then
+			entities[i]:ToPickup():Morph(5,20,2,true)
+		end
+	end]]
+
+	local notremove = {};
+	local notremoveT = 0; -- 선택 시
+	local notremoveTT = 0; -- 완성 시
+	local tmpset = 0;
 
 	-- 세트옵션 제거
-	if (player:HasCollectible(setitem[6]) or player:HasCollectible(setitem[7]) or player:HasCollectible(setitem[8])) then
-		notremove[1] = true;
-	end
-	if (player:HasCollectible(setitem[9]) or player:HasCollectible(setitem[10]) or player:HasCollectible(setitem[11])) then
-		notremove[2] = true;
-	end
-	if (player:HasCollectible(setitem[12]) or player:HasCollectible(setitem[13]) or player:HasCollectible(setitem[14])) then
-		notremove[3] = true;
-	end
-	if (player:HasCollectible(setitem[15]) or player:HasCollectible(setitem[16]) or player:HasCollectible(setitem[17])) then
-		notremove[4] = true;
-	end
-	if (player:HasCollectible(setitem[18]) or player:HasCollectible(setitem[19]) or player:HasCollectible(setitem[20])) then
-		notremove[5] = true;
-	end
-	
-	if (player:HasCollectible(venus_item) and player:HasCollectible(memory_item) and player:HasCollectible(scent_item)) or
-	(player:HasCollectible(farsp_item) and player:HasCollectible(symbolp_item) and player:HasCollectible(rosettap_item)) or
-	(player:HasCollectible(rcsn_item) and player:HasCollectible(rasr_item) and player:HasCollectible(rdmsb_item)) or
-	(player:HasCollectible(solfon_item) and player:HasCollectible(tenenu_item) and haslumen == true) or
-	(player:HasCollectible(cpn_item) and player:HasCollectible(cpb_item) and player:HasCollectible(cpr_item)) then
-		notremove = {false,false,false,false,false,true}
+	for i=1, #setitem/3 do
+		if (player:HasCollectible(setitem[3*i-2]) or player:HasCollectible(setitem[3*i-1]) or player:HasCollectible(setitem[3*i])) then
+			notremove[i] = true;
+			notremoveT = notremoveT + 1
+		end
+		if (player:HasCollectible(setitem[3*i-2]) and player:HasCollectible(setitem[3*i-1]) and player:HasCollectible(setitem[3*i])) then
+			notremove[i] = false;
+			notremoveTT = notremoveTT + 1
+			
+			for j=1, setnumber do
+				if setcheck[j] == 0 then
+					tmpset = 0;
+					for k=1, j do
+						 if setcheck[k] == setitem[3*i-2] then
+							break
+						else
+							tmpset = tmpset+1;
+						end
+					end
+					if j == tmpset then
+						setcheck[j] = setitem[3*i-2];
+					end
+				end
+			end
+		end
 	end
 
-	if (notremove[1] == true or notremove[2] == true or notremove[3] == true or notremove[4] == true or notremove[5] == true or notremove[6] == true) then
+	if  notremoveT >= 2 then
 		for i = 1, #setitem do
-			if ((notremove[1] == true) and (i == 1 or i == 6 or i == 7 or i == 8)) or
-			((notremove[2] == true) and (i == 2 or i == 9 or i == 10 or i == 11)) or
-			((notremove[3] == true) and (i == 3 or i == 12 or i == 13 or i == 14)) or 
-			((notremove[4] == true) and (i == 4 or i == 15 or i == 16 or i == 17)) or 
-			((notremove[5] == true) and (i == 5 or i == 18 or i == 19 or i == 20)) then
+			if ((notremove[1] == true) and (i == 1 or i == 2 or i == 3)) or
+			((notremove[2] == true) and (i == 4 or i == 5 or i == 6)) or
+			((notremove[3] == true) and (i == 7 or i == 8 or i == 9)) or 
+			((notremove[4] == true) and (i == 10 or i == 11 or i == 12)) or 
+			((notremove[5] == true) and (i == 13 or i == 14 or i == 15)) or 
+			((notremove[6] == true) and (i == 16 or i == 17 or i == 18)) or 
+			((notremove[7] == true) and (i == 19 or i == 20 or i == 21)) or 
+			((notremove[8] == true) and (i == 22 or i == 23 or i == 24)) or 
+			((notremove[9] == true) and (i == 25 or i == 26 or i == 27)) or 
+			((notremove[10] == true) and (i == 28 or i == 29 or i == 30)) or 
+			((notremove[11] == true) and (i == 31 or i == 32 or i == 33)) or 
+			((notremove[12] == true) and (i == 34 or i == 35 or i == 36)) or 
+			((notremove[13] == true) and (i == 37 or i == 38 or i == 39)) or 
+			((notremove[14] == true) and (i == 40 or i == 41 or i == 42)) or 
+			((notremove[15] == true) and (i == 43 or i == 44 or i == 45)) then
 			else
 				Game():GetItemPool():RemoveCollectible(setitem[i]);
 				for j = 1 , #entities do
@@ -1671,6 +1430,29 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 			end
 		end
 	end
+
+	if player:HasPlayerForm(PlayerForm.PLAYERFORM_GUPPY) == true then
+		for i=1,#guppyParts do
+			Game():GetItemPool():RemoveCollectible(guppyParts[i]);
+		end
+	end
+
+	if player:HasCollectible(alltech_item) then
+		for i = 1 , #entities do
+			if entities[i].Type == 5 and entities[i].Variant == 100 and entities[i].SubType == yusa_cleaner_item then
+				entities[i]:ToPickup():Morph(5, 100, 0, true)
+			end
+		end
+	end
+
+	if player:GetPlayerType() == 7 then
+		for i = 1 , #entities do
+			if entities[i].Type == 5 and entities[i].Variant == 100 and entities[i].SubType == alltech_item then
+				entities[i]:ToPickup():Morph(5, 100, 0, true)
+			end
+		end
+	end
+	
 	--[[if player:HasCollectible(hweng_hol_item) or player:HasCollectible(samsingi_item) or player:HasCollectible(jongma_item) or player:HasCollectible(gim_luke_item) or player:HasCollectible(er_gong_item) then
 		player:RemoveCollectible(hweng_hol_item);
 		player:RemoveCollectible(samsingi_item);
@@ -1722,8 +1504,10 @@ function ChaosGreed:Item2(currentPlayer) -- 패시브 설정용 함수
 			end
 			storedItem = heldItem
 			storedItemCharge = heldItemCharge
-			storedItemSprite:ReplaceSpritesheet(0, config:GetCollectible(storedItem).GfxFileName)
-			storedItemSprite:LoadGraphics()
+			if storedItem ~= 0 then
+				storedItemSprite:ReplaceSpritesheet(0, config:GetCollectible(storedItem).GfxFileName)
+				storedItemSprite:LoadGraphics()
+			end
 			heldItem = player:GetActiveItem()
 			heldItemCharge = player:GetActiveCharge()
 			-- Remove pedestal
@@ -1794,6 +1578,15 @@ function ChaosGreed:onTear(tear)
 	if player:HasCollectible(plunger_item) then
 		tear.TearFlags = tear.TearFlags | TearFlags.TEAR_POISON
 	end
+	if player:HasCollectible(ne_item) and player:HasCollectible(da_item) and player:HasCollectible(ssip_item) and math.random(1,4)<=2 then
+		tear.TearFlags = tear.TearFlags | TearFlags.TEAR_LIGHT_FROM_HEAVEN
+	end
+	if player:HasCollectible(godheadA_item) and player:HasCollectible(godheadB_item) and player:HasCollectible(godheadC_item) and math.random(1,4)<=1 then
+		tear.TearFlags = tear.TearFlags | TearFlags.TEAR_GLOW
+	end
+	if money_genesis>0 and math.random(money_genesis,100)>=100 then 
+		tear.TearFlags = tear.TearFlags | TearFlags.TEAR_LIGHT_FROM_HEAVEN
+	end
 end
 
 ChaosGreed:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR , ChaosGreed.onTear)
@@ -1820,31 +1613,42 @@ function ChaosGreed:useItem(collectible, rng)
 		end
 		return true
 	elseif collectible == powerbond_item then -- Power Bond 사용시
+	if player:GetNumCoins()>1 then
 		if powerBondContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 30 * 30
+			if player:GetNumCoins()<30 then
+				continueTime = 30 * player:GetNumCoins()
+				player:AddCoins(player:GetNumCoins() * -1)
+			else
+				continueTime = 30 * 30
+				player:AddCoins(-30)
+			end
 
 			powerBondContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
 			isPowerBondTimeOut = false
 
 			timer:Insert(powerbond_item, continueTime, 1, 0.005, 0)
 		end
+		end
+		player:RemoveCollectible(powerbond_item)
 		return true
 	elseif collectible == limiterremoval_item then -- Limiter Removal 사용시
+	if player:GetNumCoins()>1 then
 		if limiterRemovalContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 30 * 30
+			if player:GetNumCoins()<30 then
+				continueTime = 30 * player:GetNumCoins()
+				player:AddCoins(player:GetNumCoins() * -1)
+			else
+				continueTime = 30 * 30
+				player:AddCoins(-30)
+			end
 
 			limiterRemovalContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
 			isLimiterRemovalTimeOut = false
 
 			timer:Insert(limiterremoval_item, continueTime, 1, 1, 0)
-
-			limterVar = limterVar + 1
-
-			if limterVar >= 2 then
-				limterVar = 0
-				player:RemoveCollectible(limiterremoval_item)
-			end
 		end
+		end
+		player:RemoveCollectible(limiterremoval_item)
 		return true
 	elseif collectible == restore_item then
 		Isaac.Spawn(6, 10, 0, player.Position + Vector(-50, -50), Vector(0, 0), player) -- 리스톡 소환
@@ -1950,7 +1754,7 @@ function ChaosGreed:useItem(collectible, rng)
 		return true]]
 	elseif collectible == quickchaos_item then
 		if quickChaosContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 60 * 30
+			continueTime = 10 * 30
 
 			quickChaosContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
 			isQuickChaosTimeOut = false
@@ -2017,20 +1821,9 @@ function ChaosGreed:useItem(collectible, rng)
 		cipheruse = true
 
 		timer:Insert(cipher_item, continueTime, 0, 0.005, 1)
-	elseif collectible == astral_item then
-		player:AnimateCollectible(collectible, "UseItem", "Idle")
-		player:RemoveCollectible(astral_item)
-
-		continueTime = 60 * 30
-
-		astralContinue = Game().TimeCounter + continueTime
-		astraluse = true
-
-		timer:Insert(astral_item, continueTime, 0, 0.005, 0)
-		return true
 	elseif collectible == raptor_item then
 		player:RemoveCollectible(raptor_item)
-		i = math.random(1,9)
+		i = math.random(1,12)
 		if i == 1 then
 			Isaac.Spawn(5, 100, quickchaos_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		elseif i == 2 then
@@ -2047,6 +1840,12 @@ function ChaosGreed:useItem(collectible, rng)
 			Isaac.Spawn(5, 100, Isaac.GetItemIdByName("Rank-Up-Magic Raid Force"), Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		elseif i == 8 then
 			Isaac.Spawn(5, 100, Isaac.GetItemIdByName("Rank-Up-Magic Argent Chaos Force"), Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		elseif i == 9 then
+			Isaac.Spawn(5, 100, akma_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		elseif i == 10 then
+			Isaac.Spawn(5, 100, angel_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		elseif i == 11 then
+			Isaac.Spawn(5, 100, double_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		else
 			Isaac.Spawn(5, 100, soulshave_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		end
@@ -2057,15 +1856,13 @@ function ChaosGreed:useItem(collectible, rng)
 		Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_TAROTCARD, Card.CARD_CREDIT, player.Position, Vector(math.random(-5,5),math.random(-5,5)), player)
 		return true
 	elseif collectible == mono_item then
-		player:AnimateCollectible(collectible, "UseItem", "Idle")
-		player:RemoveCollectible(mono_item)
-
-		continueTime = 60 * 30
-
-		MonoContinue = Game().TimeCounter + continueTime
-		isMonoTimeOut = false
-
-		timer:Insert(mono_item, continueTime, 0.006, 0, 1)
+		if player:GetNumCoins() >= 15 then
+			player:RemoveCollectible(mono_item)
+			player:AddCollectible(lumen_item,0,true)
+			player:AddCollectible(solfon_item,0,true)
+			player:AddCollectible(tenenu_item,0,true)
+			player:AddCoins(-15)
+		end
 		return true
 	elseif collectible == scroll_item then
 		player:AnimateCollectible(collectible, "UseItem", "Idle")
@@ -2077,7 +1874,7 @@ function ChaosGreed:useItem(collectible, rng)
 	elseif collectible == ascroll_item then
 		player:AnimateCollectible(collectible, "UseItem", "Idle")
 		player:RemoveCollectible(ascroll_item)
-		ranscroll = ranscroll + math.random(0,40)
+		momlessscroll = momlessscroll * math.random(10,20) / 10
 		player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
 		player:EvaluateItems()
 		return true
@@ -2135,46 +1932,10 @@ function ChaosGreed:useItem(collectible, rng)
 
 			EnvyContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
 			isEnvyTimeOut = false
-			EnvyUse = true
 
 			timer:Insert(envy_item, continueTime, 0.005, 0.005, 0.005)
 
 			player:RemoveCollectible(envy_item)
-			player:AddCollectible(402,0,true)
-			player:AddCoins(coin)
-			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
-		end
-		return true
-	elseif collectible == gluttony_item then
-		if GluttonyContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 20 * 30
-			coin = player:GetNumCoins()
-
-			GluttonyContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
-			isGluttonyTimeOut = false
-			GluttonyUse = true
-
-			timer:Insert(gluttony_item, continueTime, 0.005, 0.005, 0.005)
-
-			player:RemoveCollectible(gluttony_item)
-
-			player:AddCollectible(402,0,true)
-			player:AddCoins(coin)
-			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
-		end
-		return true
-	elseif collectible == greed_item then
-		if GreedContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 20 * 30
-			coin = player:GetNumCoins()
-
-			GreedContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
-			isGreedTimeOut = false
-			GreedUse = true
-
-			timer:Insert(greed_item, continueTime, 0.005, 0.005, 0.005)
-
-			player:RemoveCollectible(greed_item)
 			player:AddCollectible(402,0,true)
 			player:AddCoins(coin)
 			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
@@ -2185,23 +1946,6 @@ function ChaosGreed:useItem(collectible, rng)
 		Isaac.Spawn(5, 100, 402, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
 		player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
 		player:RemoveCollectible(pride_item)
-		return true
-	elseif collectible == sloth_item then
-		if SlothContinue < Game().TimeCounter then -- 지속 시간이 아님
-			continueTime = 20 * 30
-			coin = player:GetNumCoins()
-
-			SlothContinue = Game().TimeCounter + continueTime -- 지속 시간 30초 뒤 (30은 단위 초로 변환)
-			isSlothTimeOut = false
-			SlothUse = true
-
-			timer:Insert(sloth_item, continueTime, 0.005, 0.005, 0.005)
-
-			player:RemoveCollectible(sloth_item)
-			player:AddCollectible(402,0,true)
-			player:AddCoins(coin)
-			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
-		end
 		return true
 	elseif collectible == no_item then
 		player:RemoveCollectible(no_item)
@@ -2341,8 +2085,8 @@ function ChaosGreed:useItem(collectible, rng)
 		player:RemoveCollectible(Curse_Foot_item)
 		return true
 	elseif collectible == artifact_chakram_item then
-		if player:GetNumCoins() >= 5 then
-			player:AddCoins(-5)
+		if player:GetNumCoins() >= 15 then
+			player:AddCoins(-15)
 			if (Game():GetLevel():GetAngelRoomChance() < 1) then
 				Game():GetLevel():AddAngelRoomChance(1);
 			end
@@ -2465,28 +2209,10 @@ function ChaosGreed:useItem(collectible, rng)
 		return true
 	elseif collectible == bok_E_sibal_shake_it_item then
 		if player:GetNumCoins() >= 15 then
-			i = math.random(1,5)
-			if i == 1 then
-				Isaac.Spawn(5, 100, venus_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, scent_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, memory_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-			elseif i == 2 then
-				Isaac.Spawn(5, 100, rasr_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, rcsn_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, rdmsb_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-			elseif i == 3 then
-				Isaac.Spawn(5, 100, cpb_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, cpn_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, cpr_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-			elseif i == 4 then
-				Isaac.Spawn(5, 100, farsp_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, rosettap_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, symbolp_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-			else
-				Isaac.Spawn(5, 100, solfon_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, lumen_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-				Isaac.Spawn(5, 100, tenenu_item, Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
-			end
+			i = math.random(1,15)
+			player:AddCollectible(setitem[3*i-2],0,true)
+			player:AddCollectible(setitem[3*i-1],0,true)
+			player:AddCollectible(setitem[3*i],0,true)
 			player:AddCoins(-15)
 			player:RemoveCollectible(bok_E_sibal_shake_it_item)
 		end
@@ -2509,6 +2235,20 @@ function ChaosGreed:useItem(collectible, rng)
 			end
 			return true
 		end
+	elseif collectible == omfg_sagi_item then
+			omfg_sagiVar = omfg_sagiVar + 1
+			local tmpsagi = player:GetCardRNG(hermit_stars_card):RandomInt(100)+1
+			if tmpsagi > 50 then
+				player:AddCoins(player:GetNumCoins())
+			else
+				player:AddCoins(-99);
+				player:RemoveCollectible(omfg_sagi_item)
+			end
+			if omfg_sagiVar >= 3 then
+				player:RemoveCollectible(omfg_sagi_item)
+				omfg_sagiVar = 0
+			end
+			return true
 	elseif collectible == bok_E_tuk_burumyeon_an_om_item then
 		if player:GetNumCoins() >= 10 then
 			player:AddCoins(-10)
@@ -2522,18 +2262,20 @@ function ChaosGreed:useItem(collectible, rng)
 			return true
 		end
 	elseif collectible == u_ang_jyoo_gum_item then
-		i = math.random(1,2)
-		if i == 1 then
-			player:AddCollectible(chry_item,0,false)
-		else
-			for i=1 , 3 do
-				Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_CURSE, true, player:GetCollectibleRNG(u_ang_jyoo_gum_item):GetSeed()),Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		if player:GetNumCoins() >= 15 then	
+			i = ranNum(u_ang_jyoo_gum_item,2)
+			if i == 1 then
+				j = ranNum(u_ang_jyoo_gum_item,#setitem/3)
+				player:AddCollectible(setitem[3*j-2],0,true)
+				player:AddCollectible(setitem[3*j-1],0,true)
+				player:AddCollectible(setitem[3*j],0,true)
 			end
+			player:AddCoins(-15)
+			player:RemoveCollectible(u_ang_jyoo_gum_item)
 		end
-		player:RemoveCollectible(u_ang_jyoo_gum_item)
 		return true
 	elseif collectible == A_nae_noon_item then
-		level:AddCurse(7,true)
+		level:AddCurse(1,false)
 		Isaac.Spawn(5, 100, Game():GetItemPool():GetCollectible(ItemPoolType.POOL_GREED_CURSE, true, player:GetCollectibleRNG(A_nae_noon_item):GetSeed()),Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
 		player:RemoveCollectible(A_nae_noon_item)
 		return true
@@ -2574,20 +2316,20 @@ function ChaosGreed:useItem(collectible, rng)
 		if player:HasCollectible(533) then -- 라샷 소지 시
 			player:RemoveCollectible(533) -- 라샷 제거
 		end
-		local i = math.random(1,7)
+		local i = math.random(1,8)
 		if i == 1 then
 			player:AddCollectible(68,0,false)
-		elseif i == 1 then
-			player:AddCollectible(114,0,false)
 		elseif i == 2 then
-			player:AddCollectible(118,0,false)
+			player:AddCollectible(114,0,false)
 		elseif i == 3 then
-			player:AddCollectible(168,0,false)
+			player:AddCollectible(118,0,false)
 		elseif i == 4 then
-			player:AddCollectible(asulf_item,0,false)
+			player:AddCollectible(168,0,false)
 		elseif i == 5 then
-			player:AddCollectible(329,0,false)
+			player:AddCollectible(asulf_item,0,false)
 		elseif i == 6 then
+			player:AddCollectible(329,0,false)
+		elseif i == 7 then
 			player:AddCollectible(533,0,false)
 		else
 			player:AddCollectible(395,0,false)
@@ -2598,9 +2340,57 @@ function ChaosGreed:useItem(collectible, rng)
 			akmaVar = true
 			akmaTime = Game().TimeCounter
 			player:AddCoins(-15)
+			continueTime = 60 * 30
+			timer:Insert(akma_item, continueTime, 1, 0, 0)
+			player:RemoveCollectible(akma_item)
 		end
-		player:RemoveCollectible(akma_item)
 		return true
+	elseif collectible == angel_item then
+		if player:GetNumCoins() >= 15 then
+			angelVar = true
+			angelTime = Game().TimeCounter
+			player:AddCoins(-15)
+			continueTime = 120 * 30
+			timer:Insert(angel_item, continueTime, 1, 0, 0)
+			player:RemoveCollectible(angel_item)
+		end
+		return true
+	elseif collectible == double_item then
+		if player:GetNumCoins() >= 15 then
+			doubleVar = true
+			doubleTime = Game().TimeCounter
+			player:AddCoins(-15)
+			continueTime = 180 * 30
+			timer:Insert(double_item, continueTime, 1, 0, 0)
+			player:RemoveCollectible(double_item)
+		end
+		return true
+	elseif collectible == astral_item then
+		if player:GetNumCoins() >= 15 then
+			astraluse = true
+			astralContinue = Game().TimeCounter
+			player:AddCoins(-15)
+			continueTime = 60 * 30
+			timer:Insert(astral_item, continueTime, 1, 0, 0)
+			player:RemoveCollectible(astral_item)
+		end
+		return true
+	elseif collectible == money_genesis_item then
+		if player:GetNumCoins() >= 1 then
+			money_genesis = money_genesis + player:GetNumCoins()
+			player:AddCoins(player:GetNumCoins()*-1)
+		end
+		player:RemoveCollectible(money_genesis_item)
+		return true
+		
+	elseif collectible == money_add_damage_item then
+		if player:GetNumCoins() >= 1 then
+			money_add_damage = money_add_damage + player:GetNumCoins()
+			player:AddCoins(player:GetNumCoins()*-1)
+		end
+		player:RemoveCollectible(money_add_damage_item)
+		return true
+	
 	elseif collectible == hweng_hol_item then
 		if player:GetNumCoins() >= 5 then
 			local i = math.random(1,3)
@@ -2700,19 +2490,77 @@ function ChaosGreed:useItem(collectible, rng)
 				entities[i]:TakeDamage(9000000, 0, EntityRef(player), 1)
 			end
 		end
+	elseif collectible == randomset_item then
+		Isaac.Spawn(5, 100, setitem[player:GetCollectibleRNG(randomset_item):RandomInt(#setitem)+1], Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		player:RemoveCollectible(randomset_item)
+		return true
+	elseif collectible == actLuck_item then
+		if player:GetNumCoins() >= 5 then
+			plusluck = plusluck + 1
+			player:AddCacheFlags(CacheFlag.CACHE_LUCK)
+			player:AddCoins(-5)
+		end
+		return true
+	elseif collectible == yuryoBrim_item then
+		if player:GetNumCoins() >= 30 then
+			player:AddCollectible(118,0,true)
+			player:AddCoins(-30)
+		end
+		return true
+	elseif collectible == yuryoKarl_item then
+		if player:GetNumCoins() >= 15 then
+			player:AddCollectible(114,0,true)
+			RemAttack(114)
+			player:AddCoins(-15)
+		end
+		return true
+	elseif collectible == yuryoTech_item then
+		if player:GetNumCoins() >= 15 then
+			player:AddCollectible(68,0,true)
+			RemAttack(68)
+			player:AddCoins(-15)
+		end
+		return true
+	elseif collectible == gungeoncopy_item then
+		local chm = player:GetCollectibleNum(208)
+		for i=0,chm do
+			player:RemoveCollectible(208)
+			player:AddCollectible(381,0,true)
+		end
+		return true
+	elseif collectible == i_cant_understand_item then
+		if (Game():GetLevel():GetAngelRoomChance() < 1) then
+			Game():GetLevel():AddAngelRoomChance(1);
+		elseif (Game():GetLevel():GetAngelRoomChance() > 0) then
+			Game():GetLevel():AddAngelRoomChance(-1);
+		end
+		return true
+	elseif collectible == 477 and player:GetPlayerType() ~= 15 then
+		voidVar = voidVar + 1
+		if voidVar >= 3 then
+			player:RemoveCollectible(477)
+		end
 	end
 end
 
 ChaosGreed:AddCallback(ModCallbacks.MC_USE_ITEM, ChaosGreed.useItem)
 
 function ChaosGreed:useCard(card) 
-  player = Isaac.GetPlayer(0) -- 초반 시작 카드
- 
-  if card == hermit_stars_card then 
-	player:AddCard(Card.CARD_HERMIT)
-	player:AddCard(Card.CARD_STARS)
-	return true 
-  end 
+	player = Isaac.GetPlayer(0) -- 초반 시작 카드
+
+		if card == hermit_stars_card then 
+		player:AddCard(Card.CARD_HERMIT)
+		player:AddCard(Card.CARD_STARS)
+		Isaac.Spawn(5, 100, setitem[player:GetCardRNG(hermit_stars_card):RandomInt(#setitem)+1], Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		if player:GetPlayerType() == 1 then
+			Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_TAROTCARD, Card.CARD_JOKER, player.Position, Vector(math.random(-5,5),math.random(-5,5)), player)
+			Isaac.Spawn(5, 100, i_cant_understand_item, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0, 0), player)
+		end
+		if player:GetPlayerType() == 7 then
+			player:AddCollectible(yuryoBrim_item,0,true)
+		end
+		return true 
+	end 
 end 
 
 ChaosGreed:AddCallback(ModCallbacks.MC_USE_CARD, ChaosGreed.useCard)
@@ -2722,7 +2570,7 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
     entities = Isaac.GetRoomEntities()
 	flag = false
 	if dmg_target:IsVulnerableEnemy() then
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
 			bonusmultiple = 0;
 		end
 	end
@@ -2742,6 +2590,17 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
 			end
 		end
     end
+    --[[if player:HasCollectible(stopCopyHy_item) and dmg_target:IsVulnerableEnemy() and wGoldVar<300 then
+    	if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+    		wGoldVar = wGoldVar + 1
+    	end
+    end--]]
+
+	if player:HasCollectible(rainbowdead_item) and player:HasCollectible(rainbowpaw_item) and player:HasCollectible(rainbowtail_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+			Isaac.Spawn(3, 43, math.random(2,5), player.Position, Vector(0,0), player)
+		end
+	end
 
     if player:HasCollectible(yusa_guppy_item) and dmg_target:IsVulnerableEnemy() then
 		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
@@ -2774,14 +2633,14 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
 	end
 	if player:HasCollectible(68) and dmg_target:IsVulnerableEnemy() and not player:HasCollectible(114) then
 		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
-			dmg_target:TakeDamage(dmg_amount*1.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 100;
+			dmg_target:TakeDamage(dmg_amount*4.0, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 400;
 		end
 	end
 	if player:HasCollectible(118) and dmg_target:IsVulnerableEnemy() and not player:HasCollectible(114) then
 		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
-			dmg_target:TakeDamage(dmg_amount*1.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 100;
+			dmg_target:TakeDamage(dmg_amount*2.0, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 200;
 		end
 	end
 	if player:HasCollectible(asulf_item) and dmg_target:IsVulnerableEnemy() then
@@ -2802,8 +2661,8 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
 			bonusmultiple = bonusmultiple + 50;
 		end
 	end
-    if player:HasCollectible(psyfly_item) and dmg_target:IsVulnerableEnemy() then
-        if dmg_dealer.Type == EntityType.ENTITY_TEAR and math.random(1,6) <= 1 then
+	if player:HasCollectible(psyfly_item) and dmg_target:IsVulnerableEnemy() then
+		if dmg_dealer.Type == EntityType.ENTITY_TEAR and math.random(1,6) <= 1 then
 			Isaac.Spawn(EntityType.ENTITY_FAMILIAR, FamiliarVariant.BLUE_FLY, math.random(1,5), player.Position, Vector(0, 0), player)
 		end
 	end
@@ -2814,33 +2673,105 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
 		end
 	end
 	if player:HasCollectible(venus_item) and player:HasCollectible(scent_item) and player:HasCollectible(memory_item) and dmg_target:IsVulnerableEnemy() then -- 22 23 24를 모두 획득 시
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and (dmg_target.Type == 406 or dmg_target.Type == 412) then
-			dmg_target:TakeDamage(dmg_amount * 4.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 410;
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
 		end
 	end
 	if player:HasCollectible(farsp_item) and player:HasCollectible(rosettap_item) and player:HasCollectible(symbolp_item) and dmg_target:IsVulnerableEnemy() then
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and (dmg_target.Type == 406 or dmg_target.Type == 412) then
-			dmg_target:TakeDamage(dmg_amount * 4.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 410;
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
 		end
 	end 
-	if haslumen==true and player:HasCollectible(tenenu_item) and player:HasCollectible(solfon_item) and dmg_target:IsVulnerableEnemy() then
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and (dmg_target.Type == 406 or dmg_target.Type == 412) then
-			dmg_target:TakeDamage(dmg_amount * 4.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 410;
+	if player:HasCollectible(lumen_item) and player:HasCollectible(tenenu_item) and player:HasCollectible(solfon_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
 		end
 	end
 	if player:HasCollectible(cpr_item) and player:HasCollectible(cpb_item) and player:HasCollectible(cpn_item) and dmg_target:IsVulnerableEnemy() then
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and (dmg_target.Type == 406 or dmg_target.Type == 412) then
-			dmg_target:TakeDamage(dmg_amount * 4.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 410;
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
 		end
 	end
 	if player:HasCollectible(rcsn_item) and player:HasCollectible(rasr_item) and player:HasCollectible(rdmsb_item) and dmg_target:IsVulnerableEnemy() then
-		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and (dmg_target.Type == 406 or dmg_target.Type == 412) then
-			dmg_target:TakeDamage(dmg_amount * 4.1, 0, EntityRef(player), 1)
-			bonusmultiple = bonusmultiple + 410;
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(rainbowpaw_item) and player:HasCollectible(rainbowdead_item) and player:HasCollectible(rainbowtail_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(ne_item) and player:HasCollectible(da_item) and player:HasCollectible(ssip_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(mangsang_item) and player:HasCollectible(hondon_item) and player:HasCollectible(hwangak_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(ac_item) and player:HasCollectible(ti_item) and player:HasCollectible(ve_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(de_item) and player:HasCollectible(fen_item) and player:HasCollectible(ce_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(chaosSt_item) and player:HasCollectible(chaosNd_item) and player:HasCollectible(chaosRd_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(injecA_item) and player:HasCollectible(injecB_item) and player:HasCollectible(injecC_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(godheadA_item) and player:HasCollectible(godheadB_item) and player:HasCollectible(godheadC_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(maxoverA_item) and player:HasCollectible(maxoverB_item) and player:HasCollectible(maxoverC_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(moneyA_item) and player:HasCollectible(moneyB_item) and player:HasCollectible(moneyC_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(moneyA_item) and player:HasCollectible(moneyB_item) and player:HasCollectible(moneyC_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target.Type == 406 then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if player:HasCollectible(mangsang_item) and player:HasCollectible(hondon_item) and player:HasCollectible(hwangak_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target.Type == 412 then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
 		end
 	end
 	if player:HasCollectible(farsp_item) and player:HasCollectible(rosettap_item) and player:HasCollectible(symbolp_item) and dmg_target:IsVulnerableEnemy() and dmg_target:ToNPC():IsBoss() == false then
@@ -2852,7 +2783,58 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
 			end
 		end
 	end
+	if player:HasCollectible(maxoverA_item) and player:HasCollectible(maxoverB_item) and player:HasCollectible(maxoverC_item) then
+		if dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE then
+			dmg_target:TakeDamage(dmg_amount*1.5, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 150;
+		end
+	end
+	
+	if player:HasCollectible(exDmgDble_item) and dmg_target:IsVulnerableEnemy() and (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+		dmg_target:TakeDamage(dmg_amount * 2, 0, EntityRef(player), 1)
+		bonusmultiple = bonusmultiple + 200;
+	end
 
+	if player:HasCollectible(395) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 3, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 300;
+		end
+	end
+	--[[if player:HasCollectible(extradamage_item) and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 3, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 300;
+		end
+	end--]]
+	if player:HasPlayerForm(PlayerForm.PLAYERFORM_GUPPY) == true and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * 1, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + 100;
+		end
+	end
+	if money_add_damage >0 and dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+			dmg_target:TakeDamage(dmg_amount * (money_add_damage/100), 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + money_add_damage;
+		end
+	end
+	if extraDamage > 0 and dmg_target:IsVulnerableEnemy() and (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+		dmg_target:TakeDamage((dmg_amount * extraDamage) , 0, EntityRef(player), 1)
+		bonusmultiple = bonusmultiple + (extraDamage*100);
+	end
+	if dmg_target:IsVulnerableEnemy() then
+		if (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) and dmg_target:ToNPC():IsBoss() then
+			dmg_target:TakeDamage(dmg_amount * wGoldVar/100, 0, EntityRef(player), 1)
+			bonusmultiple = bonusmultiple + wGoldVar;
+		end
+	end
+
+	--[[if player:HasCollectible(realChamp_item) and (dmg_dealer.Type == EntityType.ENTITY_TEAR or dmg_source & DamageFlag.DAMAGE_LASER == DamageFlag.DAMAGE_LASER or dmg_dealer.Type == EntityType.ENTITY_KNIFE) then
+		if dmg_target:ToNPC():IsChampion() and dmg_target:IsVulnerableEnemy() and dmg_target:HasMortalDamage() then
+			Isaac.Spawn(5, 0, 0, Isaac.GetFreeNearPosition(player.Position, 50), Vector(0,0), player)
+		end
+	end]]
 	--[[if player:HasCollectible(63) and dmg_target:IsVulnerableEnemy() then
 		if dmg_dealer.Type == EntityType.ENTITY_TEAR and math.random(1,4)==1 then
 			player:SetActiveCharge(player:GetActiveCharge() + 1)
@@ -2877,11 +2859,15 @@ function ChaosGreed:npcHit(dmg_target , dmg_amount, dmg_source, dmg_dealer)
             d = 0.5
         end
 
-        if ref.Type == EntityType.ENTITY_HUSH then fin_amt = 1.5 end
+        if ref.Type == EntityType.ENTITY_HUSH then
+        	fin_amt = 1.5
+        end
 
-        if ref.Index ~= nil then if ref:IsVulnerableEnemy() then
-            ref.HitPoints = ref.HitPoints + (dmg_amount * d) * (1.0-fin_amt)
-        end end
+        if ref.Index ~= nil then
+        	if ref:IsVulnerableEnemy() then
+            	ref.HitPoints = ref.HitPoints + (dmg_amount * d) * (1.0-fin_amt)
+            end
+        end
     end
 end
 
@@ -2894,6 +2880,21 @@ function ChaosGreed:onDamage(entity, damage, damageFlag, damageSource, DamageCou
 		if damageFlag == DamageFlag.DAMAGE_CURSED_DOOR then
 			return false
 		end
+	end
+	if player:HasCollectible(de_item) and player:HasCollectible(fen_item) and player:HasCollectible(ce_item) then
+		if damageFlag == DamageFlag.DAMAGE_CURSED_DOOR then
+			return false
+		end
+	end
+	if player:HasCollectible(de_item) and player:HasCollectible(fen_item) and player:HasCollectible(ce_item) then
+		if aricooldown <= Game():GetFrameCount() then
+			aricooldown = Game():GetFrameCount() + (30 * 30)
+			player:UseActiveItem(58, false, true, false, false)
+			return false
+		end
+	end
+	if player:HasCollectible(173) and math.random(1,10) <= 3 then
+		Isaac.Spawn(5,10,3,Isaac.GetFreeNearPosition(player.Position,50), Vector(0,0), player)
 	end
 end
 
@@ -2964,7 +2965,8 @@ end
 ChaosGreed:AddCallback(ModCallbacks.MC_POST_UPDATE, ChaosGreed.eterbanjireset);
 
 function ChaosGreed:specialcheck()
-	player = Isaac.GetPlayer(0)
+	local player = Isaac.GetPlayer(0)
+	local specialnum = 0
 	
 	for i = 1, #specialitemp do
 		if player:HasCollectible(specialitemp[i]) then
@@ -2977,6 +2979,8 @@ function ChaosGreed:specialcheck()
 				specialitem3 = specialitemp[i]
 			elseif specialitem1 ~= specialitemp[i] and specialitem2 ~= specialitemp[i] and specialitem3 ~= specialitemp[i] and specialitem4 == 0 then
 				specialitem4 = specialitemp[i]
+			elseif specialitem1 ~= specialitemp[i] and specialitem2 ~= specialitemp[i] and specialitem3 ~= specialitemp[i] and specialitem4 ~= specialitemp[i] and specialitem5 == 0 then
+				specialitem5 = specialitemp[i]
 			end
 		else
 			if specialitem1 == specialitemp[i] then
@@ -2991,11 +2995,14 @@ function ChaosGreed:specialcheck()
 			if specialitem4 == specialitemp[i] then
 				specialitem4 = 0
 			end
+			if specialitem5 == specialitemp[i] then
+				specialitem5 = 0
+			end
 		end
 	end
-	if specialnum >= 4 then
+	if specialnum >= 5 then
 		for i = 1, #specialitemp do
-			if specialitemp[i] ~= specialitem1 and specialitemp[i] ~= specialitem2 and specialitemp[i] ~= specialitem3 and specialitemp[i] ~= specialitem4 and player:HasCollectible(specialitemp[i]) then
+			if specialitemp[i] ~= specialitem1 and specialitemp[i] ~= specialitem2 and specialitemp[i] ~= specialitem3 and specialitemp[i] ~= specialitem4 and specialitemp[i] ~= specialitem5 and player:HasCollectible(specialitemp[i]) then
 				player:RemoveCollectible(specialitemp[i])
 			end
 			for j = 1 , #entities do
@@ -3080,9 +3087,49 @@ function ChaosGreed:judasAzaCharEffect()
 	if player:GetPlayerType() == 7 then
 		if player:HasCollectible(52) then -- 닥터 소지 시
 			player:RemoveCollectible(52) -- 닥터 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(68) then -- 테크 소지 시
+			player:RemoveCollectible(68) -- 테크 제거
+			player:RemoveCollectible(68)
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(104) then -- 테크 소지 시
+			player:RemoveCollectible(104) -- 테크 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(114) then -- 칼 소지 시
+			player:RemoveCollectible(114) -- 칼 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(agravity_item) then -- 그혈 소지 시
+			player:RemoveCollectible(agravity_item) -- 그혈 제거
+		end
+		if player:HasCollectible(149) then -- 구토 소지 시
+			player:RemoveCollectible(149) -- 구토 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(152) then -- 테크2 소지 시
+			player:RemoveCollectible(152) -- 테크2 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
 		end
 		if player:HasCollectible(168) then -- 에픽 소지 시
 			player:RemoveCollectible(168) -- 에픽 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(229) then -- 플래닛 소지 시
+			player:RemoveCollectible(229) -- 플래닛 제거
+		end
+		if player:HasCollectible(asulf_item) then -- 루도비코 소지 시
+			player:RemoveCollectible(asulf_item) -- 루도비코 제거
+		end
+		if player:HasCollectible(329) then -- 루도비코 소지 시
+			player:RemoveCollectible(329) -- 루도비코 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
+		end
+		if player:HasCollectible(395) then -- 테크엑스 소지 시
+			player:RemoveCollectible(395) -- 테크엑스 제거
+			Isaac.Spawn(5, 100, 118,Isaac.GetFreeNearPosition(player.Position,50), Vector(0, 0), player)
 		end
 	end
 end
@@ -3121,24 +3168,100 @@ function ChaosGreed:familiarUpdate(ent)
                 if ents[i]:IsVulnerableEnemy() and math.abs(off.X) + math.abs(off.Y) < ent.Size+32 and fam.FrameCount > 40 then
                     ent:Kill()
                 end
-             end
+            end
         end
 	end
 end
 
 ChaosGreed:AddCallback(ModCallbacks.MC_FAMILIAR_UPDATE, ChaosGreed.familiarUpdate)
 
+function RemAttack(except)
+	player = Isaac.GetPlayer(0)
+	if player:HasCollectible(52) and except~=52 then -- 닥터 소지 시
+		player:RemoveCollectible(52) -- 닥터 제거
+	end
+	if player:HasCollectible(68) and except~=68 then -- 테크 소지 시
+		player:RemoveCollectible(68) -- 테크 제거
+		player:RemoveCollectible(68)
+	end
+	if player:HasCollectible(104) and except~=104 then -- 테크 소지 시
+		player:RemoveCollectible(104) -- 테크 제거
+	end
+	if player:HasCollectible(114) and except~=114 then -- 칼 소지 시
+		player:RemoveCollectible(114) -- 칼 제거
+	end
+	if player:HasCollectible(118) and except~=118 then -- 혈사 소지 시
+		player:RemoveCollectible(118) -- 혈사 제거
+		player:RemoveCollectible(118)
+	end
+	if player:HasCollectible(agravity_item) and except~=agravity_item then -- 그혈 소지 시
+		player:RemoveCollectible(agravity_item) -- 그혈 제거
+	end
+	if player:HasCollectible(149) and except~=149 then -- 구토 소지 시
+		player:RemoveCollectible(149) -- 구토 제거
+	end
+	if player:HasCollectible(152) and except~=152 then -- 테크2 소지 시
+		player:RemoveCollectible(152) -- 테크2 제거
+	end
+	if player:HasCollectible(168) and except~=168 then -- 에픽 소지 시
+		player:RemoveCollectible(168) -- 에픽 제거
+	end
+	if player:HasCollectible(asulf_item) and except~=asulf_item then -- 루도비코 소지 시
+		player:RemoveCollectible(asulf_item) -- 루도비코 제거
+	end
+	if player:HasCollectible(329) and except~=329 then -- 루도비코 소지 시
+		player:RemoveCollectible(329) -- 루도비코 제거
+	end
+	if player:HasCollectible(395) and except~=395 then -- 테크엑스 소지 시
+		player:RemoveCollectible(395) -- 테크엑스 제거
+	end
+end
+
+function ranNum(item, num)
+	randomnum = ((player:GetCollectibleRNG(item):RandomInt((num)))+1)
+	return randomnum
+end
+
 function ChaosGreed:Render()
 	player = Isaac.GetPlayer(0)
 	if player:HasCollectible(backpack_item) and storedItem ~= 0 then
 		storedItemSprite:Render(Vector(0,0), Vector(0,0), Vector(0,0))
 	end
-
-	Isaac.RenderText(specialitem1,10,210,207/255,255/255,36/255,2)
-	Isaac.RenderText(specialitem2,10,220,207/255,255/255,36/255,2)
-	Isaac.RenderText(specialitem3,10,230,207/255,255/255,36/255,2)
-	Isaac.RenderText(specialitem4,10,240,207/255,255/255,36/255,2)
-	Isaac.RenderText(bonusmultiple .. "%",10,250,255/255,90/255,90/255,2)
+	
+	if specialitem1 ~= 0 then
+		specialSprite1:ReplaceSpritesheet(0, config:GetCollectible(specialitem1).GfxFileName)
+		specialSprite1:LoadGraphics()
+		specialSprite1:Render(Vector(10,220), Vector(0,0), Vector(0,0))
+	end
+	if specialitem2 ~= 0 then
+		specialSprite2:ReplaceSpritesheet(0, config:GetCollectible(specialitem2).GfxFileName)
+		specialSprite2:LoadGraphics()
+		specialSprite2:Render(Vector(30,220), Vector(0,0), Vector(0,0))
+	end
+	if specialitem3 ~= 0 then
+		specialSprite3:ReplaceSpritesheet(0, config:GetCollectible(specialitem3).GfxFileName)
+		specialSprite3:LoadGraphics()
+		specialSprite3:Render(Vector(50,220), Vector(0,0), Vector(0,0))
+	end
+	if specialitem4 ~= 0 then
+		specialSprite4:ReplaceSpritesheet(0, config:GetCollectible(specialitem4).GfxFileName)
+		specialSprite4:LoadGraphics()
+		specialSprite4:Render(Vector(70,220), Vector(0,0), Vector(0,0))
+	end
+	if specialitem5 ~= 0 then
+		specialSprite5:ReplaceSpritesheet(0, config:GetCollectible(specialitem5).GfxFileName)
+		specialSprite5:LoadGraphics()
+		specialSprite5:Render(Vector(90,220), Vector(0,0), Vector(0,0))
+	end
+	Isaac.RenderText(bonusmultiple .. "%",10,260,255/255,90/255,90/255,2)
+	
+	for i=1, setnumber do
+		if setcheck[i] ~= 0 then
+			setSprite[i]:ReplaceSpritesheet(0, config:GetCollectible(setcheck[i]).GfxFileName)
+			setSprite[i]:LoadGraphics()
+			setSprite[i]:Render(Vector(10+((i-1)*20),280), Vector(0,0), Vector(0,0))
+		end
+	end
 
 	-- 타이머 랜더
 	timer:Rander()
